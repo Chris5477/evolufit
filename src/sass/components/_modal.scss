@@ -1,0 +1,43 @@
+.modal {
+	@include sizeContainer(100%, 100%);
+	@include posAbs(0, 0);
+	background-color: rgba(0, 0, 0, 0.719);
+}
+
+.body-modal {
+	@include sizeContainer(80%, auto);
+	padding: 50px 25px;
+	background: $primary;
+	color: black;
+    border-radius: 10px;
+
+	h2 {
+		color: black;
+	}
+    button{
+        background-color: black;
+        color: $light;
+    }
+
+	label{
+		font-size: 22px;
+		font-weight: 800;
+	}
+
+	input{
+		@include sizeContainer(90%, 40px);
+		margin: 10px 0;
+		padding-left: 15px;
+		color: $primary;
+		font-weight: bolder;
+		font-size: 20px;
+	}
+}
+
+.form-add-result {
+	@include flex(space-around, center);
+	flex-direction: column;
+    margin: 50px 0;
+
+   
+}

@@ -1,0 +1,227 @@
+/* CSS HOME PAGE ******************************************************************************/
+
+.section-part {
+	background: $gradient;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 15px 30px;
+
+	a {
+		display: block;
+		text-align: center;
+		width: 100%;
+		padding: 15px 0;
+	}
+
+	h2 {
+		margin: 25px;
+	}
+}
+
+.container-picture {
+	position: relative;
+	min-height: 400px;
+	border-top: 1px solid $light;
+	margin-top: 15px;
+
+	img {
+		width: 100%;
+		@include posAbs(5%, 7%);
+	}
+}
+
+.other-info {
+	@include sizeContainer(100%, 400px);
+	background-color: black;
+	position: relative;
+	overflow: hidden;
+
+	aside {
+		@include sizeContainer(60%, 200px);
+		transform: translate(60%, 40%);
+		position: relative;
+		z-index: 1000;
+		padding: 20px 0;
+
+		p {
+			font-size: 28px;
+			text-align: center;
+			font-weight: 800;
+			color: black;
+
+			&:last-child {
+				color: $primary;
+			}
+		}
+	}
+
+	img {
+		width: 80%;
+		position: absolute;
+		top: 10%;
+		left: -10%;
+	}
+}
+
+/* CSS NEWACCOUNT PAGE *********************************************************** */
+
+.newAccount h2 {
+	font-size: 40px;
+}
+
+/* CSS PROFIL PAGE **************************************************************** */
+
+.profil {
+	background: $gradient;
+	flex-direction: column;
+	position: relative;
+}
+
+.info-user {
+	font-size: 20px;
+
+	.greet-user {
+		color: $light;
+		padding: 15px 0;
+	}
+	span {
+		letter-spacing: 1.4px;
+		font-size: 10vw;
+		font-weight: 600;
+	}
+}
+
+.program,
+.daily-objectif {
+	flex-direction: column;
+}
+
+.program {
+	position: relative;
+
+	h2 {
+		color: $light;
+	}
+
+	span {
+		display: inline-block;
+		margin: 10px 0;
+		font-size: 10vw;
+		color: $primary;
+	}
+
+	a {
+		@include posAbs(90%, 50%);
+		transform: translateX(-50%);
+		font-size: 18px;
+	}
+}
+
+.daily-objectif {
+	margin-bottom: 80px;
+
+	li {
+		margin: 15px 0;
+	}
+}
+
+/* CSS PLANNING PAGE **************************************************************** */
+
+.planning {
+	background: $gradient;
+	overflow: hidden;
+	color: white;
+
+	> h2 {
+		margin-top: 20px;
+		text-align: center;
+	}
+}
+
+.daily-workout {
+	text-align: center;
+	padding-top: 25px;
+
+	p {
+		margin: 20px;
+	}
+}
+
+.week-program {
+	@include sizeContainer(100%, auto);
+	@include flex(space-around, center);
+}
+
+.day-week {
+	flex-direction: column;
+	padding: 25px 0;
+
+	h2 {
+		color: white;
+	}
+}
+
+.day-week ul p {
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.day-week ul p:nth-child(odd) {
+	color: $primary;
+}
+
+/* CSS TRAINING AND CARDIO PAGE ********************************************************** */
+
+.training {
+	background: $gradient;
+	flex-direction: column;
+	padding-bottom: 25px;
+
+	h2 {
+		padding: 20px 0;
+	}
+
+	h3 {
+		padding: 10px;
+	}
+
+	.myExercice {
+		@include sizeContainer(100%, auto);
+		@include flex(flex-start, center);
+		flex-direction: column;
+	}
+}
+
+/* CSS EXERCICE PAGE *********************************** */
+
+.exercice {
+	background: $gradient;
+	flex-direction: column;
+	font-weight: 800;
+	padding: 40px 0;
+
+	h2 {
+		padding: 15px;
+	}
+
+	p {
+		padding: 0px 30px;
+		margin: 20px 0;
+		text-align: center;
+	}
+
+	.muscular {
+		color: $primary;
+		font-size: 55px;
+	}
+}
+
+.container-btns {
+	@include flex(space-around, center);
+	padding: 15px 0;
+
+	button {
+		width: 120px;
+	}
+}

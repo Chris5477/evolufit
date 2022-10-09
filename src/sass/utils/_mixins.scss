@@ -1,0 +1,21 @@
+@mixin flex($axisX, $axisY) {
+	display: flex;
+	justify-content: $axisX;
+	align-items: $axisY;
+}
+
+@mixin posAbs($top, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+
+@mixin sizeContainer($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin border($thickness, $type: solid, $color, $radius: 0px) {
+	border: $thickness $type $color;
+	border-radius: $radius;
+}

@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+.recharts-legend-item-text{
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 8.2vw;
+	font-weight: 800;
+	color: $primary;
+	text-align: center;
+}
+
+h3 {
+	font-size: 7vw;
+	color: $light;
+	font-weight: 600;
+	text-align: center;
+}
+
+p, li{
+	font-size: 5vw;
+	font-weight: 600;
+	color: $light;
+}
+
+.white-bg {
+	background-color: $light;
+}
+
+.color-white {
+	color: $light;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.no-bg-letter {
+	-webkit-text-stroke: 1px $primary;
+	color: transparent;
+}
+
+.container {
+	@include sizeContainer(100%, auto);
+}
+
+.flex-center {
+	@include flex(center, center);
+}

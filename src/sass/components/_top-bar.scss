@@ -1,0 +1,20 @@
+.top-bar {
+	@include flex(space-around, center);
+	padding: 10px 0;
+
+	h1 {
+		color: $primary;
+		transform: rotateZ(-5deg);
+		font-size: 28px;
+	}
+}
+
+.logged {
+	@include flex(space-between, center);
+	padding: 10px 20px;
+
+	.container-avatar {
+		width: 10%;
+		border-radius: 50%;
+	}
+}

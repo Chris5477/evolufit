@@ -1,0 +1,11 @@
+.menu-btn{
+    @include sizeContainer(30px, 30px);
+    border: 1px solid black;
+    background-color: $primary;
+    border-radius: 6px;
+    padding: 3px;
+
+    img{
+        width: 100%;
+    }
+}

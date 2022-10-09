@@ -1,0 +1,26 @@
+.tabs-navigation {
+	@include sizeContainer(100%, 50px);
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+
+	li {
+		@include sizeContainer(calc(100% / 3), 50px);
+		background-color: $primary;
+		padding: 10px 40px;
+		border: 1px solid black;
+	}
+
+	a {
+		img {
+			width: 90%;
+			max-width: 50px;
+		}
+	}
+
+	.active-tab {
+		background-color: darken($color: $primary, $amount: 20);
+	}
+}
