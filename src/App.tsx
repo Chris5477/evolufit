@@ -5,14 +5,14 @@ import "./style.css";
 
 const App = () => {
   return (
-    <div data-testid='app' className='App container'>
-      <Topbar />  
-      <BrowserRouter>
+    <BrowserRouter>
+      <div data-testid='app' className='App container'>
+      <Topbar />
         <Routes>
           <Route path='/' element={<Homepage />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 };
 

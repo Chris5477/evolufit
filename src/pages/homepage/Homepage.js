@@ -1,8 +1,7 @@
-import athleteOne from "../../assets/athlete/athlete1.png"
-import athleteTwo from "../../assets/athlete/athlete2.png"
+import athleteOne from "../../assets/athlete/athlete1.png";
+import athleteTwo from "../../assets/athlete/athlete2.png";
 
 import { Link } from "react-router-dom";
-
 
 const Homepage = () => {
   return (
@@ -19,9 +18,9 @@ const Homepage = () => {
         <div className='container-picture container'>
           <img src={athleteOne} alt='althelte' />
         </div>
-        {/* <Link className='link-button uppercase' to={"/new-account"}>
+        <Link className='link-button uppercase' to={"/new-account"}>
           S'inscrire
-        </Link> */}
+        </Link>
       </section>
 
       <article className='other-info'>
