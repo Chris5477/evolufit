@@ -17,16 +17,16 @@ const TopBar = () => {
       </div>
     </header>
   ) : (
-    <header data-testid="topbar" className='top-bar container white-bg'>
+    <header data-testid='topbar' className='top-bar container white-bg'>
       <Link to='/'>
         <h1>Evolu'fit</h1>
       </Link>
-      <Link className="link-button uppercase" to={"/login"}>
-				Connexion
-			</Link>
-			<Link className="link-button uppercase" to={"/new-account"}>
-				S'inscrire
-			</Link>
+      <Link className='link-button uppercase' to={"/login"}>
+        Connexion
+      </Link>
+      <Link className='link-button uppercase' to={"/signin"}>
+        S'inscrire
+      </Link>
     </header>
   );
 };
