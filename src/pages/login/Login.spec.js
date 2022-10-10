@@ -15,4 +15,15 @@ describe("Login Page", () => {
     const loginPage = screen.getByTestId("loginpage");
     expect(loginPage).toBeInTheDocument();
   });
+
+  describe("test login function", () => {
+    const mockData = {
+      pseudo: "",
+      password: "",
+    };
+
+    test("Should display an error message if fields aren't filled or wrong input", () => {
+      console.log(document.body.innerHTML)
+    });
+  });
 });
