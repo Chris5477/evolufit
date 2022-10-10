@@ -1,51 +1,57 @@
 form {
-	min-height: 65vh;
-	background: $gradient;
-	color: $light;
-	padding: 10% 0 5% 12%;
+  min-height: 65vh;
+  background: $gradient;
+  color: $light;
+  padding: 10% 0 5% 12%;
 
-	.form-data {
+  .form-data {
+    label {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
 
-		label {
-			display: block;
-			font-size: 22px;
-			font-weight: 600;
-			margin: 10px 0;
-		}
+    input {
+      @include sizeContainer(90%, 40px);
+      border: 2px solid $primary;
+      color: $primary;
+      padding-left: 15px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
 
-		input {
-			@include sizeContainer(90%, 40px);
-			border: 2px solid $primary;
-			color: $primary;
-			padding-left: 15px;
-			font-size: 20px;
-			font-weight: 800;
-		}
-	}
+  input[type="submit"] {
+    margin-top: 30px;
+  }
 
-	input[type="submit"] {
-		margin-top: 30px;
-	}
+  .radio-input {
+    @include sizeContainer(100%, 40px);
+    @include flex(flex-start, center);
+    font-size: 24px;
 
-	.radio-input {
-		@include sizeContainer(100%, 40px);
-		@include flex(flex-start, center);
-		font-size: 24px;
+    label {
+      margin: 0 7px;
+    }
+  }
 
-		label {
-			margin: 0 7px;
-		}
-	}
+  input[type="radio"] {
+    @include sizeContainer(20px, 20px);
+  }
 
-	input[type="radio"] {
-		@include sizeContainer(20px, 20px);
-	}
+  .validation {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    margin-top: 5px;
+  }
 
-	.error-validation{
-		font-size: 20px;
-		line-height: 20px;
-		font-weight: 800;
-		color: red;
-		margin-top: 5px;
-	}
+  .success {
+    color: green;
+  }
+
+  .error {
+    color: red;
+  }
 }

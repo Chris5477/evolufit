@@ -168,12 +168,17 @@ form input[type=radio] {
   width: 20px;
   height: 20px;
 }
-form .error-validation {
+form .validation {
   font-size: 20px;
   line-height: 20px;
   font-weight: 800;
-  color: red;
   margin-top: 5px;
+}
+form .success {
+  color: green;
+}
+form .error {
+  color: red;
 }
 
 .recharts-legend-wrapper {
