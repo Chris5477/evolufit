@@ -24,7 +24,7 @@ describe("Login Page", () => {
       fireEvent.submit(form);
 
       if (!pseudo.value || !password.value) {
-        const errorTxt = await screen.findAllByText("Veuillez remplir ce champs");
+        const errorTxt = await screen.findAllByText("Veuillez remplir tous les champs");
         expect(errorTxt).toBeTruthy();
       }
     });

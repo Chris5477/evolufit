@@ -47,7 +47,7 @@ describe("Signin Page", () => {
     test("Should return an error message if any field is empty", async () => {
       fireEvent.submit(submitBtn);
 
-      const isValid = await screen.findAllByText("Veuillez remplir ce champs!");
+      const isValid = await screen.findAllByText("Veuillez remplir tous les champs!");
       expect(isValid).toBeTruthy();
     });
     test("Should return a success message if the form is valid", async () => {

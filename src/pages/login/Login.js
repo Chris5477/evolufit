@@ -26,13 +26,13 @@ const Login = () => {
     const { pseudo, password } = userData;
     e.preventDefault();
     if (pseudo === "admin" && password === "12345") {
-      createMessage("valid", "Connexion en cours...");
+      createMessage("success", "Connexion en cours...");
       localStorage.setItem("token", JSON.stringify("test"));
       setTimeout(() => navigate("/profil"), 1500);
     } else if (pseudo && password && pseudo !== "admin" && password !== "12345") {
-      createMessage("valid", "Identifiants incorrects");
+      createMessage("error", "Identifiants incorrects");
     } else {
-      createMessage("error", "Veuillez remplir ce champs");
+      createMessage("error", "Veuillez remplir tous les champs");
     }
   };
 
@@ -53,7 +53,11 @@ const Login = () => {
       />
 
       <input className='link-button uppercase' type='submit' value='Se connecter' />
-      {message.code === "valid" && <p className='feedback-form'>{message.message}</p>}
+      {message.code === "success" ? (
+        <p className='feedback-form validation success'>{message.message}</p>
+      ) : (
+        <p className='feedback-form validation error'>{message.message}</p>
+      )}
     </form>
   );
 };

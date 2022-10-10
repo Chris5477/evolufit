@@ -44,7 +44,7 @@ const Signin = () => {
     e.preventDefault();
     const isValid = Object.values(data).every((value) => value);
     if (!isValid) {
-      customMessage("error", "Veuillez remplir ce champs!");
+      customMessage("error", "Veuillez remplir tous les champs!");
     } else {
       customMessage("success", `Inscription réussie! Redirection en cours...`);
       localStorage.setItem("token", "test");
@@ -131,7 +131,7 @@ const Signin = () => {
         message={feedBack.code === "error" && feedBack.message}
       />
       <input className='link-button uppercase' type='submit' value='Envoyer' />
-      {feedBack.code === "success" && <p className='valdiation success'>{feedBack.message}</p>}
+      {feedBack.code === "success" ?  <p className='valdiation success'>{feedBack.message}</p> : <p className='valdiation error'>{feedBack.message}</p>}
     </form>
   );
 };
