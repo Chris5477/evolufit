@@ -1,7 +1,60 @@
-const Login = () => {
-    return(
-        <div data-testid="loginpage" className="login">Login</div>
-    )
-}
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import FormData from "../../components/formData/FormData";
 
-export default Login
+const Login = () => {
+  const initialMessage = {
+    code: "",
+    message: "",
+  };
+
+  const [pseudo, setPseudo] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(initialMessage);
+  const navigate = useNavigate();
+
+  const userData = {
+    pseudo,
+    password,
+  };
+  const createMessage = (code, message) => {
+    const newMessage = { code, message };
+    setMessage(newMessage);
+  };
+
+  const login = (e) => {
+    const { pseudo, password } = userData;
+    e.preventDefault();
+    if (pseudo === "admin" && password === "12345") {
+      createMessage("valid", "Connexion en cours...");
+      localStorage.setItem("token", JSON.stringify("test"));
+      setTimeout(() => navigate("/profil"), 1500);
+    } else if (pseudo && password && pseudo !== "admin" && password !== "12345") {
+      createMessage("valid", "Identifiants incorrects");
+    } else {
+      createMessage("error", "Veuillez remplir ce champs");
+    }
+  };
+
+  return (
+    <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
+      <FormData
+        label='pseudo'
+        valueInput={pseudo}
+        handleChange={(e) => setPseudo(e.target.value)}
+        message={message.code === "error" && message.message}
+      />
+      <FormData
+        label='password'
+        typeInput='password'
+        valueInput={password}
+        handleChange={(e) => setPassword(e.target.value)}
+        message={message.code === "error" && message.message}
+      />
+
+      <input className='link-button uppercase' type='submit' value='Se connecter' />
+      {message.code === "valid" && <p className='feedback-form'>{message.message}</p>}
+    </form>
+  );
+};
+export default Login;

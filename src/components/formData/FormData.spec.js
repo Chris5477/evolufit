@@ -6,7 +6,7 @@ describe("FormData", () => {
     label: "test",
     valueInput: "",
     handleChange: () => "test",
-    name: "test"
+    name: "test",
   };
 
   beforeEach(() => {
