@@ -1,15 +1,15 @@
 import { users } from "../../mock/users.js";
 import { Link } from "react-router-dom";
-import athlete3 from "../../assets/athlete/athlete3.png"
+import athlete3 from "../../assets/athlete/athlete3.png";
 
 const Profil = () => {
   const { firstName } = users[0];
 
   return (
     <div data-testid='profil-page' className='profil container flex-center'>
-        <div className="banner-profil container flex-center">
-            <img src={athlete3} alt={'athletes'} />
-        </div>
+      <div className='banner-profil container flex-center'>
+        <img src={athlete3} alt={"athletes"} />
+      </div>
       <section className='info-user container'>
         <h2 className='greet-user'>
           Bonjour <span className='uppercase no-bg-letter'>{firstName}</span>
@@ -20,10 +20,9 @@ const Profil = () => {
         </p>
       </section>
       <section>
-        <p className="uppercase">Actualités:</p>
-
+        <p className='uppercase'>Actualités:</p>
+        
       </section>
-     
     </div>
   );
 };
