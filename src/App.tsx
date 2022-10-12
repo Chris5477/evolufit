@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import Topbar from "./components/Topbar/TopBar";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
+import Profil from "./pages/profil/Profil";
 import Signin from "./pages/signin/Signin";
 import "./style.css";
 
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/' element={<Homepage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signin' element={<Signin />} />
+          <Route path='/profil' element={<Profil />} />
         </Routes>
         <Footer />
       </div>
