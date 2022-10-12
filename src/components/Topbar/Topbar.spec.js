@@ -6,12 +6,12 @@ describe("Topbar", () => {
   test("Should render the componant", () => {
     render(
       <BrowserRouter>
-          <Topbar />
+        <Topbar />
       </BrowserRouter>
     );
 
     const div = screen.getByTestId("topbar");
-
     expect(div).toBeInTheDocument();
   });
+
 });

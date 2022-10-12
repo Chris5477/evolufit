@@ -1,9 +1,9 @@
 import avatar from "../../assets/icons/avatar.svg";
-// import Button from "./Button";
 import { Link } from "react-router-dom";
 import menu from "../../assets/icons/menu.svg";
 
 const TopBar = () => {
+
   return localStorage.getItem("token") ? (
     <header data-testid='topbar' className='top-bar logged container white-bg'>
       <div className='container-avatar'>
