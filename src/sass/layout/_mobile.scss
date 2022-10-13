@@ -201,10 +201,10 @@
 }
 
 .progress {
-  @include sizeContainer(95%, 150px);
+  @include sizeContainer(90%, 150px);
   border-bottom: 1px solid lighten($color: $dark, $amount: 20%);
   padding: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
 
   h2 {
     text-align: left;

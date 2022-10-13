@@ -520,11 +520,11 @@ form .error {
 }
 
 .progress {
-  width: 95%;
+  width: 90%;
   height: 150px;
   border-bottom: 1px solid #555555;
   padding: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 .progress h2 {
   text-align: left;
