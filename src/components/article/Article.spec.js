@@ -1,13 +1,21 @@
-import { render, screen } from "@testing-library/react"
-import Article from "./Article"
-
+import { fireEvent, render, screen } from "@testing-library/react";
+import Article from "./Article";
+import { actualities } from "../../news/actualities.js";
+import { handleClick } from "./Article";
 describe("Slide Component", () => {
+  const { title, article, urlImg } = actualities[0];
+  let slide = null;
+  beforeEach(() => {
+    render(<Article title={title} article={article} urlImg={urlImg} />);
+    slide = screen.getByTestId("slide");
+  });
 
-    beforeEach(() => render(<Article />))
+  test("Should render The componant", () => {
+    expect(slide).toBeInTheDocument();
+  });
 
-    test("Should render The componant", () => {
-        const slide = screen.getByTestId("slide")
-
-        expect(slide).toBeInTheDocument()
-    })
-})
+  test("Should print something in the console", () => {
+    const resultClick = handleClick();
+    expect(resultClick).toBeNull();
+  });
+});

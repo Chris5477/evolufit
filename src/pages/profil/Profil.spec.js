@@ -23,4 +23,8 @@ describe("Profil Page", () => {
 
     expect(titleh2).toBe(`Bonjour ${firstName}`);
   });
+
+  // test("Should add pixel to translate the container", () => {
+  // ...
+  // })
 });
