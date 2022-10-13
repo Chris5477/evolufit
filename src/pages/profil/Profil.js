@@ -1,9 +1,10 @@
-import { users } from "../../mock/users.js";
+import { users, infoBody, training } from "../../mock/users.js";
 import { actualities } from "../../news/actualities.js";
 import { Link } from "react-router-dom";
 import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from "../../components/article/Article.js";
 import { useEffect, useRef, useState } from "react";
+import Progress from "../../components/progres/Progress.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -21,6 +22,8 @@ const Profil = () => {
   // },[translate]);
 
   const { firstName } = users[0];
+  const { weight, initialWeight } = infoBody[0];
+  const { week } = training[0];
 
   return (
     <div data-testid='profil-page' className='profil container flex-center'>
@@ -43,6 +46,12 @@ const Profil = () => {
             <Article key={id} title={title} article={article} urlImg={urlImg} />
           ))}
         </div>
+      </section>
+      <section className='container'>
+        <h2 className='uppercase'>Progression</h2>
+        <Progress label='poids' unity='kg' data={weight.at(-1)} initialWeight={initialWeight} />
+        <Progress label='distance' unity='km' data={week} />
+        <Progress label='calories' unity='Kcal' data={week} />
       </section>
     </div>
   );

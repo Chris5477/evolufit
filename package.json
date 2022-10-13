@@ -22,7 +22,7 @@
     "sass": "sass ./src/sass/sass.scss:./src/style.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --coverage",
+    "test": "react-scripts test --watchAll --coverage --silent=true",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

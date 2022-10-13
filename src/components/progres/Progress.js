@@ -9,21 +9,38 @@ export const getEvolutionWeight = (weight, initialWeight) => {
   }
 };
 
+export const sumData = (arr, key) => {
+  const dataExploit = arr.map((data) => data[key]);
+  return dataExploit.reduce((acc, val) => acc + val);
+};
+
 const Progress = ({ label, unity, initialWeight, data }) => {
   let getWeightProgression = null;
+
   if (label === "poids") {
     const newWeight = getEvolutionWeight(data, initialWeight);
-    getWeightProgression = `<p>${initialWeight !== newWeight && newWeight}</p>`;
+    <p>{data}</p>;
+    getWeightProgression = (
+      <>
+        <p>{data}</p>
+        <p>{initialWeight != newWeight && newWeight}</p>;
+      </>
+    );
+  } else {
+    getWeightProgression = (
+      <p>
+        {sumData(data, label)} {unity}
+      </p>
+    );
   }
 
   return (
     <section data-testid='progress' className='progress container'>
-      <h2 className='uppercase'></h2>
+      <h2 className='uppercase'>
+        {label} ({unity})
+      </h2>
       <div className='infos'>
-        <div className='indication'>
-          {label} ({unity})<p>{data}</p>
-          {getWeightProgression}
-        </div>
+        <div className='indication'>{getWeightProgression}</div>
         <div className='graphic'>{/* // graphic a definir */}</div>
       </div>
     </section>
