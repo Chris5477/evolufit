@@ -538,6 +538,11 @@ form .error {
 .progress p:first-child {
   font-size: 30px;
 }
+.progress .infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 /* CSS PLANNING PAGE **************************************************************** */
 .planning {

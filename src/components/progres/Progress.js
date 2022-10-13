@@ -1,3 +1,5 @@
+import ChartLine from "../linechart/ChartLine";
+
 export const getEvolutionWeight = (weight, initialWeight) => {
   const newWeight = weight - initialWeight;
   if (weight > initialWeight) {
@@ -16,14 +18,15 @@ export const sumData = (arr, key) => {
 };
 
 const Progress = ({ label, unity, initialWeight, data }) => {
+  const lastWeight = data.at(-1)
   let getWeightProgression = null;
 
   if (label === "poids") {
-    const newWeight = getEvolutionWeight(data, initialWeight);
-    <p>{data}</p>;
+    const newWeight = getEvolutionWeight(lastWeight, initialWeight);
+    <p>{lastWeight}</p>;
     getWeightProgression = (
       <>
-        <p>{data}</p>
+        <p>{lastWeight}</p>
         <p>{initialWeight != newWeight && newWeight}</p>;
       </>
     );
@@ -42,7 +45,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
       </h2>
       <div className='infos'>
         <div className='indication'>{getWeightProgression}</div>
-        <div className='graphic'>{/* // graphic a definir */}</div>
+        <ChartLine label={label} data={data} />
       </div>
     </section>
   );

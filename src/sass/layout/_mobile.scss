@@ -218,6 +218,10 @@
   p:first-child {
     font-size: 30px;
   }
+
+  .infos{
+    @include flex(space-between, flex-start)
+  }
 }
 
 /* CSS PLANNING PAGE **************************************************************** */

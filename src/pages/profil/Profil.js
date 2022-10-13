@@ -17,9 +17,9 @@ const Profil = () => {
     divElement.style.transition = "2s";
   };
 
-  // useEffect(() => {
-  //   setInterval(translateItem, 4000);
-  // },[translate]);
+  useEffect(() => {
+    setInterval(translateItem, 4000);
+  },[translate]);
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
@@ -58,7 +58,7 @@ const Profil = () => {
             <p>Inscrit depuis {signinDate}</p>
           </div>
         </div>
-        <Progress label='poids' unity='kg' data={weight.at(-1)} initialWeight={initialWeight} />
+        <Progress label='poids' unity='kg' data={weight}  initialWeight={initialWeight} />
         <Progress label='distance' unity='km' data={week} />
         <Progress label='calories' unity='Kcal' data={week} />
       </section>
