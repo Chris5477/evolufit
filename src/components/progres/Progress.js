@@ -11,7 +11,8 @@ export const getEvolutionWeight = (weight, initialWeight) => {
 
 export const sumData = (arr, key) => {
   const dataExploit = arr.map((data) => data[key]);
-  return dataExploit.reduce((acc, val) => acc + val);
+  const total = dataExploit.reduce((acc, val) => acc + val);
+  return Number.isInteger(total) ? total : total.toFixed(2)
 };
 
 const Progress = ({ label, unity, initialWeight, data }) => {
