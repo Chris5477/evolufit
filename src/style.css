@@ -131,7 +131,7 @@ ul li {
 
 form {
   min-height: 65vh;
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   color: #FFF;
   padding: 10% 0 5% 12%;
 }
@@ -330,7 +330,7 @@ form .error {
 
 /* CSS HOME PAGE ******************************************************************************/
 .section-part {
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   font-weight: bold;
   font-size: 25px;
   padding: 15px 30px;
@@ -397,37 +397,48 @@ form .error {
 
 /* CSS PROFIL PAGE **************************************************************** */
 .profil {
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
   flex-direction: column;
   position: relative;
 }
 
+.banner-profil {
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
+  position: absolute;
+  top: 0%;
+  z-index: -10;
+}
+
 .info-user {
+  margin-top: 180px;
   font-size: 20px;
+  padding: 20px 0;
 }
 .info-user .greet-user {
-  color: #FFF;
-  padding: 15px 0;
+  color: black;
+  padding: 15px 10px;
+  font-size: 11vw;
+  font-weight: bolder;
+  text-align: left;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 218, 193) 59%, rgba(255, 111, 15, 0.2147233894) 100%);
 }
-.info-user span {
-  letter-spacing: 1.4px;
-  font-size: 10vw;
-  font-weight: 600;
+.info-user p {
+  font-size: 6vw;
+  padding: 15px 10px;
+  color: black;
 }
 
 .slider {
   width: 100%;
   height: auto;
-  padding: 40px 0;
+  padding: 20px 0;
   overflow: hidden;
   background-color: #FFF;
-  margin-top: 20px;
 }
 .slider h2 {
   padding-left: 20px;
   text-align: left;
   color: black;
-  font-size: 18px;
+  font-size: 26px;
 }
 
 .items {
@@ -451,7 +462,8 @@ form .error {
   object-fit: cover;
   position: absolute;
 }
-.item .overlay {
+
+.overlay {
   width: 300px;
   height: auto;
   position: absolute;
@@ -459,21 +471,77 @@ form .error {
   bottom: 0;
   padding: 5px;
 }
-.item .overlay h3 {
+.overlay h3 {
   text-align: left;
   font-size: 18px;
   margin-bottom: 5px;
 }
-.item .overlay p {
+.overlay p {
   font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.user-progres {
+  width: 100%;
+  height: auto;
+}
+.user-progres > h2 {
+  text-align: left;
+  color: black;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.divider {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
+  padding-left: 20px;
+}
+.divider h2 {
+  color: #FFF;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+.divider .banner-progres {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.divider .calendar-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #FFF;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.progress {
+  width: 95%;
+  height: 150px;
+  border-bottom: 1px solid #555555;
+  padding: 20px;
+  margin: 20px 0;
+}
+.progress h2 {
+  text-align: left;
+  color: #555555;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.progress p {
+  color: rgb(34, 34, 34);
+}
+.progress p:first-child {
+  font-size: 30px;
+}
+
 /* CSS PLANNING PAGE **************************************************************** */
 .planning {
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   overflow: hidden;
   color: white;
 }
@@ -518,7 +586,7 @@ form .error {
 
 /* CSS TRAINING AND CARDIO PAGE ********************************************************** */
 .training {
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   flex-direction: column;
   padding-bottom: 25px;
 }
@@ -539,7 +607,7 @@ form .error {
 
 /* CSS EXERCICE PAGE *********************************** */
 .exercice {
-  background: radial-gradient(circle, rgb(69, 69, 69) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   flex-direction: column;
   font-weight: 800;
   padding: 40px 0;

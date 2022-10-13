@@ -29,14 +29,14 @@ const Progress = ({ label, unity, initialWeight, data }) => {
   } else {
     getWeightProgression = (
       <p>
-        {sumData(data, label)} {unity}
+        {sumData(data, label)} <br /> {unity}
       </p>
     );
   }
 
   return (
     <section data-testid='progress' className='progress container'>
-      <h2 className='uppercase'>
+      <h2>
         {label} ({unity})
       </h2>
       <div className='infos'>
