@@ -92,37 +92,61 @@
   }
 }
 
-.program,
-.daily-objectif {
-  flex-direction: column;
-}
-
-.program {
-  position: relative;
+.slider {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  overflow: hidden;
+  background-color: $light;
+  margin-top: 20px;
 
   h2 {
-    color: $light;
-  }
-
-  span {
-    display: inline-block;
-    margin: 10px 0;
-    font-size: 10vw;
-    color: $primary;
-  }
-
-  a {
-    @include posAbs(90%, 50%);
-    transform: translateX(-50%);
+    padding-left: 20px;
+    text-align: left;
+    color: black;
     font-size: 18px;
   }
 }
 
-.daily-objectif {
-  margin-bottom: 80px;
+.items {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
 
-  li {
-    margin: 15px 0;
+.item {
+  min-width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 15px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .overlay {
+    @include sizeContainer(300px, auto);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.492);
+    bottom: 0;
+    padding: 5px;
+    h3 {
+      text-align: left;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 

@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react"
-import Slide from "./Slide"
+import Article from "./Article"
 
 describe("Slide Component", () => {
 
-    beforeEach(() => render(<Slide />))
+    beforeEach(() => render(<Article />))
 
     test("Should render The componant", () => {
         const slide = screen.getByTestId("slide")
