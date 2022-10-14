@@ -58,7 +58,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
         <div className='indication'>{getWeightProgression}</div>
         <ChartLine label={label} data={data} />
       </div>
-      {modal && <Modal setModal={setModal} />}
+      {modal && <Modal setModal={setModal} content={""} />}
     </section>
   );
 };

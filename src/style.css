@@ -247,49 +247,13 @@ form .error {
 }
 
 .modal {
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.719);
-}
-
-.body-modal {
-  width: 80%;
-  height: auto;
-  padding: 50px 25px;
-  background: #ff7700;
-  color: black;
-  border-radius: 10px;
-}
-.body-modal h2 {
-  color: black;
-}
-.body-modal button {
-  background-color: black;
-  color: #FFF;
-}
-.body-modal label {
-  font-size: 22px;
-  font-weight: 800;
-}
-.body-modal input {
-  width: 90%;
-  height: 40px;
-  margin: 10px 0;
-  padding-left: 15px;
-  color: #ff7700;
-  font-weight: bolder;
-  font-size: 20px;
-}
-
-.form-add-result {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  margin: 50px 0;
+  z-index: 1000;
+  background-color: #FFF;
 }
 
 .tabs-navigation {
