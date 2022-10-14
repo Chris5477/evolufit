@@ -532,13 +532,22 @@ form .error {
   font-size: 18px;
   margin-bottom: 30px;
 }
+.progress img {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.4s;
+}
+.progress :active > img {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
 .progress p {
   color: rgb(34, 34, 34);
 }
 .progress p:first-child {
   font-size: 30px;
 }
-.progress .infos {
+.progress .space-flex {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
