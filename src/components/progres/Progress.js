@@ -2,6 +2,7 @@ import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
 import { useState } from "react";
 import Modal from "../modal/Modal";
+import Dataline from "../dataline/Dataline";
 
 export const getEvolutionWeight = (weight, initialWeight) => {
   const newWeight = weight - initialWeight;
@@ -21,7 +22,7 @@ export const sumData = (arr, key) => {
 };
 
 const Progress = ({ label, unity, initialWeight, data }) => {
-  const lastWeight = data.at(-1);
+  const lastWeight = data.at(-1).weight;
   let getWeightProgression = null;
 
   const [modal, setModal] = useState(false);
@@ -52,13 +53,13 @@ const Progress = ({ label, unity, initialWeight, data }) => {
         <h2>
           {label} ({unity})
         </h2>
-        <img onClick={openModal} src={eye} alt='See more...' />
+        <img className="open-btn" onClick={openModal} src={eye} alt='See more...' />
       </div>
       <div className='space-flex'>
         <div className='indication'>{getWeightProgression}</div>
         <ChartLine label={label} data={data} />
       </div>
-      {modal && <Modal setModal={setModal} content={""} />}
+      {modal && <Modal setModal={setModal} data={data} label={label} />}
     </section>
   );
 };

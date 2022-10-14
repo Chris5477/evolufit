@@ -181,71 +181,6 @@ form .error {
   color: red;
 }
 
-.recharts-legend-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 15%;
-}
-
-.recharts-default-legend:last-child {
-  font-size: 16px;
-  flex-wrap: nowrap;
-}
-.recharts-default-legend:last-child span {
-  margin: 0 15px;
-}
-
-.card {
-  width: 90%;
-  height: 120px;
-  text-align: center;
-  background-color: #ff7700;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-.card a {
-  color: #FFF;
-  font-size: 20px;
-  line-height: 120px;
-  font-weight: 800;
-}
-
-.timer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 40px 0;
-  padding-left: 20px;
-}
-
-.timer-btns {
-  width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.timer-btns button {
-  font-weight: 800;
-  width: 150px;
-  padding: 12px 0;
-  margin: 5px 0;
-}
-
-.chrono {
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  text-align: center;
-  border-radius: 14px;
-  background-color: #ff7700;
-}
-.chrono h2 {
-  color: black;
-}
-
 .modal {
   position: fixed;
   width: 100%;
@@ -254,6 +189,15 @@ form .error {
   left: 0;
   z-index: 1000;
   background-color: #FFF;
+}
+.modal .close-modal {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  color: #ff7700;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .tabs-navigation {

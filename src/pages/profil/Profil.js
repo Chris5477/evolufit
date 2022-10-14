@@ -17,9 +17,9 @@ const Profil = () => {
     divElement.style.transition = "2s";
   };
 
-  useEffect(() => {
-    setInterval(translateItem, 4000);
-  },[translate]);
+  // useEffect(() => {
+  //   setInterval(translateItem, 4000);
+  // },[translate]);
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
