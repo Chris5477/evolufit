@@ -208,20 +208,20 @@ form .error {
   bottom: 0;
   left: 0;
   z-index: 1000;
+  background-color: #FFF;
+  border-top: 1px solid #6f6f6f;
 }
 .tabs-navigation li {
   width: 33.3333333333%;
   height: 50px;
-  background-color: #ff7700;
   padding: 10px 40px;
-  border: 1px solid black;
 }
 .tabs-navigation a img {
   width: 90%;
   max-width: 50px;
 }
 .tabs-navigation .active-tab {
-  background-color: #994700;
+  background-color: #ff9233;
 }
 
 .menu-btn {

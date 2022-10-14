@@ -1,6 +1,7 @@
 import { Sign } from "crypto";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
+import Tabs from "./components/tabs/Tabs";
 import Topbar from "./components/Topbar/TopBar";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/signin' element={<Signin />} />
           <Route path='/profil' element={<Profil />} />
         </Routes>
+        <Tabs />
         <Footer />
       </div>
     </BrowserRouter>

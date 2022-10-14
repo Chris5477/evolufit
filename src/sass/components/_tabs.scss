@@ -5,12 +5,13 @@
 	bottom: 0;
 	left: 0;
 	z-index: 1000;
+	background-color: $light;
+	border-top: 1px solid lighten($color: $dark, $amount: 30);;
+
 
 	li {
 		@include sizeContainer(calc(100% / 3), 50px);
-		background-color: $primary;
 		padding: 10px 40px;
-		border: 1px solid black;
 	}
 
 	a {
@@ -21,6 +22,6 @@
 	}
 
 	.active-tab {
-		background-color: darken($color: $primary, $amount: 20);
+		background-color: lighten($color: $primary, $amount: 10);
 	}
 }
