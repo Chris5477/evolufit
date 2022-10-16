@@ -236,103 +236,36 @@
   }
 }
 
-/* CSS PLANNING PAGE **************************************************************** */
+/* ERROR PAGE CSS **********************************************************/
 
-.planning {
+.error-page{
   background: $gradient;
-  overflow: hidden;
-  color: white;
-
-  > h2 {
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-
-.daily-workout {
-  text-align: center;
-  padding-top: 25px;
-
-  p {
-    margin: 20px;
-  }
-}
-
-.week-program {
-  @include sizeContainer(100%, auto);
-  @include flex(space-around, center);
-}
-
-.day-week {
+  padding: 40px 25px;
   flex-direction: column;
-  padding: 25px 0;
 
-  h2 {
-    color: white;
-  }
-}
-
-.day-week ul p {
-  display: block;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.day-week ul p:nth-child(odd) {
-  color: $primary;
-}
-
-/* CSS TRAINING AND CARDIO PAGE ********************************************************** */
-
-.training {
-  background: $gradient;
-  flex-direction: column;
-  padding-bottom: 25px;
-
-  h2 {
-    padding: 20px 0;
+  h2{
+    font-size: 60px;
   }
 
-  h3 {
-    padding: 10px;
-  }
-
-  .myExercice {
-    @include sizeContainer(100%, auto);
-    @include flex(flex-start, center);
-    flex-direction: column;
-  }
-}
-
-/* CSS EXERCICE PAGE *********************************** */
-
-.exercice {
-  background: $gradient;
-  flex-direction: column;
-  font-weight: 800;
-  padding: 40px 0;
-
-  h2 {
-    padding: 15px;
-  }
-
-  p {
-    padding: 0px 30px;
+  p{
+    font-size: 24px;
     margin: 20px 0;
-    text-align: center;
   }
 
-  .muscular {
-    color: $primary;
-    font-size: 55px;
+  .message-serveur{
+    font-size: 40px;
   }
-}
 
-.container-btns {
-  @include flex(space-around, center);
-  padding: 15px 0;
-
-  button {
-    width: 120px;
+  .error-type{
+    font-size: 14px;
   }
+
+  a{
+    font-size: 18px;
+    font-style: italic;
+    color: $dark;
+    cursor: pointer;
+
+  }
+
 }

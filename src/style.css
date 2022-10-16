@@ -562,100 +562,30 @@ form .error {
   align-items: flex-start;
 }
 
-/* CSS PLANNING PAGE **************************************************************** */
-.planning {
+/* ERROR PAGE CSS **********************************************************/
+.error-page {
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
-  overflow: hidden;
-  color: white;
-}
-.planning > h2 {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.daily-workout {
-  text-align: center;
-  padding-top: 25px;
-}
-.daily-workout p {
-  margin: 20px;
-}
-
-.week-program {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.day-week {
-  flex-direction: column;
-  padding: 25px 0;
-}
-.day-week h2 {
-  color: white;
-}
-
-.day-week ul p {
-  display: block;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.day-week ul p:nth-child(odd) {
-  color: #ff7700;
-}
-
-/* CSS TRAINING AND CARDIO PAGE ********************************************************** */
-.training {
-  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
-  flex-direction: column;
-  padding-bottom: 25px;
-}
-.training h2 {
-  padding: 20px 0;
-}
-.training h3 {
-  padding: 10px;
-}
-.training .myExercice {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 40px 25px;
   flex-direction: column;
 }
-
-/* CSS EXERCICE PAGE *********************************** */
-.exercice {
-  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
-  flex-direction: column;
-  font-weight: 800;
-  padding: 40px 0;
+.error-page h2 {
+  font-size: 60px;
 }
-.exercice h2 {
-  padding: 15px;
-}
-.exercice p {
-  padding: 0px 30px;
+.error-page p {
+  font-size: 24px;
   margin: 20px 0;
-  text-align: center;
 }
-.exercice .muscular {
-  color: #ff7700;
-  font-size: 55px;
+.error-page .message-serveur {
+  font-size: 40px;
 }
-
-.container-btns {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 0;
+.error-page .error-type {
+  font-size: 14px;
 }
-.container-btns button {
-  width: 120px;
+.error-page a {
+  font-size: 18px;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
