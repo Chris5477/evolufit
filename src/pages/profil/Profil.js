@@ -19,15 +19,17 @@ const Profil = () => {
     divElement.style.transition = "2s";
   };
 
-  // useEffect(() => {
-  //   setInterval(translateItem, 4000);
-  // }, [translate]);
+  useEffect(() => {
+    setInterval(translateItem, 4000);
+  }, [translate]);
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
   const { week } = training[0];
 
-  useEffect(() => {localStorage.getItem("token") == null && navigate("/")},[]);
+  useEffect(() => {
+    localStorage.getItem("token") == null && navigate("/");
+  }, []);
 
   return (
     <div data-testid='profil-page' className='profil container flex-center'>

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.io/chris5477/evolufit",
+  "homepage": "http://chris5477.github.io/evolufit",
   "name": "evolufit",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll --coverage",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d deploy"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
