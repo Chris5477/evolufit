@@ -7,6 +7,11 @@
 		transform: rotateZ(-5deg);
 		font-size: 28px;
 	}
+	
+	.link-button{
+		background-color: $primary;
+		color:$light;
+	}
 }
 
 .logged {

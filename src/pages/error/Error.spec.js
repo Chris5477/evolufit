@@ -15,10 +15,5 @@ describe("Error page", () => {
   test("Should render an error page", () => {
     const error = screen.getByTestId("error-page");
     expect(error).toBeInTheDocument();
-  });
-
-  test("Should display an apology message to user", (done) => {
-    const serverMessage = document.querySelector(".message-serveur");
-    expect(serverMessage).not.toBeInTheDocument();
-  });
+  })
 });

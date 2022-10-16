@@ -33,9 +33,13 @@
 
 .other-info {
   @include sizeContainer(100%, 400px);
-  background-color: black;
   position: relative;
   overflow: hidden;
+
+  h2{
+    color : $primary;
+    padding: 20px 0;
+  }
 
   aside {
     @include sizeContainer(60%, 200px);
@@ -43,15 +47,16 @@
     position: relative;
     z-index: 1000;
     padding: 20px 0;
+    background-color: $dark; 
 
     p {
       font-size: 28px;
       text-align: center;
       font-weight: 800;
-      color: black;
+      color: $primary;
 
       &:last-child {
-        color: $primary;
+        color: $light;
       }
     }
   }
@@ -59,7 +64,7 @@
   img {
     width: 100%;
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: -30%;
   }
 }
@@ -238,34 +243,32 @@
 
 /* ERROR PAGE CSS **********************************************************/
 
-.error-page{
+.error-page {
   background: $gradient;
   padding: 40px 25px;
   flex-direction: column;
 
-  h2{
+  h2 {
     font-size: 60px;
   }
 
-  p{
+  p {
     font-size: 24px;
     margin: 20px 0;
   }
 
-  .message-serveur{
+  .message-serveur {
     font-size: 40px;
   }
 
-  .error-type{
+  .error-type {
     font-size: 14px;
   }
 
-  a{
+  a {
     font-size: 18px;
     font-style: italic;
     color: $dark;
     cursor: pointer;
-
   }
-
 }

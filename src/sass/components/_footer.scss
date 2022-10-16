@@ -1,7 +1,9 @@
 footer {
   padding: 15px 10px 80px 10px;
+  background-color: #FFF;
 
   h2 {
+    color :$primary;
     transform: rotateZ(-5deg);
     text-align: left;
   }
@@ -17,7 +19,7 @@ ul {
   font-weight: bold;
 
   li {
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 0;
     color: black;
   }
