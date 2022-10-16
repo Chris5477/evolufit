@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/evolufit/static/css/main.9ece2f26.css",
-    "main.js": "/evolufit/static/js/main.32eb5881.js",
+    "main.js": "/evolufit/static/js/main.57738ef6.js",
     "static/js/787.3beaa5d6.chunk.js": "/evolufit/static/js/787.3beaa5d6.chunk.js",
     "static/media/reprise.png": "/evolufit/static/media/reprise.44a9d8d522e1d5a9935f.png",
     "static/media/athlete1.png": "/evolufit/static/media/athlete1.b496a6150a289b0ca711.png",
@@ -26,11 +26,11 @@
     "index.html": "/evolufit/index.html",
     "static/media/avatar.svg": "/evolufit/static/media/avatar.bd966c88b2949a5e0e0c0cbe62c5effe.svg",
     "main.9ece2f26.css.map": "/evolufit/static/css/main.9ece2f26.css.map",
-    "main.32eb5881.js.map": "/evolufit/static/js/main.32eb5881.js.map",
+    "main.57738ef6.js.map": "/evolufit/static/js/main.57738ef6.js.map",
     "787.3beaa5d6.chunk.js.map": "/evolufit/static/js/787.3beaa5d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ece2f26.css",
-    "static/js/main.32eb5881.js"
+    "static/js/main.57738ef6.js"
   ]
 }
