@@ -21,8 +21,8 @@ const App = () => {
           <Route path='/signin' element={<Signin />} />
           <Route path='/profil' element={<Profil />} />
         </Routes>
-        <Tabs />
-        <Footer />
+        {localStorage.getItem("token") && <Tabs />}
+        <Footer /> 
       </div>
     </BrowserRouter>
   );

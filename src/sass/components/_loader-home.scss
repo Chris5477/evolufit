@@ -1,0 +1,92 @@
+.loader-home {
+  @include sizeContainer(100%, 100%);
+  @include flex(center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: $gradient;
+  animation: disapear 2s 4s forwards;
+
+  h1 {
+    color: $light;
+    font-size: 50px;
+    font-weight: bolder;
+    @include posAbs(50%, 50%);
+    transform: rotateZ(-5deg) translate(-50%, -80%);
+    opacity: 0;
+    animation :opacity 1s 2s linear forwards;
+  }
+
+  .cadre {
+    @include sizeContainer(180px, 180px);
+    @include flex (center,center);
+    background-color: transparent;
+    border: 30px solid $light;
+    position: relative;
+    animation: spinner 1s  ease-out 3 forwards;
+
+    &::before {
+      content: "";
+      @include sizeContainer(30px, 30px);
+      position: absolute;
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $gradient;
+    }
+    &::after {
+      content: "";
+      @include sizeContainer(30px, 30px);
+      position: absolute;
+      bottom: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $gradient;
+    }
+  }
+}
+
+.scalup {
+  @include sizeContainer(80px, 80px);
+  animation: scale 1s 0.2s linear 3;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  1% {
+    border-radius: 50%;
+  }
+  99% {
+    border-radius: 20%;
+  }
+  100% {
+    border-radius: none;
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes opacity {
+  0%{opacity: 0;}
+
+  100%{opacity: 1;}
+}
+
+@keyframes disapear {
+  100%{opacity: 0};
+}
+

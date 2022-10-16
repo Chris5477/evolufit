@@ -5,9 +5,11 @@ import Article from "../../components/article/Article.js";
 import { useEffect, useRef, useState } from "react";
 import Progress from "../../components/progres/Progress.js";
 import calendar from "../../assets/icons/calendar.svg";
+import { useNavigate } from "react-router-dom";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
+  const navigate = useNavigate();
   const slideRef = useRef();
 
   const translateItem = () => {
@@ -17,13 +19,15 @@ const Profil = () => {
     divElement.style.transition = "2s";
   };
 
-  useEffect(() => {
-    setInterval(translateItem, 4000);
-  }, [translate]);
+  // useEffect(() => {
+  //   setInterval(translateItem, 4000);
+  // }, [translate]);
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
   const { week } = training[0];
+
+  useEffect(() => {localStorage.getItem("token") == null && navigate("/")},[]);
 
   return (
     <div data-testid='profil-page' className='profil container flex-center'>

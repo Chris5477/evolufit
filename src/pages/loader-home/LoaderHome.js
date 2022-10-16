@@ -1,8 +1,32 @@
+import { useEffect, useRef, useState } from "react";
+import heart from "../../assets/icons/heart.svg";
+import body from "../../assets/icons/body.svg";
+
 const LoaderHome = () => {
-    return(
+  const arr = [heart, body];
 
-        <div className="loader-home" data-testid="loader-home"></div>
-    )
-}
+  const [index, setIndex] = useState(0);
+  const ref = useRef();
+  const upIndex = index < 1;
 
-export default LoaderHome
+  useEffect(() => {
+    setTimeout(() => setIndex(index + 1), 1000);
+  }, [upIndex]);
+
+  useEffect(() => {
+    setTimeout(() => ref.current.style.display="none", 6000);
+  }, []);
+
+  return (
+    <div ref={ref} className='loader-home' data-testid='loader-home'>
+      {index < 2 && (
+        <div className='cadre'>
+          <img className='scalup' src={arr[index]} alt='logo' />
+        </div>
+      )}
+      <h1>EVOLU'FIT</h1>
+    </div>
+  );
+};
+
+export default LoaderHome;

@@ -1,12 +1,26 @@
-import { render, screen } from "@testing-library/react"
-import App from "./App"
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
 describe("App", () => {
-    test("Should render App component", () => {
-        render(<App />)
+  beforeAll(() => localStorage.setItem("token", "ok"));
+  afterAll(() => localStorage.clear());
 
-        const app = screen.getByTestId("app")
+  test("Should render App component", () => {
+    render(<App />);
 
-        expect(app).toBeInTheDocument()
-    })
-})
+    const app = screen.getByTestId("app");
+    expect(app).toBeInTheDocument();
+
+    const nav = document.querySelector("nav");
+    expect(nav).toBeInTheDocument();
+  });
+});
+
+describe("localStorage", () => {
+  test("Should not display the tabs with nodata in localstorage", () => {
+    render(<App />);
+
+    const nav = document.querySelector("nav");
+    expect(nav).toBeNull();
+  });
+});
