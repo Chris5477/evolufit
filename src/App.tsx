@@ -1,8 +1,8 @@
-import { Sign } from "crypto";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Tabs from "./components/tabs/Tabs";
 import Topbar from "./components/Topbar/TopBar";
+import Error from "./pages/error/Error";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
 import Profil from "./pages/profil/Profil";
@@ -20,6 +20,7 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/profil' element={<Profil />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         {localStorage.getItem("token") && <Tabs />}
         <Footer /> 
