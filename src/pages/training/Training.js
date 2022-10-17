@@ -1,5 +1,6 @@
 import bannierMuscu from "../../assets/others/bannier-muscu.png";
 import { PieChart, Pie, Cell, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
+import Button from "../../components/button/Button";
 
 const Training = () => {
   const data = [
@@ -140,7 +141,7 @@ const Training = () => {
             <Radar name='performance' dataKey='performance' stroke='#ff7700' fill='#ff7700' fillOpacity={0.8} />
             <Legend />
           </RadarChart>
-          <button className='uppercase'>Consulter</button>
+          <Button onClick={() => null} content='Consulter' />
         </section>
         <section>
           <h3>Muscle des bras</h3>
@@ -151,7 +152,7 @@ const Training = () => {
             <Radar name='performance' dataKey='performance' stroke='#ff7700' fill='#ff7700' fillOpacity={0.8} />
             <Legend />
           </RadarChart>
-          <button className='uppercase'>Consulter</button>
+          <Button onClick={() => null} content='Consulter' />
         </section>
         <section>
           <h3>Muscle des jambes</h3>
@@ -162,7 +163,7 @@ const Training = () => {
             <Radar name='performance' dataKey='performance' stroke='#ff7700' fill='#ff7700' fillOpacity={0.8} />
             <Legend />
           </RadarChart>
-          <button className='uppercase'>Consulter</button>
+          <Button onClick={() => null} content='Consulter' />
         </section>
       </div>
     </div>
