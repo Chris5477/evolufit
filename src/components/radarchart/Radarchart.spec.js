@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import Radar from "./Radarchart"
+import SpiderChart from "./Radarchart"
 
 describe("Radarchart Component", () => {
   test("Should render the graphic", () => {
-    render(<Radar />);
+    render(<SpiderChart />);
 
     const radar = screen.getByTestId("radarchart");
     expect(radar).toBeInTheDocument();
