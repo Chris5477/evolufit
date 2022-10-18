@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Tabs from "./components/tabs/Tabs";
 import Topbar from "./components/Topbar/TopBar";
+import Cardio from "./pages/cardio/Cardio";
 import Error from "./pages/error/Error";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/profil' element={<Profil />} />
+          <Route path='/cardio' element={<Cardio />} />
           <Route path='/training' element={<Training />} />
           <Route path="*" element={<Error />} />
         </Routes>
