@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Progress from "../../components/progres/Progress.js";
 import calendar from "../../assets/icons/calendar.svg";
 import { useNavigate } from "react-router-dom";
+import IMC from "../../components/imc/IMC.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -68,6 +69,7 @@ const Profil = () => {
         <Progress label='distance' unity='km' data={week} />
         <Progress label='calories' unity='Kcal' data={week} />
       </section>
+      <IMC />
     </div>
   );
 };
