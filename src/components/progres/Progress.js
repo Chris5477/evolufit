@@ -2,7 +2,6 @@ import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
 import { useState } from "react";
 import Modal from "../modal/Modal";
-import Dataline from "../dataline/Dataline";
 
 export const getEvolutionWeight = (weight, initialWeight) => {
   const newWeight = weight - initialWeight;

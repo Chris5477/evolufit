@@ -2,7 +2,8 @@ import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "r
 
 const Dataline = ({ data, label }) => {
   const dataKey = label === "poids" ? "weight" : label;
-
+  
+ 
   return (
     <div data-testid='dataline' className='dataline'>
       <LineChart width={400} height={350} data={data} margin={{ right: 50 }}>
