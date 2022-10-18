@@ -36,8 +36,8 @@
   position: relative;
   overflow: hidden;
 
-  h2{
-    color : $primary;
+  h2 {
+    color: $primary;
     padding: 20px 0;
   }
 
@@ -47,7 +47,7 @@
     position: relative;
     z-index: 1000;
     padding: 20px 0;
-    background-color: $dark; 
+    background-color: $dark;
 
     p {
       font-size: 28px;
@@ -271,4 +271,40 @@
     color: $dark;
     cursor: pointer;
   }
+}
+
+/* TRAINING PAGE CSS ***********************************************************/
+
+.training-page,
+.pie,
+.radar {
+  flex-direction: column;
+}
+
+.radar{
+  margin-bottom: 15px;
+}
+
+.pie, .radar {
+  h2,
+  h3 {
+    color: $light;
+    background-color: $primary;
+    padding: 35px 0;
+    margin-bottom: 30px;
+  }
+
+  h3{
+    margin: 20px;
+  }
+
+  p {
+    color: $dark;
+    padding: 25px;
+    text-align: justify;
+  }
+}
+.recharts-legend-wrapper {
+  @include flex(center, center);
+  transform: translateY(10px);
 }
