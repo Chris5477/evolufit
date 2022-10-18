@@ -626,17 +626,20 @@ form .error {
 }
 
 .pie h2,
-.pie h3, .radar h2,
+.pie h3,
+.radar h2,
 .radar h3 {
   color: rgb(246, 246, 246);
   background-color: #ff7700;
   padding: 35px 0;
   margin-bottom: 30px;
 }
-.pie h3, .radar h3 {
+.pie h3,
+.radar h3 {
   margin: 20px;
 }
-.pie p, .radar p {
+.pie p,
+.radar p {
   color: rgb(34, 34, 34);
   padding: 25px;
   text-align: justify;
@@ -647,6 +650,54 @@ form .error {
   justify-content: center;
   align-items: center;
   transform: translateY(10px);
+}
+
+.info-imc {
+  flex-direction: column;
+  margin-top: 30px;
+}
+.info-imc h2,
+.info-imc h3,
+.info-imc p {
+  width: 100%;
+  color: rgb(34, 34, 34);
+  text-align: left;
+  padding: 5px 25px;
+}
+.info-imc p {
+  margin-bottom: 45px;
+}
+.info-imc h2 {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.info-imc h3 {
+  font-size: 28px;
+}
+
+.imc {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+.imc .part-imc {
+  width: 24.3902439024%;
+  border-top: 5px solid #ff7700;
+}
+.imc p {
+  padding-top: 5px;
+  color: rgb(34, 34, 34);
+  font-size: 13px;
+}
+.imc .range {
+  width: 90%;
+  height: 0;
+  position: absolute;
+  top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

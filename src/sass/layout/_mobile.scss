@@ -281,11 +281,12 @@
   flex-direction: column;
 }
 
-.radar{
+.radar {
   margin-bottom: 15px;
 }
 
-.pie, .radar {
+.pie,
+.radar {
   h2,
   h3 {
     color: $light;
@@ -294,7 +295,7 @@
     margin-bottom: 30px;
   }
 
-  h3{
+  h3 {
     margin: 20px;
   }
 
@@ -307,4 +308,56 @@
 .recharts-legend-wrapper {
   @include flex(center, center);
   transform: translateY(10px);
+}
+
+.info-imc {
+
+  flex-direction: column;
+  margin-top: 30px;
+
+  h2,
+  h3,
+  p {
+    width: 100%;
+    color: $dark;
+    text-align: left;
+    padding: 5px 25px;
+  }
+
+  p{
+    margin-bottom: 45px;
+  }
+
+  h2 {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
+
+.imc {
+  @include sizeContainer(90%, 50px);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+  .part-imc {
+    width: calc(100% / 4.1);
+    border-top: 5px solid $primary;
+  }
+  p {
+    padding-top: 5px;
+    color: $dark;
+    font-size: 13px;
+  }
+
+  .range {
+    @include sizeContainer(90%, 0);
+    position: absolute;
+    top: 2px;
+  }
 }
