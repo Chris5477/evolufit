@@ -704,12 +704,21 @@ form .error {
 }
 
 /* CARDIO PAGE CSS **********************************************/
+.cardio-page h2 {
+  color: black;
+  padding: 15px 0;
+}
+
 .exocardio, .dataline {
   margin: 40px 0;
 }
 .exocardio .user-progres button, .dataline .user-progres button {
   display: block;
   margin: 30px auto;
+}
+
+.exocardio h2:first-child {
+  padding-left: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

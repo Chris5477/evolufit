@@ -18,8 +18,7 @@ export const getEvolutionWeight = (weight, initialWeight) => {
 export const sumData = (arr, key) => {
   const dataExploit = arr.map((data) => data[key]);
   let total = dataExploit.reduce((acc, val) => acc + val);
-  total = key === "distance" ? Number(total / 1000) : total  
-  console.log(typeof total)
+  total = key === "distance" ? Number(total / 100) : total  
   return Number.isInteger(total) ? total : total.toFixed(2);
 };
 
