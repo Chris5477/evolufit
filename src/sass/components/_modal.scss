@@ -6,7 +6,31 @@
   z-index: 1000;
   background-color: $light;
 
-  .close-modal{
+  .container-modal {
+    @include sizeContainer(90%, 80vh);
+  }
+
+  .header-modal h2 {
+    color: $dark;
+    padding: 20px;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+  .content-modal {
+    text-align: justify;
+    padding: 10px 20px;
+    color: $dark;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+
+    .content-other{
+      margin: 20px 0;
+    }
+  }
+
+  .close-modal {
     position: absolute;
     top: 2%;
     right: 4%;
@@ -16,4 +40,3 @@
     cursor: pointer;
   }
 }
-

@@ -29,7 +29,7 @@ const Login = () => {
       createMessage("success", "Connexion en cours...");
       localStorage.setItem("token", JSON.stringify("test"));
       setTimeout(() => navigate("/profil"), 1500);
-    } else if (pseudo && password && pseudo !== "admin" && password !== "12345") {
+    } else if ((pseudo && password) && (pseudo !== "admin" || password !== "12345")) {
       createMessage("error", "Identifiants incorrects");
     } else {
       createMessage("error", "Veuillez remplir tous les champs");
@@ -38,6 +38,7 @@ const Login = () => {
 
   return (
     <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
+      <h2 className="uppercase">Connexion</h2>
       <FormData
         label='pseudo'
         valueInput={pseudo}
@@ -52,12 +53,12 @@ const Login = () => {
         message={message.code === "error" && message.message}
       />
 
-      <input className='link-button uppercase' type='submit' value='Se connecter' />
       {message.code === "success" ? (
         <p className='feedback-form validation success'>{message.message}</p>
       ) : (
         <p className='feedback-form validation error'>{message.message}</p>
       )}
+      <input className='link-button uppercase' type='submit' value='Se connecter' />
     </form>
   );
 };

@@ -1,7 +1,7 @@
 import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
 import { useState } from "react";
-import Modal from "../modal/Modal";
+import ModalGraphic from "../modal-graphic/ModalGraphic";
 
 export const getEvolutionWeight = (weight, initialWeight) => {
   const newWeight = weight - initialWeight;
@@ -14,18 +14,17 @@ export const getEvolutionWeight = (weight, initialWeight) => {
   }
 };
 
-
 export const sumData = (arr, key) => {
   const dataExploit = arr.map((data) => data[key]);
   let total = dataExploit.reduce((acc, val) => acc + val);
-  total = key === "distance" ? Number(total / 100) : total  
+  total = key === "distance" ? Number(total / 100) : total;
   return Number.isInteger(total) ? total : total.toFixed(2);
 };
 
 const Progress = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data.at(-1).weight;
   let getWeightProgression = null;
-  
+
   const [modal, setModal] = useState(false);
 
   const openModal = () => {
@@ -60,7 +59,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
         <div className='indication'>{getWeightProgression}</div>
         <ChartLine label={label} data={data} />
       </div>
-      {modal && <Modal setModal={setModal} data={data} label={label} />}
+      {modal && <ModalGraphic setModal={setModal} data={data} label={label} />}
     </section>
   );
 };

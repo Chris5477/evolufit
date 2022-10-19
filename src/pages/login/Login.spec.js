@@ -20,13 +20,10 @@ describe("Login Page", () => {
 
   describe("test login function", () => {
     test("Should display an error message if fields aren't filled or wrong input", async () => {
-      const [pseudo, password] = [...document.querySelectorAll("input")];
       fireEvent.submit(form);
 
-      if (!pseudo.value || !password.value) {
-        const errorTxt = await screen.findAllByText("Veuillez remplir tous les champs");
-        expect(errorTxt).toBeTruthy();
-      }
+      const errorTxt = await screen.findAllByText("Veuillez remplir tous les champs");
+      expect(errorTxt).toBeTruthy();
     });
 
     test("Should display a success message then redirect user on his profil page", async () => {
@@ -35,10 +32,8 @@ describe("Login Page", () => {
       fireEvent.change(password, { target: { value: "12345" } });
       fireEvent.submit(form);
 
-      if (pseudo.value === "admin" && password.value === "12345") {
-        const successTxt = await screen.findAllByText("Connexion en cours...");
-        expect(successTxt).toBeTruthy();
-      }
+      const successTxt = await screen.findAllByText("Connexion en cours...");
+      expect(successTxt).toBeTruthy();
     });
     test("Should display a error message about wrong ids", async () => {
       const [pseudo, password] = [...document.querySelectorAll("input")];
@@ -46,10 +41,8 @@ describe("Login Page", () => {
       fireEvent.change(password, { target: { value: "password" } });
       fireEvent.submit(form);
 
-      if (pseudo.value !== "admin" && password.value !== "12345") {
-        const successTxt = await screen.findAllByText("Identifiants incorrects");
-        expect(successTxt).toBeTruthy();
-      }
+      const successTxt = await screen.findAllByText("Identifiants incorrects");
+      expect(successTxt).toBeTruthy();
     });
   });
 });

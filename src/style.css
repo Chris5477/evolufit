@@ -67,7 +67,7 @@ p, li {
   color: #ff7700;
   padding: 10px 15px;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 3.8vw;
 }
 
 .btn {
@@ -114,6 +114,7 @@ footer {
   background-color: #FFF;
   border-top: 1px solid rgb(34, 34, 34);
   margin-top: 10px;
+  box-shadow: 0px -5px 5px rgb(34, 34, 34);
 }
 footer h2 {
   color: #ff7700;
@@ -157,7 +158,13 @@ form {
   min-height: 65vh;
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   color: rgb(246, 246, 246);
-  padding: 10% 0 5% 12%;
+  padding-bottom: 5px;
+}
+form h2 {
+  padding: 10px 0;
+}
+form .form-data {
+  padding-left: 25px;
 }
 form .form-data label {
   display: block;
@@ -175,7 +182,8 @@ form .form-data input {
   font-weight: 800;
 }
 form input[type=submit] {
-  margin-top: 30px;
+  margin: 30px auto;
+  display: block;
 }
 form .radio-input {
   width: 100%;
@@ -184,6 +192,8 @@ form .radio-input {
   justify-content: flex-start;
   align-items: center;
   font-size: 24px;
+  padding-left: 20px;
+  margin: 15px 0;
 }
 form .radio-input label {
   margin: 0 7px;
@@ -193,16 +203,17 @@ form input[type=radio] {
   height: 20px;
 }
 form .validation {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 800;
-  margin-top: 5px;
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: bolder;
+  padding: 10px 25px;
+  text-align: left;
 }
 form .success {
   color: green;
 }
 form .error {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 
 .modal {
@@ -213,6 +224,27 @@ form .error {
   left: 0;
   z-index: 1000;
   background-color: rgb(246, 246, 246);
+}
+.modal .container-modal {
+  width: 90%;
+  height: 80vh;
+}
+.modal .header-modal h2 {
+  color: rgb(34, 34, 34);
+  padding: 20px;
+  font-weight: bolder;
+  text-align: left;
+}
+.modal .content-modal {
+  text-align: justify;
+  padding: 10px 20px;
+  color: rgb(34, 34, 34);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.modal .content-modal .content-other {
+  margin: 20px 0;
 }
 .modal .close-modal {
   position: absolute;
@@ -407,7 +439,7 @@ form .error {
   height: 200px;
   transform: translate(60%, 40%);
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   padding: 20px 0;
   background-color: rgb(34, 34, 34);
 }
@@ -709,10 +741,12 @@ form .error {
   padding: 15px 0;
 }
 
-.exocardio, .dataline {
+.exocardio,
+.dataline {
   margin: 40px 0;
 }
-.exocardio .user-progres button, .dataline .user-progres button {
+.exocardio .user-progres button,
+.dataline .user-progres button {
   display: block;
   margin: 30px auto;
 }

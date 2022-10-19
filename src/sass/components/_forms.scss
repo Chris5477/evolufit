@@ -2,9 +2,13 @@ form {
   min-height: 65vh;
   background: $gradient;
   color: $light;
-  padding: 10% 0 5% 12%;
+  padding-bottom: 5px;
 
+  h2{
+    padding: 10px 0;
+  }
   .form-data {
+    padding-left: 25px;
     label {
       display: block;
       font-size: 22px;
@@ -23,13 +27,16 @@ form {
   }
 
   input[type="submit"] {
-    margin-top: 30px;
+    margin: 30px auto;
+    display: block;
   }
 
   .radio-input {
     @include sizeContainer(100%, 40px);
     @include flex(flex-start, center);
     font-size: 24px;
+    padding-left: 20px;
+    margin: 15px 0;
 
     label {
       margin: 0 7px;
@@ -41,10 +48,11 @@ form {
   }
 
   .validation {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 800;
-    margin-top: 5px;
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: bolder;
+    padding: 10px 25px;
+    text-align: left;
   }
 
   .success {
@@ -52,6 +60,6 @@ form {
   }
 
   .error {
-    color: red;
+    color: rgb(255, 0, 0);
   }
 }

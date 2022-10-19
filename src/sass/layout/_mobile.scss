@@ -45,7 +45,7 @@
     @include sizeContainer(60%, 200px);
     transform: translate(60%, 40%);
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     padding: 20px 0;
     background-color: $dark;
 
@@ -322,7 +322,7 @@
 
 /* TRAINING PAGE CSS ***********************************************************/
 
-.bannier{
+.bannier {
   margin-bottom: -5px;
 }
 
@@ -361,15 +361,15 @@
   transform: translateY(10px);
 }
 
-
 /* CARDIO PAGE CSS **********************************************/
 
-.cardio-page h2{
+.cardio-page h2 {
   color: black;
   padding: 15px 0;
 }
 
-.exocardio, .dataline {
+.exocardio,
+.dataline {
   margin: 40px 0;
 
   .user-progres button {
@@ -378,6 +378,6 @@
   }
 }
 
-.exocardio h2:first-child{
+.exocardio h2:first-child {
   padding-left: 25px;
 }
