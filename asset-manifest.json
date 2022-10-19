@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evolufit/static/css/main.de7ac2b4.css",
-    "main.js": "/evolufit/static/js/main.4c0d1cc3.js",
+    "main.css": "/evolufit/static/css/main.22d98b63.css",
+    "main.js": "/evolufit/static/js/main.ec254c5b.js",
     "static/js/787.3beaa5d6.chunk.js": "/evolufit/static/js/787.3beaa5d6.chunk.js",
     "static/media/bannier-muscu.png": "/evolufit/static/media/bannier-muscu.cb6e3a96df77256fd2d7.png",
     "static/media/banner-cardio.png": "/evolufit/static/media/banner-cardio.1bbc924ca50589e9d5e9.png",
@@ -27,12 +27,12 @@
     "static/media/eye.svg": "/evolufit/static/media/eye.5b2e3e1a417834e16813a95ac85f4ebb.svg",
     "index.html": "/evolufit/index.html",
     "static/media/avatar.svg": "/evolufit/static/media/avatar.bd966c88b2949a5e0e0c0cbe62c5effe.svg",
-    "main.de7ac2b4.css.map": "/evolufit/static/css/main.de7ac2b4.css.map",
-    "main.4c0d1cc3.js.map": "/evolufit/static/js/main.4c0d1cc3.js.map",
+    "main.22d98b63.css.map": "/evolufit/static/css/main.22d98b63.css.map",
+    "main.ec254c5b.js.map": "/evolufit/static/js/main.ec254c5b.js.map",
     "787.3beaa5d6.chunk.js.map": "/evolufit/static/js/787.3beaa5d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de7ac2b4.css",
-    "static/js/main.4c0d1cc3.js"
+    "static/css/main.22d98b63.css",
+    "static/js/main.ec254c5b.js"
   ]
 }
