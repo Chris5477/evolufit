@@ -6,6 +6,7 @@ import Cardio from "./pages/cardio/Cardio";
 import Error from "./pages/error/Error";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
+import Planning from "./pages/planning/Planning";
 import Profil from "./pages/profil/Profil";
 import Signin from "./pages/signin/Signin";
 import Training from "./pages/training/Training";
@@ -13,11 +14,10 @@ import User from "./pages/user/User";
 import "./style.css";
 
 const App = () => {
-
   return (
     <BrowserRouter>
       <div data-testid='app' className='App container'>
-      <Topbar />
+        <Topbar />
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/login' element={<Login />} />
@@ -26,10 +26,11 @@ const App = () => {
           <Route path='/cardio' element={<Cardio />} />
           <Route path='/training' element={<Training />} />
           <Route path='/settings' element={<User />} />
-          <Route path="*" element={<Error />} />
+          <Route path='/planning' element={<Planning />} />
+          <Route path='*' element={<Error />} />
         </Routes>
         {localStorage.getItem("token") && <Tabs />}
-        <Footer /> 
+        <Footer />
       </div>
     </BrowserRouter>
   );
