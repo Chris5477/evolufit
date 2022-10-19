@@ -10,7 +10,7 @@ const Piechart = ({ title, info }) => {
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
     return (
-      <text x={x} y={y} fill='white' textAnchor={x > cx ? "start" : "end"} dominantBaseline='central'>
+      <text x={x} y={y} fill='white' fontSize={20} fontWeight="bold" textAnchor={x > cx ? "start" : "end"} dominantBaseline='central'>
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
@@ -27,7 +27,6 @@ const Piechart = ({ title, info }) => {
           labelLine={false}
           label={renderCustomizedLabel}
           outerRadius={80}
-          fill='#8884d8'
           dataKey='value'
         >
           {mass.map((entry, index) => (

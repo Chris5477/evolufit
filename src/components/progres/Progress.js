@@ -14,16 +14,19 @@ export const getEvolutionWeight = (weight, initialWeight) => {
   }
 };
 
+
 export const sumData = (arr, key) => {
   const dataExploit = arr.map((data) => data[key]);
-  const total = dataExploit.reduce((acc, val) => acc + val);
+  let total = dataExploit.reduce((acc, val) => acc + val);
+  total = key === "distance" ? Number(total / 1000) : total  
+  console.log(typeof total)
   return Number.isInteger(total) ? total : total.toFixed(2);
 };
 
 const Progress = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data.at(-1).weight;
   let getWeightProgression = null;
-
+  
   const [modal, setModal] = useState(false);
 
   const openModal = () => {
@@ -52,7 +55,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
         <h2>
           {label} ({unity})
         </h2>
-        <img className="open-btn" onClick={openModal} src={eye} alt='See more...' />
+        <img className='open-btn' onClick={openModal} src={eye} alt='See more...' />
       </div>
       <div className='space-flex'>
         <div className='indication'>{getWeightProgression}</div>

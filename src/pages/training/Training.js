@@ -1,7 +1,6 @@
 import bannierMuscu from "../../assets/others/bannier-muscu.png";
 import SpiderChart from "../../components/radarchart/Radarchart";
 import { torse, bras, jambes } from "../../mock/perf";
-import Button from "../../components/button/Button";
 import Piechart from "../../components/pie/PieGraph";
 import Banner from "../../components/banner/Banner";
 
@@ -17,13 +16,8 @@ const Training = () => {
 
       <h2 className='container'>Vos performanes</h2>
       <SpiderChart title={"Muscle du torse"} data={torse} />
-      <Button onClick={() => null} content='Consulter' />
-
       <SpiderChart title={"Muscle des bras"} data={bras} />
-      <Button onClick={() => null} content='Consulter' />
-
       <SpiderChart title={"Muscle des jambes"} data={jambes} />
-      <Button onClick={() => null} content='Consulter' />
     </div>
   );
 };

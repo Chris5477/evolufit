@@ -184,8 +184,8 @@
 
 .divider {
   @include sizeContainer(100%, 120px);
+  @include flex(flex-start, center);
   background: $gradient;
-  padding-left: 20px;
   h2 {
     color: $light;
     padding: 10px;
@@ -193,15 +193,11 @@
     font-size: 20px;
   }
 
-  .banner-progres {
-    @include flex(flex-start, center);
-  }
-
   .calendar-logo {
     @include sizeContainer(50px, 50px);
     background-color: $light;
     border-radius: 50%;
-    margin-right: 10px;
+    margin: 0 10px 0 25px;
   }
 }
 
@@ -239,75 +235,6 @@
   .space-flex {
     @include flex(space-between, flex-start);
   }
-}
-
-/* ERROR PAGE CSS **********************************************************/
-
-.error-page {
-  background: $gradient;
-  padding: 40px 25px;
-  flex-direction: column;
-
-  h2 {
-    font-size: 60px;
-  }
-
-  p {
-    font-size: 24px;
-    margin: 20px 0;
-  }
-
-  .message-serveur {
-    font-size: 40px;
-  }
-
-  .error-type {
-    font-size: 14px;
-  }
-
-  a {
-    font-size: 18px;
-    font-style: italic;
-    color: $dark;
-    cursor: pointer;
-  }
-}
-
-/* TRAINING PAGE CSS ***********************************************************/
-
-.training-page,
-.pie,
-.radar {
-  flex-direction: column;
-}
-
-.radar {
-  margin-bottom: 15px;
-}
-
-.pie,
-.radar {
-  h2,
-  h3 {
-    color: $light;
-    background-color: $primary;
-    padding: 35px 0;
-    margin-bottom: 30px;
-  }
-
-  h3 {
-    margin: 20px;
-  }
-
-  p {
-    color: $dark;
-    padding: 25px;
-    text-align: justify;
-  }
-}
-.recharts-legend-wrapper {
-  @include flex(center, center);
-  transform: translateY(10px);
 }
 
 .info-imc {
@@ -358,5 +285,90 @@
     @include sizeContainer(90%, 0);
     position: absolute;
     top: 2px;
+  }
+}
+
+/* ERROR PAGE CSS **********************************************************/
+
+.error-page {
+  background: $gradient;
+  padding: 40px 25px;
+  flex-direction: column;
+
+  h2 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .message-serveur {
+    font-size: 40px;
+  }
+
+  .error-type {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 18px;
+    font-style: italic;
+    color: $dark;
+    cursor: pointer;
+  }
+}
+
+/* TRAINING PAGE CSS ***********************************************************/
+
+.bannier{
+  margin-bottom: -5px;
+}
+
+.training-page,
+.pie,
+.radar {
+  flex-direction: column;
+}
+
+.radar {
+  margin-bottom: 15px;
+}
+
+.pie,
+.radar {
+  h2,
+  h3 {
+    color: $light;
+    background-color: $primary;
+    padding: 35px 0;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin: 20px;
+  }
+
+  p {
+    color: $dark;
+    padding: 25px;
+    text-align: justify;
+  }
+}
+.recharts-legend-wrapper {
+  @include flex(center, center);
+  transform: translateY(10px);
+}
+
+
+/* CARDIO PAGE CSS **********************************************/
+
+.exocardio, .dataline {
+  margin: 40px 0;
+
+  .user-progres button {
+    display: block;
+    margin: 30px auto;
   }
 }

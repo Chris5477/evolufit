@@ -112,6 +112,8 @@ p, li {
 footer {
   padding: 15px 10px 80px 10px;
   background-color: #FFF;
+  border-top: 1px solid rgb(34, 34, 34);
+  margin-top: 10px;
 }
 footer h2 {
   color: #ff7700;
@@ -532,8 +534,10 @@ form .error {
 .divider {
   width: 100%;
   height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
-  padding-left: 20px;
 }
 .divider h2 {
   color: rgb(246, 246, 246);
@@ -541,17 +545,12 @@ form .error {
   text-align: left;
   font-size: 20px;
 }
-.divider .banner-progres {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 .divider .calendar-logo {
   width: 50px;
   height: 50px;
   background-color: rgb(246, 246, 246);
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 0 10px 0 25px;
 }
 
 .progress {
@@ -586,70 +585,6 @@ form .error {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-/* ERROR PAGE CSS **********************************************************/
-.error-page {
-  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
-  padding: 40px 25px;
-  flex-direction: column;
-}
-.error-page h2 {
-  font-size: 60px;
-}
-.error-page p {
-  font-size: 24px;
-  margin: 20px 0;
-}
-.error-page .message-serveur {
-  font-size: 40px;
-}
-.error-page .error-type {
-  font-size: 14px;
-}
-.error-page a {
-  font-size: 18px;
-  font-style: italic;
-  color: rgb(34, 34, 34);
-  cursor: pointer;
-}
-
-/* TRAINING PAGE CSS ***********************************************************/
-.training-page,
-.pie,
-.radar {
-  flex-direction: column;
-}
-
-.radar {
-  margin-bottom: 15px;
-}
-
-.pie h2,
-.pie h3,
-.radar h2,
-.radar h3 {
-  color: rgb(246, 246, 246);
-  background-color: #ff7700;
-  padding: 35px 0;
-  margin-bottom: 30px;
-}
-.pie h3,
-.radar h3 {
-  margin: 20px;
-}
-.pie p,
-.radar p {
-  color: rgb(34, 34, 34);
-  padding: 25px;
-  text-align: justify;
-}
-
-.recharts-legend-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(10px);
 }
 
 .info-imc {
@@ -698,6 +633,83 @@ form .error {
   height: 0;
   position: absolute;
   top: 2px;
+}
+
+/* ERROR PAGE CSS **********************************************************/
+.error-page {
+  background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
+  padding: 40px 25px;
+  flex-direction: column;
+}
+.error-page h2 {
+  font-size: 60px;
+}
+.error-page p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+.error-page .message-serveur {
+  font-size: 40px;
+}
+.error-page .error-type {
+  font-size: 14px;
+}
+.error-page a {
+  font-size: 18px;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  cursor: pointer;
+}
+
+/* TRAINING PAGE CSS ***********************************************************/
+.bannier {
+  margin-bottom: -5px;
+}
+
+.training-page,
+.pie,
+.radar {
+  flex-direction: column;
+}
+
+.radar {
+  margin-bottom: 15px;
+}
+
+.pie h2,
+.pie h3,
+.radar h2,
+.radar h3 {
+  color: rgb(246, 246, 246);
+  background-color: #ff7700;
+  padding: 35px 0;
+  margin-bottom: 30px;
+}
+.pie h3,
+.radar h3 {
+  margin: 20px;
+}
+.pie p,
+.radar p {
+  color: rgb(34, 34, 34);
+  padding: 25px;
+  text-align: justify;
+}
+
+.recharts-legend-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(10px);
+}
+
+/* CARDIO PAGE CSS **********************************************/
+.exocardio, .dataline {
+  margin: 40px 0;
+}
+.exocardio .user-progres button, .dataline .user-progres button {
+  display: block;
+  margin: 30px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,9 +4,9 @@ import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from "../../components/article/Article.js";
 import { useEffect, useRef, useState } from "react";
 import Progress from "../../components/progres/Progress.js";
-import calendar from "../../assets/icons/calendar.svg";
 import { useNavigate } from "react-router-dom";
 import IMC from "../../components/imc/IMC.js";
+import UserProgress from "../../components/userProgress/UserProgress.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -26,7 +26,7 @@ const Profil = () => {
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
-  const { week } = training[0];
+  const week  = training.flatMap(data => data.week )
 
   useEffect(() => {
     localStorage.getItem("token") == null && navigate("/");
@@ -54,17 +54,8 @@ const Profil = () => {
           ))}
         </div>
       </section>
-      <section className='container user-progres'>
-        <h2 className='uppercase'>Progrès</h2>
-        <div className='divider'>
-          <h2 className='uppercase'>7 derniers jours</h2>
-          <div className='banner-progres'>
-            <div className='calendar-logo flex-center'>
-              <img src={calendar} alt='calendar' />
-            </div>
-            <p>Inscrit depuis {signinDate}</p>
-          </div>
-        </div>
+      <UserProgress title={"Progrès"} date={signinDate} />
+      <section className='container'>
         <Progress label='poids' unity='kg' data={weight} initialWeight={initialWeight} />
         <Progress label='distance' unity='km' data={week} />
         <Progress label='calories' unity='Kcal' data={week} />

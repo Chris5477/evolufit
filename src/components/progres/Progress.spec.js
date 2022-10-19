@@ -30,11 +30,11 @@ describe("getEvolutionWeight", () => {
 describe("sumData", () => {
   const data = [
     {
-      distance: 12,
+      distance: 140,
       calories: 100,
     },
     {
-      distance: 14,
+      distance: 200,
       calories: 110,
     },
   ];
@@ -42,7 +42,7 @@ describe("sumData", () => {
   test("Should return the sum about the data that interests us", () => {
     const totalDistance = sumData(data, "distance");
     const totalCalories = sumData(data, "calories");
-    expect(totalDistance).toBe(26);
+    expect(Number(totalDistance)).toBe(0.34);
     expect(totalCalories).toBe(210);
   });
 
