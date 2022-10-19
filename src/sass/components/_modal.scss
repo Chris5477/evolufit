@@ -4,7 +4,14 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: $light;
+  background-color: darken($color :$light, $amount : 10);
+  flex-direction: column;
+
+  h2,
+  p {
+    text-align: left;
+    color: black;
+  }
 
   .container-modal {
     @include sizeContainer(90%, 80vh);
@@ -25,7 +32,7 @@
     font-weight: bold;
     line-height: 20px;
 
-    .content-other{
+    .content-other {
       margin: 20px 0;
     }
   }

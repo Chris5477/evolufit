@@ -9,6 +9,7 @@ import Login from "./pages/login/Login";
 import Profil from "./pages/profil/Profil";
 import Signin from "./pages/signin/Signin";
 import Training from "./pages/training/Training";
+import User from "./pages/user/User";
 import "./style.css";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/profil' element={<Profil />} />
           <Route path='/cardio' element={<Cardio />} />
           <Route path='/training' element={<Training />} />
+          <Route path='/settings' element={<User />} />
           <Route path="*" element={<Error />} />
         </Routes>
         {localStorage.getItem("token") && <Tabs />}

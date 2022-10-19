@@ -17,9 +17,9 @@
 .logged {
 	@include flex(space-between, center);
 	padding: 10px 20px;
-
-	.container-avatar {
-		width: 10%;
+	
+	.container-avatar, .container-avatar img {
 		border-radius: 50%;
+		cursor: pointer;
 	}
 }

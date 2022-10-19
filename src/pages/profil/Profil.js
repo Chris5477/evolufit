@@ -21,12 +21,13 @@ const Profil = () => {
   };
 
   useEffect(() => {
-    setInterval(translateItem, 4000);
+    const id = setInterval(translateItem, 4000);
+    return () => clearInterval(id);
   }, [translate]);
 
   const { firstName, signinDate } = users[0];
   const { weight, initialWeight } = infoBody[0];
-  const week  = training.flatMap(data => data.week )
+  const week = training.flatMap((data) => data.week);
 
   useEffect(() => {
     localStorage.getItem("token") == null && navigate("/");

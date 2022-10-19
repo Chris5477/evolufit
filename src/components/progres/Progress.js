@@ -36,7 +36,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
     getWeightProgression = (
       <>
         <p>{lastWeight}</p>
-        <p>{initialWeight != newWeight && newWeight}</p>
+        <p>{initialWeight !== newWeight && newWeight}</p>
       </>
     );
   } else {

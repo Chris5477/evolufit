@@ -104,9 +104,9 @@ p, li {
   align-items: center;
   padding: 10px 20px;
 }
-.logged .container-avatar {
-  width: 10%;
+.logged .container-avatar, .logged .container-avatar img {
   border-radius: 50%;
+  cursor: pointer;
 }
 
 footer {
@@ -114,7 +114,7 @@ footer {
   background-color: #FFF;
   border-top: 1px solid rgb(34, 34, 34);
   margin-top: 10px;
-  box-shadow: 0px -5px 5px rgb(34, 34, 34);
+  box-shadow: 0px -2px 2px rgb(34, 34, 34);
 }
 footer h2 {
   color: #ff7700;
@@ -223,7 +223,13 @@ form .error {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgb(246, 246, 246);
+  background-color: #dddddd;
+  flex-direction: column;
+}
+.modal h2,
+.modal p {
+  text-align: left;
+  color: black;
 }
 .modal .container-modal {
   width: 90%;
@@ -381,16 +387,14 @@ form .error {
     opacity: 0;
   }
 }
-.menu-btn {
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  background-color: #ff7700;
-  border-radius: 6px;
-  padding: 3px;
-}
-.menu-btn img {
-  width: 100%;
+.warning {
+  width: 90%;
+  text-align: justify;
+  background-color: rgb(119, 203, 113);
+  color: rgb(34, 34, 34);
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 /* CSS HOME PAGE ******************************************************************************/
@@ -621,7 +625,7 @@ form .error {
 
 .info-imc {
   flex-direction: column;
-  margin-top: 30px;
+  padding: 30px 0;
 }
 .info-imc h2,
 .info-imc h3,

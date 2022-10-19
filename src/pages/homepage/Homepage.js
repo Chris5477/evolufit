@@ -2,6 +2,7 @@ import athleteOne from "../../assets/athlete/athlete1.png";
 import athleteTwo from "../../assets/athlete/athlete2.png";
 import LoaderHome from "../loader-home/LoaderHome";
 import { Link } from "react-router-dom";
+import Tabs from "../../components/tabs/Tabs";
 
 const Homepage = () => {
   return (
@@ -20,7 +21,7 @@ const Homepage = () => {
           <div className='container-picture container'>
             <img src={athleteOne} alt='althelte' />
           </div>
-          <Link className='link-button uppercase' to={"/new-account"}>
+          <Link className='link-button uppercase' to={"/signin"}>
             S'inscrire
           </Link>
         </section>
@@ -36,7 +37,7 @@ const Homepage = () => {
           </aside>
           <img src={athleteTwo} alt='atlete' />
         </article>
-        {/* {localStorage.getItem("token") !== null && <Tabs />} */}
+        {localStorage.getItem("token") !== null && <Tabs />}
       </div>
     </>
   );

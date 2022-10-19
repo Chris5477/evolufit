@@ -3,6 +3,7 @@ import Dataline from "../../components/dataline/Dataline";
 import { infoBody } from "../../mock/users";
 import bannerCardio from "../../assets/others/banner-cardio.png";
 import Exocardio from "../../components/exocardio/Exocardio";
+import Warning from "../../components/warning/Warning";
 
 const Cardio = () => {
   const { weight } = infoBody[0];
@@ -15,6 +16,7 @@ const Cardio = () => {
         <Dataline data={weight} label={"poids"} />
       </section>
       <Exocardio/>
+      <Warning />
     </section>
   );
 };
