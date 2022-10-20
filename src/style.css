@@ -725,7 +725,10 @@ form .error {
 }
 
 .radar {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.radar button {
+  margin: 20px 0;
 }
 
 .pie h2,
@@ -790,13 +793,13 @@ form .error {
 .planning li {
   text-align: center;
   padding: 15px;
-  color: rgb(246, 246, 246);
+  color: rgb(34, 34, 34);
 }
 .planning li:nth-child(odd) {
-  background-color: #888888;
+  background-color: #c3c3c3;
 }
 .planning li:nth-child(even) {
-  background-color: #555555;
+  background-color: #dddddd;
 }
 .planning button {
   display: block;
