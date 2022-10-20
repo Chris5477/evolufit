@@ -273,12 +273,13 @@ form .error {
   border-top: 1px solid #6f6f6f;
 }
 .tabs-navigation li {
-  width: 33.3333333333%;
+  width: 25%;
   height: 50px;
   padding: 10px 40px;
 }
 .tabs-navigation a img {
-  width: 90%;
+  width: 100%;
+  min-width: 20px;
   max-width: 50px;
 }
 .tabs-navigation .active-tab {
@@ -394,6 +395,22 @@ form .error {
   margin: 20px auto;
   border-radius: 10px;
   padding: 30px;
+}
+
+.timer h2 {
+  font-size: 120px;
+}
+.timer .container-btns {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateX(-50%);
+}
+.timer .container-btns button {
+  font-size: 5vw;
 }
 
 /* CSS HOME PAGE ******************************************************************************/

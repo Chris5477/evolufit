@@ -10,13 +10,14 @@
 
 
 	li {
-		@include sizeContainer(calc(100% / 3), 50px);
+		@include sizeContainer(calc(100% / 4), 50px);
 		padding: 10px 40px;
 	}
 
 	a {
 		img {
-			width: 90%;
+			width: 100%;
+			min-width: 20px;
 			max-width: 50px;
 		}
 	}

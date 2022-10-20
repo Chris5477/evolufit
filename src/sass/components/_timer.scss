@@ -1,0 +1,16 @@
+.timer {
+  h2 {
+    font-size: 120px;
+  }
+
+  .container-btns {
+    @include posAbs(90%, 50%);
+    @include flex (space-around, center);
+    transform: translateX(-50%);    
+
+    button{
+        font-size: 5vw;
+    }
+   
+  }
+}
