@@ -47,9 +47,9 @@ const Profil = () => {
           nemo.
         </p>
       </section>
-      <section className='slider'>
+      <section className='slider container'>
         <h2 className='uppercase subtitle'>Actualités</h2>
-        <div ref={slideRef} className='items uppercase'>
+        <div ref={slideRef} className='items container uppercase'>
           {actualities.map(({ id, title, article, urlImg }) => (
             <Article key={id} title={title} article={article} urlImg={urlImg} />
           ))}
