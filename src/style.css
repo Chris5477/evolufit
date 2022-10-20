@@ -377,6 +377,12 @@ form .error {
   padding: 30px;
 }
 
+.timer {
+  cursor: pointer;
+}
+.timer img {
+  margin: 0 10px;
+}
 .timer h2 {
   font-size: 120px;
 }

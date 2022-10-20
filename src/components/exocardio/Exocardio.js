@@ -5,7 +5,7 @@ import Context from "../Context";
 const Exocardio = () => {
 
   const user = useContext(Context);
-  const training = user[7].week
+  const training = user[2]
 
 
   return (

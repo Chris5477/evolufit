@@ -1,6 +1,7 @@
-import { findByAltText, fireEvent, render, screen } from "@testing-library/react";
+import {fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Context from "../../components/Context";
+import { mockContext } from "../../mock/mockContext";
 import Signin from "./Signin";
 
 describe("Signin Page", () => {
@@ -16,7 +17,7 @@ describe("Signin Page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Context.Provider>
+        <Context.Provider value={mockContext}>
           <Signin />
         </Context.Provider>
       </BrowserRouter>

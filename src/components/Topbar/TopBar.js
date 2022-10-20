@@ -1,12 +1,15 @@
 import avatar from "../../assets/icons/avatar.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import timer from "../../assets/icons/timer.svg";
 import { useContext, useState } from "react";
 import Timer from "../timer/Timer";
+import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
+import Button from "../button/Button";
 
 const TopBar = () => {
   const user = useContext(Context);
+  const navigate = useNavigate();
 
   let myPhoto = avatar;
 
@@ -21,8 +24,13 @@ const TopBar = () => {
     setModal(true);
   };
 
+  const disconnect = () => {
+    localStorage.clear();
+    navigate("/");
+  };
+
   return localStorage.getItem("token") ? (
-    <header data-testid='topbar' className='top-bar logged container white-bg'>
+    <header data-testid='topbar' className='top-bar logged container flex-center white-bg'>
       <div className='container-avatar'>
         <Link to='/settings'>
           <img src={myPhoto} alt='avatar' width={24} height={24} />
@@ -31,8 +39,9 @@ const TopBar = () => {
       <Link to='/'>
         <h1>Evolu'fit</h1>
       </Link>
-      <div onClick={openModal} className='timer'>
-        <img src={timer} alt='timer' />
+      <div className='timer'>
+      <img onClick={disconnect} src={logout} alt='disconnect' />
+        <img onClick={openModal} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}
     </header>

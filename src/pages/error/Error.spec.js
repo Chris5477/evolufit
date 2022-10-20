@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
 import Context from "../../components/Context";
+import { mockContext } from "../../mock/mockContext";
 import Error from "./Error";
 
 describe("Error page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Context.Provider>
+        <Context.Provider value={mockContext}>
           <Error />
         </Context.Provider>
       </BrowserRouter>
