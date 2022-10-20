@@ -5,10 +5,9 @@ footer {
   margin-top: 10px;
   box-shadow: 0px -2px 2px $dark;
 
-  h2 {
+  .main-title {
     color: $primary;
     transform: rotateZ(-5deg);
-    text-align: left;
   }
 }
 .container-footer {

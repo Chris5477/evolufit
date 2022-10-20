@@ -4,15 +4,15 @@ import Button from "../../components/button/Button";
 const Planning = () => {
   return (
     <section className='planning container' data-testid='planning'>
-      <h2 className='uppercase'>Votre programme</h2>
+      <h2 className='uppercase txt-center'>Votre programme</h2>
 
       <div className='day-week container uppercase'>
-        <ul className='container'>
+        <ul className='container txt-center'>
           {planning.map(({ week }, index) => (
             <div key={index}>
               {week.map(({ day, objectif, program }, index) => (
                 <div className='day' key={`index ${index}`}>
-                  <h3>
+                  <h3 className='txt-center'>
                     {day} -- {objectif}
                   </h3>
 

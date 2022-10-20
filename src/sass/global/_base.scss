@@ -18,13 +18,15 @@ h2 {
 	font-size: 8.2vw;
 	font-weight: 800;
 	color: $light;
-	text-align: center;
 }
 
 h3 {
 	font-size: 7vw;
 	color: $light;
 	font-weight: 600;
+}
+
+.txt-center{
 	text-align: center;
 }
 
@@ -34,13 +36,6 @@ p, li{
 	color: $light;
 }
 
-.white-bg {
-	background-color: $light;
-}
-
-.color-white {
-	color: $light;
-}
 
 .uppercase {
 	text-transform: uppercase;
@@ -58,3 +53,4 @@ p, li{
 .flex-center {
 	@include flex(center, center);
 }
+

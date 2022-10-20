@@ -14,7 +14,7 @@ const Training = () => {
       <Banner picture={bannierMuscu} />
       <Piechart title={"Information sur vos masses"} info={addInfo} />
 
-      <h2 className='container'>Vos performanes</h2>
+      <h2 className='container txt-center'>Vos performanes</h2>
       <SpiderChart title={"Muscle du torse"} data={torse} />
       <SpiderChart title={"Muscle des bras"} data={bras} />
       <SpiderChart title={"Muscle des jambes"} data={jambes} />

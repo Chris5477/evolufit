@@ -12,7 +12,7 @@ const Cardio = () => {
     <section className='cardio-page container' data-testid='cardio-page'>
       <Banner picture={bannerCardio} />
       <section className='container'>
-        <h2>Progression corporelle</h2>
+        <h2 className="uppercase txt-center">Progression corporelle</h2>
         <Dataline data={weight} label={"poids"} />
       </section>
       <Exocardio/>

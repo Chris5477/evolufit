@@ -10,7 +10,7 @@ const Homepage = () => {
       <LoaderHome />
       <div data-testid='homepage' className='home-page container'>
         <section className='section-part color-white container'>
-          <h2 className='uppercase'>
+          <h2 className='txt-center uppercase'>
             Suivez votre <span className='no-bg-letter'>evolution !</span>
           </h2>
           <p>
@@ -21,19 +21,19 @@ const Homepage = () => {
           <div className='container-picture container'>
             <img src={athleteOne} alt='althelte' />
           </div>
-          <Link className='link-button uppercase' to={"/signin"}>
+          <Link className='link-button uppercase txt-center' to={"/signin"}>
             S'inscrire
           </Link>
         </section>
 
         <article className='other-info'>
-          <h2 className='uppercase'>Plus d'excuse!</h2>
+          <h2 className='txt-center uppercase'>Plus d'excuse!</h2>
           <aside className='white-bg uppercase'>
-            <p>Motivation</p>
-            <p> + </p>
-            <p>évolution</p>
-            <p>=</p>
-            <p>Satisfatcion</p>
+            <p className="txt-center">Motivation</p>
+            <p className="txt-center"> + </p>
+            <p className="txt-center">évolution</p>
+            <p className="txt-center">=</p>
+            <p className="txt-center">Satisfatcion</p>
           </aside>
           <img src={athleteTwo} alt='atlete' />
         </article>
