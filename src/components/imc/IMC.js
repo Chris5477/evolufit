@@ -1,27 +1,36 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import eye from "../../assets/icons/eye.svg";
+import Context from "../Context";
 import ModalInfo from "../Modal-info/ModalInfo";
 
-const title = "Indice de masse corporelle ?";
-const content = `Qu'est ce que l'IMC. L'indice de masse corporelle (IMC) mesure la corpulence. Il se calcule à partir de ton poids et de ta taille. Pour calculer l'IMC, il suffit de diviser ton poids (kg) par ta taille (m) au carré. Un IMC idéal serait compris entre 18.5 à 24.8`;
-const other = (
-  <div className='imc'>
-    <div className='part-imc'>
-      <p>Insuffisance Pondérale</p>
-    </div>
-    <div className='part-imc'>
-      <p>Corpulence Normale</p>
-    </div>
-    <div className='part-imc'>
-      <p>Surpoids</p>
-    </div>
-    <div className='part-imc'>
-      <p>Obésité</p>
-    </div>
-    <input className='range' type='range' defaultValue='62' />
-  </div>
-);
 const IMC = () => {
+  const user = useContext(Context)[1];
+  const weight = user.weight.at(-1).weight;
+  const size = user.size / 100;
+
+  const imc = (weight / size ** 2).toFixed(2);
+  const rangeImc = (imc * 100) / 40;
+
+  const title = "Indice de masse corporelle ?";
+  const content = `Qu'est ce que l'IMC. L'indice de masse corporelle (IMC) mesure la corpulence. Il se calcule à partir de ton poids et de ta taille. Pour calculer l'IMC, il suffit de diviser ton poids (kg) par ta taille (m) au carré. Un IMC idéal serait compris entre 18.5 à 24.8`;
+  const other = (
+    <div className='imc'>
+      <div className='part-imc'>
+        <p>Insuffisance Pondérale</p>
+      </div>
+      <div className='part-imc'>
+        <p>Corpulence Normale</p>
+      </div>
+      <div className='part-imc'>
+        <p>Surpoids</p>
+      </div>
+      <div className='part-imc'>
+        <p>Obésité</p>
+      </div>
+      <input onChange={() => null} className='range' type='range' value={rangeImc} />
+    </div>
+  );
+
   const [modal, setModal] = useState(false);
 
   return (
@@ -30,7 +39,7 @@ const IMC = () => {
         Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
       </h2>
 
-      <h3>31.8</h3>
+      <h3>{imc}</h3>
       <p>En fonction de votre taille et de poids</p>
 
       {other}

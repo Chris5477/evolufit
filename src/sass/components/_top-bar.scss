@@ -1,25 +1,26 @@
 .top-bar {
-	@include flex(space-around, center);
-	padding: 10px 0;
+  @include flex(space-around, center);
+  padding: 10px;
 
-	h1 {
-		color: $primary;
-		transform: rotateZ(-5deg);
-		font-size: 28px;
-	}
-	
-	.link-button{
-		background-color: $primary;
-		color:$light;
-	}
+  h1 {
+    color: $primary;
+    transform: rotateZ(-5deg);
+    font-size: 28px;
+  }
+
+  .link-button {
+    background-color: $primary;
+    color: $light;
+  }
 }
 
 .logged {
-	@include flex(space-between, center);
-	padding: 10px 20px;
-	
-	.container-avatar, .container-avatar img {
-		border-radius: 50%;
-		cursor: pointer;
-	}
+  @include flex(space-around, center);
+  padding: 10px 0;
+
+  .container-avatar,
+  .container-avatar img {
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

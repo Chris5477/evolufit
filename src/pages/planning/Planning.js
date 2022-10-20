@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import Button from "../../components/button/Button";
 import Context from "../../components/Context";
 
@@ -8,6 +9,7 @@ const Planning = () => {
 
   return (
     <section className='planning container' data-testid='planning'>
+      <ToastContainer />
       <h2 className='uppercase txt-center'>Votre programme</h2>
 
       <div className='day-week container uppercase'>
@@ -28,7 +30,10 @@ const Planning = () => {
             </div>
           ))}
         </ul>
-        <Button content={"Modifier"} handleClick={() => null} />
+        <Button
+          content={"Modifier"}
+          onClick={() => toast.warn("Fonctionnalité bientôt disponible", { autoClose: 2000, theme: "colored" })}
+        />
       </div>
     </section>
   );

@@ -5,7 +5,8 @@ import { useContext, useState } from "react";
 import Timer from "../timer/Timer";
 import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
-import Button from "../button/Button";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const TopBar = () => {
   const user = useContext(Context);
@@ -13,7 +14,7 @@ const TopBar = () => {
 
   let myPhoto = avatar;
 
-  if (user === undefined) {
+  if (user[0]?.profilPicture != undefined) {
     const { profilPicture } = user[0];
     myPhoto = profilPicture;
   }
@@ -26,7 +27,8 @@ const TopBar = () => {
 
   const disconnect = () => {
     localStorage.clear();
-    navigate("/");
+    toast.success("déconnexion en cours !", { autoClose: 2100, theme: "colored" });
+    setTimeout(() => navigate("/"), 2200);
   };
 
   return localStorage.getItem("token") ? (
@@ -40,7 +42,7 @@ const TopBar = () => {
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
-      <img onClick={disconnect} src={logout} alt='disconnect' />
+        <img onClick={disconnect} src={logout} alt='disconnect' />
         <img onClick={openModal} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}

@@ -37,7 +37,7 @@ const Profil = () => {
   return (
     <div data-testid='profil-page' className='profil container flex-center'>
       <div className='banner-profil container flex-center'>
-        <img src={athlete3} alt={"athletes"} width={400} />
+        <img src={athlete3} alt={"athletes"} width='100%' />
       </div>
       <section className='info-user container'>
         <h2 className='greet-user uppercase '>

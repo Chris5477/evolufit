@@ -1,3 +1,4 @@
+import { toast, ToastContainer } from "react-toastify";
 import calendar from "../../assets/icons/calendar.svg";
 import Button from "../button/Button";
 import Dataline from "../dataline/Dataline";
@@ -8,13 +9,17 @@ const UserProgress = ({ title, isCardio, data }) => {
     graphicExercice = (
       <>
         <Dataline isCardio data={data} />
-        <Button onClick={() => null} content='Visualiser' />
+        <Button
+          onClick={() => toast.warn("Fonctionnalité bientôt disponible", { autoClose: 2000, theme: "colored" })}
+          content='Visualiser'
+        />
       </>
     );
   }
 
   return (
     <section className='container user-progres' data-testid='user-progres'>
+      <ToastContainer />
       <h2 className='uppercase'>{title}</h2>
       <div className='divider'>
         <div className='calendar-logo flex-center'>
