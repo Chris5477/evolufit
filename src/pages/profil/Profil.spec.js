@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import Context from "../../components/Context.js";
+import { mockContext } from "../../mock/mockContext.js";
 import { users } from "../../mock/users.js";
 import Profil from "./Profil";
 
@@ -7,7 +9,9 @@ describe("Profil Page", () => {
   beforeEach(() =>
     render(
       <BrowserRouter>
-        <Profil />
+        <Context.Provider value={mockContext}>
+          <Profil />
+        </Context.Provider>
       </BrowserRouter>
     )
   );

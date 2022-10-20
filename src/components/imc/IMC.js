@@ -24,14 +24,10 @@ const other = (
 const IMC = () => {
   const [modal, setModal] = useState(false);
 
-  const openModal = () => {
-    setModal(true);
-  };
-
   return (
     <section className='info-imc container flex-center' data-testid='info-imc'>
       <h2>
-        Mon IMC <img onClick={openModal} src={eye} alt='more' />
+        Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
       </h2>
 
       <h3>31.8</h3>

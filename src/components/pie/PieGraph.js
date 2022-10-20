@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { PieChart, Pie, Cell, Legend } from "recharts";
-import { mass } from "../../mock/perf";
+import Context from "../Context";
 
 const Piechart = ({ title, info }) => {
+  const user = useContext(Context);
+  const mass = user[6];
+
   const COLORS = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
   const RADIAN = Math.PI / 180;
   /* istanbul ignore next */
@@ -10,7 +14,15 @@ const Piechart = ({ title, info }) => {
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
     return (
-      <text x={x} y={y} fill='white' fontSize={20} fontWeight="bold" textAnchor={x > cx ? "start" : "end"} dominantBaseline='central'>
+      <text
+        x={x}
+        y={y}
+        fill='white'
+        fontSize={20}
+        fontWeight='bold'
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline='central'
+      >
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
@@ -18,7 +30,7 @@ const Piechart = ({ title, info }) => {
 
   return (
     <section className='pie container flex-center' data-testid='pie'>
-      <h2 className="container txt-center color-light">{title}</h2>
+      <h2 className='container txt-center color-light'>{title}</h2>
       <PieChart width={280} height={280}>
         <Pie
           data={mass}

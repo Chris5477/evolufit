@@ -1,5 +1,6 @@
 import { findByAltText, fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import Context from "../../components/Context";
 import Signin from "./Signin";
 
 describe("Signin Page", () => {
@@ -15,7 +16,9 @@ describe("Signin Page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Signin />
+        <Context.Provider>
+          <Signin />
+        </Context.Provider>
       </BrowserRouter>
     );
 

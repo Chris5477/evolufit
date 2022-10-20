@@ -1,7 +1,11 @@
-import { planning } from "../../mock/planning";
+import { useContext } from "react";
 import Button from "../../components/button/Button";
+import Context from "../../components/Context";
 
 const Planning = () => {
+  const user = useContext(Context);
+  const planning = user[7];
+
   return (
     <section className='planning container' data-testid='planning'>
       <h2 className='uppercase txt-center'>Votre programme</h2>

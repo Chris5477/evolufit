@@ -1,5 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import { mockContext } from "../../mock/mockContext";
+import Context from "../Context";
 import TopBar from "../Topbar/TopBar";
 import Tabs from "./Tabs";
 
@@ -7,8 +9,10 @@ describe("Tabs componant", () => {
   beforeEach(() =>
     render(
       <BrowserRouter>
-        <TopBar />
-        <Tabs />
+        <Context.Provider value={mockContext}>
+          <TopBar />
+          <Tabs />
+        </Context.Provider>
       </BrowserRouter>
     )
   );

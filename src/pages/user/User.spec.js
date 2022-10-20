@@ -1,12 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import Context from "../../components/Context";
 import User from "./User";
 
 describe("User page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <User />
+        <Context.Provider>
+          <User />
+        </Context.Provider>
       </BrowserRouter>
     );
   });

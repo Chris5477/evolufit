@@ -1,12 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import Context from "../../components/Context";
+import { mockContext } from "../../mock/mockContext";
 import Training from "./Training";
 
 describe("Training page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Training />
+        <Context.Provider value={mockContext}>
+          <Training />
+        </Context.Provider>
       </BrowserRouter>
     );
   });

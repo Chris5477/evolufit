@@ -1,12 +1,19 @@
 import avatar from "../../assets/icons/avatar.svg";
 import { Link } from "react-router-dom";
 import timer from "../../assets/icons/timer.svg";
-import { users } from "../../mock/users";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Timer from "../timer/Timer";
+import Context from "../Context";
 
 const TopBar = () => {
-  const myPhoto = users[0].profilPicture != null ? users[0].profilPicture : avatar;
+  const user = useContext(Context);
+
+  let myPhoto = avatar;
+
+  if (user === undefined) {
+    const { profilPicture } = user[0];
+    myPhoto = profilPicture;
+  }
 
   const [modal, setModal] = useState(false);
 

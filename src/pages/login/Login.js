@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
+import { infoBody, training, users } from "../../mock/users.js";
+import { torse, bras, jambes, mass } from "../../mock/perf.js";
+import { planning } from "../../mock/planning.js";
 
-const Login = () => {
+const Login = ({ setCtx }) => {
   const initialMessage = {
     code: "",
     message: "",
@@ -12,6 +15,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(initialMessage);
   const navigate = useNavigate();
+
+  const mockBdd = [...users, ...infoBody, training, torse, bras, jambes, mass, planning];
 
   const userData = {
     pseudo,
@@ -27,9 +32,10 @@ const Login = () => {
     e.preventDefault();
     if (pseudo === "admin" && password === "12345") {
       createMessage("success", "Connexion en cours...");
+      setCtx(mockBdd);
       localStorage.setItem("token", JSON.stringify("test"));
       setTimeout(() => navigate("/profil"), 1500);
-    } else if ((pseudo && password) && (pseudo !== "admin" || password !== "12345")) {
+    } else if (pseudo && password && (pseudo !== "admin" || password !== "12345")) {
       createMessage("error", "Identifiants incorrects");
     } else {
       createMessage("error", "Veuillez remplir tous les champs");
@@ -38,7 +44,7 @@ const Login = () => {
 
   return (
     <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
-      <h2 className="txt-center uppercase color-light">Connexion</h2>
+      <h2 className='txt-center uppercase color-light'>Connexion</h2>
       <FormData
         label='pseudo'
         valueInput={pseudo}

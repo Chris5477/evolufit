@@ -1,12 +1,12 @@
-import { users, infoBody, training } from "../../mock/users.js";
 import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from "../../components/article/Article.js";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Progress from "../../components/progres/Progress.js";
 import { useNavigate } from "react-router-dom";
 import IMC from "../../components/imc/IMC.js";
 import UserProgress from "../../components/userProgress/UserProgress.js";
+import Context from "../../components/Context.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -25,9 +25,10 @@ const Profil = () => {
     return () => clearInterval(id);
   }, [translate]);
 
-  const { firstName, signinDate } = users[0];
-  const { weight, initialWeight } = infoBody[0];
-  const week = training.flatMap((data) => data.week);
+  const user = useContext(Context);
+  const { firstName, signinDate } = user[0];
+  const { weight, initialWeight } = user[1];
+  const week = user[2].flatMap((data) => data.week);
 
   useEffect(() => {
     localStorage.getItem("token") == null && navigate("/");

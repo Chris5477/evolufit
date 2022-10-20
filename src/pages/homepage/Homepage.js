@@ -2,7 +2,6 @@ import athleteOne from "../../assets/athlete/athlete1.png";
 import athleteTwo from "../../assets/athlete/athlete2.png";
 import LoaderHome from "../loader-home/LoaderHome";
 import { Link } from "react-router-dom";
-import Tabs from "../../components/tabs/Tabs";
 
 const Homepage = () => {
   return (

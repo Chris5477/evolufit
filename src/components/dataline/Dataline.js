@@ -1,6 +1,6 @@
 import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 
-const Dataline = ({ data, label, isCardio }) => {
+const Dataline = ({ label, data, isCardio }) => {
   const dataKey = label === "poids" ? "weight" : label;
   const width = window.innerWidth - 40;
 

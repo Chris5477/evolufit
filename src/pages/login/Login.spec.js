@@ -1,5 +1,7 @@
 import { fireEvent, getByText, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import Context from "../../components/Context";
+import { mockContext } from "../../mock/mockContext";
 import Login from "./Login";
 
 describe("Login Page", () => {
@@ -8,7 +10,9 @@ describe("Login Page", () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Login />
+        <Context.Provider value={mockContext}>
+          <Login setCtx={() => mockContext} />
+        </Context.Provider>
       </BrowserRouter>
     );
     form = screen.getByTestId("loginpage");

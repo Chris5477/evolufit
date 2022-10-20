@@ -1,10 +1,14 @@
 import bannierMuscu from "../../assets/others/bannier-muscu.png";
 import SpiderChart from "../../components/radarchart/Radarchart";
-import { torse, bras, jambes } from "../../mock/perf";
 import Piechart from "../../components/pie/PieGraph";
 import Banner from "../../components/banner/Banner";
+import { useContext } from "react";
+import Context from "../../components/Context";
 
 const Training = () => {
+  const user = useContext(Context);
+  const [torse, bras, jambes] = user.filter((_, index) => index >= 3 && index <= 5);
+
   const addInfo = `La masse musculaire joue un rôle non négligeable sur la dépense énergétique quotidienne et engendre un coût
   métabolique plus important que la masse grasse. Pour simplifier, cela signifie que vos muscles demandent et
   dépensent plus d'énergie que votre graisse.`;

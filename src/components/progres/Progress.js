@@ -27,10 +27,6 @@ const Progress = ({ label, unity, initialWeight, data }) => {
 
   const [modal, setModal] = useState(false);
 
-  const openModal = () => {
-    setModal(true);
-  };
-
   if (label === "poids") {
     const newWeight = getEvolutionWeight(lastWeight, initialWeight);
     getWeightProgression = (
@@ -53,7 +49,7 @@ const Progress = ({ label, unity, initialWeight, data }) => {
         <h2>
           {label} ({unity})
         </h2>
-        <img className='open-btn' onClick={openModal} src={eye} alt='See more...' />
+        <img className='open-btn' onClick={() => setModal(true)} src={eye} alt='See more...' />
       </div>
       <div className='space-flex'>
         <div className='indication'>{getWeightProgression}</div>

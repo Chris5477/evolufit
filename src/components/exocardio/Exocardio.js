@@ -1,7 +1,13 @@
 import UserProgress from "../userProgress/UserProgress";
-import { training } from "../../mock/users";
+import { useContext } from "react";
+import Context from "../Context";
 
 const Exocardio = () => {
+
+  const user = useContext(Context);
+  const training = user[7].week
+
+
   return (
     <section className='exocardio container' data-testid='exocardio'>
       {training.map((data, index) => (
