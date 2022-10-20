@@ -1,10 +1,6 @@
 .tabs-navigation {
 	@include sizeContainer(100%, 50px);
 	display: flex;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 1000;
 	background-color: $light;
 	border-top: 1px solid lighten($color: $dark, $amount: 30);;
 

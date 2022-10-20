@@ -18,13 +18,13 @@ const LoaderHome = () => {
   }, []);
 
   return (
-    <div ref={ref} className='loader-home' data-testid='loader-home'>
+    <div ref={ref} className='loader-home flex-center posFixed' data-testid='loader-home'>
       {index < 2 && (
         <div className='cadre'>
           <img className='scalup' src={arr[index]} alt='logo' />
         </div>
       )}
-      <h1>EVOLU'FIT</h1>
+      <h1 className="color-light">EVOLU'FIT</h1>
     </div>
   );
 };

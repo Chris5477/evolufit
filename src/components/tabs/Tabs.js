@@ -18,7 +18,7 @@ const Tabs = () => {
   });
 
   return (
-    <nav data-testid='tabs' className='tabs-navigation'>
+    <nav data-testid='tabs' className='tabs-navigation posFixed'>
       <li
         onClick={() => setPathname("/profil")}
         className={`tab flex-center ${pathname === "/profil" && "active-tab"}`}

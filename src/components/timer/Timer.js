@@ -26,7 +26,7 @@ const Timer = ({ setModal }) => {
   const resetTimer = () => setDuration(30);
 
   return createPortal(
-    <div className='modal timer container flex-center' data-testid='timer'>
+    <div className='modal timer container flex-center posFixed' data-testid='timer'>
       <img className='close-modal' onClick={() => setModal(false)} src={close} alt='cross' />
       <h2>{duration}</h2>
       <div className='container-btns container'>

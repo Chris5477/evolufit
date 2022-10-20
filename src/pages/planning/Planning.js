@@ -12,7 +12,7 @@ const Planning = () => {
             <div key={index}>
               {week.map(({ day, objectif, program }, index) => (
                 <div className='day' key={`index ${index}`}>
-                  <h3 className='txt-center'>
+                  <h3 className='txt-center color-light'>
                     {day} -- {objectif}
                   </h3>
 

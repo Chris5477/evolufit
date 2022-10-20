@@ -1,10 +1,5 @@
 .loader-home {
   @include sizeContainer(100%, 100%);
-  @include flex(center, center);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   background: $gradient;
   animation: disapear 2s 4s forwards;
 
@@ -29,9 +24,7 @@
     &::before {
       content: "";
       @include sizeContainer(30px, 30px);
-      position: absolute;
-      top: -25%;
-      left: 50%;
+      @include posAbs(-25%,50%);
       transform: translateX(-50%);
       background: $gradient;
     }

@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
-      <h2 className="txt-center uppercase">Connexion</h2>
+      <h2 className="txt-center uppercase color-light">Connexion</h2>
       <FormData
         label='pseudo'
         valueInput={pseudo}

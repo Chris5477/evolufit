@@ -54,7 +54,7 @@ const Signin = () => {
 
   return (
     <form data-testid='signin' className='newAccount container' onSubmit={(e) => signup(e)}>
-      <h2 className='uppercase txt-center'>
+      <h2 className='uppercase txt-center color-light'>
         Créer mon compte <br /> <span className='primary'>Évolu'Fit</span>
       </h2>
 

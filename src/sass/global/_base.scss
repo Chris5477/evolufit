@@ -1,56 +1,68 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	list-style: none;
-	text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-body{
-	background-color: $light;
+body {
+  background-color: $light;
 }
 
-.recharts-legend-item-text{
-	font-size: 14px;
+.recharts-legend-item-text {
+  font-size: 14px;
 }
 
 h2 {
-	font-size: 8.2vw;
-	font-weight: 800;
-	color: $light;
+  font-size: 7.2vw;
+  font-weight: 800;
+  color: $dark;
 }
 
 h3 {
-	font-size: 7vw;
-	color: $light;
-	font-weight: 600;
+  font-size: 7vw;
+  color: $dark;
+  font-weight: 600;
+
 }
 
-.txt-center{
-	text-align: center;
+.txt-center {
+  text-align: center;
 }
 
-p, li{
-	font-size: 5vw;
-	font-weight: 600;
-	color: $light;
+p,
+li {
+  font-size: 5vw;
+  font-weight: 600;
+  color: $dark;
+
 }
 
+.posFixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
 
 .uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .no-bg-letter {
-	-webkit-text-stroke: 1px $light;
-	color: transparent;
+  -webkit-text-stroke: 1px $light;
+  color: transparent;
 }
 
 .container {
-	@include sizeContainer(100%, auto);
+  @include sizeContainer(100%, auto);
 }
 
 .flex-center {
-	@include flex(center, center);
+  @include flex(center, center);
 }
 
+.color-light {
+  color: $light;
+}

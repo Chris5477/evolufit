@@ -5,7 +5,7 @@ import Warning from "../warning/Warning";
 
 const ModalGraphic = ({ setModal, data, label }) => {
   return createPortal(
-    <div data-testid='modal' className='modal flex-center'>
+    <div data-testid='modal' className='modal posFixed flex-center'>
       <img className='close-modal' onClick={() => setModal(false)} src={close} alt='cross' />
       <h2 className='uppercase'>
       {label} <br /> 7 derniers jours

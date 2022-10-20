@@ -10,10 +10,10 @@ const Homepage = () => {
       <LoaderHome />
       <div data-testid='homepage' className='home-page container'>
         <section className='section-part color-white container'>
-          <h2 className='txt-center uppercase'>
+          <h2 className='txt-center uppercase color-light'>
             Suivez votre <span className='no-bg-letter'>evolution !</span>
           </h2>
-          <p>
+          <p className="color-light">
             Créer votre compte gratuitement pour suivre votre évolution sportive. Suivez votre perte de masse grasse ou
             votre prise de masse musculaire. Evolu'fit vous permet de noter chaque séance pour avoir la possibilité de
             visualiser vos progrès rapidement. Le but de votre motivation est d'obtenir le corps que vous révez.
@@ -37,7 +37,6 @@ const Homepage = () => {
           </aside>
           <img src={athleteTwo} alt='atlete' />
         </article>
-        {localStorage.getItem("token") !== null && <Tabs />}
       </div>
     </>
   );

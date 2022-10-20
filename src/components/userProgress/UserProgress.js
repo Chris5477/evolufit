@@ -20,7 +20,7 @@ const UserProgress = ({ title, isCardio, data }) => {
         <div className='calendar-logo flex-center'>
           <img src={calendar} alt='calendar' />
         </div>
-        <h2 className='uppercase'>7 derniers jours</h2>
+        <h2 className='uppercase color-light'>7 derniers jours</h2>
         <div className='banner-progres'></div>
       </div>
       {graphicExercice}

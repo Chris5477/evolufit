@@ -3,7 +3,7 @@ import close from "../../assets/icons/close.svg";
 
 const ModalInfo = ({ title, content, setModal, other }) => {
   return createPortal(
-    <div data-testid='modal' className='modal flex-center'>
+    <div data-testid='modal' className='modal posFixed flex-center'>
       <img className='close-modal' onClick={() => setModal(false)} src={close} alt='cross' />
 
       <div className='container-modal'>

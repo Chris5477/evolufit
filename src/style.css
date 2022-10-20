@@ -15,14 +15,14 @@ body {
 }
 
 h2 {
-  font-size: 8.2vw;
+  font-size: 7.2vw;
   font-weight: 800;
-  color: rgb(246, 246, 246);
+  color: rgb(34, 34, 34);
 }
 
 h3 {
   font-size: 7vw;
-  color: rgb(246, 246, 246);
+  color: rgb(34, 34, 34);
   font-weight: 600;
 }
 
@@ -30,10 +30,18 @@ h3 {
   text-align: center;
 }
 
-p, li {
+p,
+li {
   font-size: 5vw;
   font-weight: 600;
-  color: rgb(246, 246, 246);
+  color: rgb(34, 34, 34);
+}
+
+.posFixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .uppercase {
@@ -56,12 +64,17 @@ p, li {
   align-items: center;
 }
 
+.color-light {
+  color: rgb(246, 246, 246);
+}
+
 .link-button {
   background-color: rgb(246, 246, 246);
   color: #ff7700;
   padding: 10px 15px;
   font-weight: 800;
   font-size: 3.8vw;
+  border-radius: 5px;
 }
 
 .btn {
@@ -130,7 +143,6 @@ footer .main-title {
 .container-footer ul li {
   font-size: 20px;
   padding: 5px 0;
-  color: black;
 }
 
 .networks {
@@ -208,32 +220,22 @@ form .error {
 }
 
 .modal {
-  position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   background-color: #dddddd;
   flex-direction: column;
-}
-.modal h2,
-.modal p {
-  color: black;
 }
 .modal .container-modal {
   width: 90%;
   height: 80vh;
 }
 .modal .header-modal h2 {
-  color: rgb(34, 34, 34);
   padding: 20px;
   font-weight: bolder;
 }
 .modal .content-modal {
   text-align: justify;
   padding: 10px 20px;
-  color: rgb(34, 34, 34);
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
@@ -255,10 +257,6 @@ form .error {
   width: 100%;
   height: 50px;
   display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
   background-color: rgb(246, 246, 246);
   border-top: 1px solid #6f6f6f;
 }
@@ -279,13 +277,6 @@ form .error {
 .loader-home {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   animation: disapear 2s 4s forwards;
 }
@@ -381,7 +372,6 @@ form .error {
   width: 90%;
   text-align: justify;
   background-color: rgb(119, 203, 113);
-  color: rgb(34, 34, 34);
   margin: 20px auto;
   border-radius: 10px;
   padding: 30px;
@@ -503,8 +493,6 @@ form .error {
 }
 .slider h2 {
   padding-left: 20px;
-  color: rgb(34, 34, 34);
-  font-size: 26px;
 }
 
 .items {
@@ -547,7 +535,6 @@ form .error {
 }
 
 .user-progres > h2 {
-  color: black;
   margin-bottom: 30px;
   padding-left: 20px;
 }
@@ -561,9 +548,7 @@ form .error {
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
 }
 .divider h2 {
-  color: rgb(246, 246, 246);
   padding: 10px;
-  font-size: 20px;
 }
 .divider .calendar-logo {
   width: 50px;
@@ -582,7 +567,6 @@ form .error {
 }
 .progress h2 {
   color: #555555;
-  font-size: 18px;
   margin-bottom: 30px;
 }
 .progress img {
@@ -593,9 +577,6 @@ form .error {
 .progress :active > img {
   transform: scale(1.3);
   transition: 0.4s;
-}
-.progress p {
-  color: rgb(34, 34, 34);
 }
 .progress p:first-child {
   font-size: 30px;
@@ -614,14 +595,13 @@ form .error {
 .info-imc h3,
 .info-imc p {
   width: 100%;
-  color: rgb(34, 34, 34);
   padding: 5px 25px;
 }
 .info-imc p {
   margin-bottom: 45px;
 }
 .info-imc h2 {
-  font-size: 32px;
+  font-size: 8vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -644,7 +624,6 @@ form .error {
 }
 .imc p {
   padding-top: 5px;
-  color: rgb(34, 34, 34);
   font-size: 13px;
   padding: 5px;
 }
@@ -661,9 +640,6 @@ form .error {
   padding: 40px 25px;
   flex-direction: column;
 }
-.error-page h2 {
-  font-size: 60px;
-}
 .error-page p {
   font-size: 24px;
   margin: 20px 0;
@@ -677,7 +653,6 @@ form .error {
 .error-page a {
   font-size: 18px;
   font-style: italic;
-  color: rgb(34, 34, 34);
   cursor: pointer;
 }
 
@@ -703,7 +678,6 @@ form .error {
 .pie h3,
 .radar h2,
 .radar h3 {
-  color: rgb(246, 246, 246);
   background-color: #ff7700;
   padding: 35px 0;
   margin-bottom: 30px;
@@ -714,7 +688,6 @@ form .error {
 }
 .pie p,
 .radar p {
-  color: rgb(34, 34, 34);
   padding: 25px;
   text-align: justify;
 }
@@ -728,7 +701,6 @@ form .error {
 
 /* CARDIO PAGE CSS **********************************************/
 .cardio-page h2 {
-  color: black;
   padding: 15px 0;
 }
 
@@ -751,7 +723,6 @@ form .error {
   margin: 30px 0;
 }
 .planning h2 {
-  color: rgb(34, 34, 34);
   padding: 8px;
 }
 .planning h3 {
@@ -760,7 +731,6 @@ form .error {
 }
 .planning li {
   padding: 15px;
-  color: rgb(34, 34, 34);
 }
 .planning li:nth-child(odd) {
   background-color: #c3c3c3;

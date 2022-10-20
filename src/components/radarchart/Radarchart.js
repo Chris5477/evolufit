@@ -4,7 +4,7 @@ import Button from "../button/Button";
 const SpiderChart = ({ title, data }) => {
   return (
     <section className='radar container flex-center' data-testid='radarchart'>
-      <h3 className='container txt-center'>{title}</h3>
+      <h3 className='container txt-center color-light'>{title}</h3>
       <RadarChart outerRadius={90} width={280} height={280} data={data}>
         <PolarGrid stroke='black' />
         <PolarAngleAxis dataKey='subject' />

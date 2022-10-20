@@ -1,23 +1,13 @@
 .modal {
-  position: fixed;
   @include sizeContainer(100%, 100%);
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: darken($color :$light, $amount : 10);
+  background-color: darken($color: $light, $amount: 10);
   flex-direction: column;
-
-  h2,
-  p {
-    color: black;
-  }
-
+ 
   .container-modal {
     @include sizeContainer(90%, 80vh);
   }
 
   .header-modal h2 {
-    color: $dark;
     padding: 20px;
     font-weight: bolder;
   }
@@ -25,7 +15,7 @@
   .content-modal {
     text-align: justify;
     padding: 10px 20px;
-    color: $dark;
+
     font-size: 18px;
     font-weight: bold;
     line-height: 20px;
