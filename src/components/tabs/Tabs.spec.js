@@ -1,11 +1,13 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import TopBar from "../Topbar/TopBar";
 import Tabs from "./Tabs";
 
 describe("Tabs componant", () => {
   beforeEach(() =>
     render(
       <BrowserRouter>
+        <TopBar />
         <Tabs />
       </BrowserRouter>
     )

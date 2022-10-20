@@ -13,8 +13,6 @@ const Tabs = () => {
 
   useEffect(() => {
     document.querySelector(".top-bar h1").addEventListener("click", backHome);
-
-    return () => document.querySelector(".top-bar h1").removeEventListener("click", backHome);
   });
 
   return (
