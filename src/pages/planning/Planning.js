@@ -5,7 +5,7 @@ import Context from "../../components/Context";
 
 const Planning = () => {
   const user = useContext(Context);
-  const planning = user[7];
+  const planning = user[6];
 
   return (
     <section className='planning container' data-testid='planning'>
