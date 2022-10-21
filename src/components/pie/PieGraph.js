@@ -4,29 +4,10 @@ import Context from "../Context";
 
 const Piechart = ({ title, info }) => {
   const user = useContext(Context);
-  const mass = user[6];
+  const mass = user[1].massRate;
 
   const COLORS = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
   const RADIAN = Math.PI / 180;
-  /* istanbul ignore next */
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-    return (
-      <text
-        x={x}
-        y={y}
-        fill='white'
-        fontSize={20}
-        fontWeight='bold'
-        textAnchor={x > cx ? "start" : "end"}
-        dominantBaseline='central'
-      >
-        {`${(percent * 100).toFixed(0)}%`}
-      </text>
-    );
-  };
 
   return (
     <section className='pie container flex-center' data-testid='pie'>
@@ -34,15 +15,17 @@ const Piechart = ({ title, info }) => {
       <PieChart width={280} height={280}>
         <Pie
           data={mass}
+          fontSize={30}
+          fontWeight={800}
           cx='50%'
           cy='50%'
-          labelLine={false}
-          label={renderCustomizedLabel}
-          outerRadius={80}
+          label={"name"}
+          outerRadius={90}
+          innerRadius={40}
           dataKey='value'
         >
           {mass.map((entry, index) => (
-            <Cell key={`cell-${index}`} c fill={COLORS[index % COLORS.length]} />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
         <Legend formatter={(value, index) => value}></Legend>

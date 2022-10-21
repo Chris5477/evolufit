@@ -43,11 +43,8 @@ const Profil = () => {
         <h2 className='greet-user uppercase '>
           Bonjour <span>{firstName}</span>
         </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae delectus labore itaque eius ipsa obcaecati
-          nemo.
-        </p>
       </section>
+        <q>Marcher sur la lune est compliqué, mais pas marcher jusqu'à la salle !</q>
       <section className='slider container'>
         <h2 className='uppercase subtitle'>Actualités</h2>
         <div ref={slideRef} className='items container uppercase'>

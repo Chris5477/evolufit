@@ -4,14 +4,14 @@ import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
 import { torse, bras, jambes, mass } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
-import { ToastContainer, toast } from "react-toastify";
+import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Login = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const mockBdd = [...users, ...infoBody, training, torse, bras, jambes, mass, planning];
+  const mockBdd = [...users, ...infoBody, training, torse, bras, jambes, planning];
   const userData = {
     pseudo,
     password,
@@ -36,7 +36,6 @@ const Login = ({ setCtx }) => {
 
   return (
     <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
-      <ToastContainer />
       <h2 className='txt-center uppercase color-light'>Connexion</h2>
       <FormData label='pseudo' valueInput={pseudo} handleChange={(e) => setPseudo(e.target.value)} />
       <FormData

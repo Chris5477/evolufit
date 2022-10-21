@@ -19,7 +19,6 @@ const UserProgress = ({ title, isCardio, data }) => {
 
   return (
     <section className='container user-progres' data-testid='user-progres'>
-      <ToastContainer />
       <h2 className='uppercase'>{title}</h2>
       <div className='divider'>
         <div className='calendar-logo flex-center'>
@@ -29,6 +28,7 @@ const UserProgress = ({ title, isCardio, data }) => {
         <div className='banner-progres'></div>
       </div>
       {graphicExercice}
+      <ToastContainer />
     </section>
   );
 };

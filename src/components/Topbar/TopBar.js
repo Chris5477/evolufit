@@ -6,7 +6,7 @@ import Timer from "../timer/Timer";
 import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
 import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 const TopBar = () => {
   const user = useContext(Context);

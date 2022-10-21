@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import FormData from "../../components/formData/FormData";
 
 const Signin = () => {
@@ -44,7 +44,6 @@ const Signin = () => {
 
   return (
     <form data-testid='signin' className='newAccount container' onSubmit={(e) => signup(e)}>
-      <ToastContainer />
       <h2 className='uppercase txt-center color-light'>
         Créer mon compte <br /> <span className='primary'>Évolu'Fit</span>
       </h2>

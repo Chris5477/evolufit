@@ -1,11 +1,10 @@
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, RadarChart, Radar } from "recharts";
 import Button from "../button/Button";
 
 const SpiderChart = ({ title, data }) => {
   return (
     <section className='radar container flex-center' data-testid='radarchart'>
-      <ToastContainer />
       <h3 className='container txt-center color-light'>{title}</h3>
       <RadarChart outerRadius={90} width={300} height={300} data={data}>
         <PolarGrid stroke='black' />

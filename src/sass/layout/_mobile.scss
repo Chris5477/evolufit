@@ -94,13 +94,19 @@
       rgba(255, 218, 193, 1) 59%,
       rgba(255, 111, 15, 0.2147233893557423) 100%
     );
-  }
 
+  }
+  
   p {
     font-size: 6vw;
     padding: 15px 10px;
     color: darken($color: $dark, $amount: 15%);
   }
+}
+q{
+  color: $dark;
+  font-size: 26px;
+  padding: 0 15px;
 }
 
 .slider {

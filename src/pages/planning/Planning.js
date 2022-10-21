@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import Button from "../../components/button/Button";
 import Context from "../../components/Context";
 
@@ -9,7 +9,6 @@ const Planning = () => {
 
   return (
     <section className='planning container' data-testid='planning'>
-      <ToastContainer />
       <h2 className='uppercase txt-center'>Votre programme</h2>
 
       <div className='day-week container uppercase'>

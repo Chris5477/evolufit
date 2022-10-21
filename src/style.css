@@ -107,9 +107,10 @@ li {
 
 .logged {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding-left: 15px;
+  padding-right: 10px;
 }
 .logged .container-avatar,
 .logged .container-avatar img {
@@ -121,7 +122,6 @@ footer {
   padding: 15px 10px 80px 10px;
   background-color: #fff;
   border-top: 1px solid rgb(34, 34, 34);
-  margin-top: 10px;
   box-shadow: 0px -2px 2px rgb(34, 34, 34);
 }
 footer .main-title {
@@ -492,6 +492,12 @@ form .error {
   font-size: 6vw;
   padding: 15px 10px;
   color: black;
+}
+
+q {
+  color: rgb(34, 34, 34);
+  font-size: 26px;
+  padding: 0 15px;
 }
 
 .slider {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Context from "./components/Context";
 import Footer from "./components/footer/Footer";
 import Tabs from "./components/tabs/Tabs";
@@ -37,6 +38,7 @@ const App = () => {
           </Routes>
           {localStorage.getItem("token") && <Tabs />}
           <Footer />
+          <ToastContainer/>
         </div>
       </Context.Provider>
     </BrowserRouter>
