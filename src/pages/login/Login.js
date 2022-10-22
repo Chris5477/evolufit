@@ -4,7 +4,7 @@ import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
 import { torse, bras, jambes, mass } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
-import {toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Login = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
@@ -26,7 +26,7 @@ const Login = ({ setCtx }) => {
       setCtx(mockBdd);
       localStorage.setItem("token", JSON.stringify("test"));
       notify(toast.success, "Connexion en cours...", 2500);
-      setTimeout(() => navigate("/profil"), 2500);
+      setTimeout(() => navigate("/evolufit/profil"), 2500);
     } else if (pseudo && password && (pseudo !== "admin" || password !== "12345")) {
       notify(toast.error, "Identifiants incorrects", 2500);
     } else {

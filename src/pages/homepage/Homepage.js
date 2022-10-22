@@ -20,7 +20,7 @@ const Homepage = () => {
           <div className='container-picture container'>
             <img src={athleteOne} alt='althelte' />
           </div>
-          <Link className='link-button uppercase txt-center' to={"/signin"}>
+          <Link className='link-button uppercase txt-center' to={"/evolufit/signin"}>
             S'inscrire
           </Link>
         </section>

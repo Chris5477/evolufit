@@ -26,7 +26,7 @@ const Error = () => {
         </>
       )}
 
-      <NavLink to='/'>(Cliquez ici pour aller sur votre page profil )</NavLink>
+      <NavLink to='/evolufit/'>(Cliquez ici pour aller sur votre page profil )</NavLink>
       <p className='error-type'>(Ceci est une erreur 404, car la page n'a pas été trouvé !)</p>
     </section>
   );

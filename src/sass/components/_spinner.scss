@@ -1,5 +1,6 @@
 .spinner {
   @include sizeContainer(100%, 100%);
+  opacity: 0.8;
   background-color: $primary;
 
   .dot {

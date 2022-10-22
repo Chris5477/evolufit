@@ -9,7 +9,7 @@ const Tabs = () => {
   const url = window.location.pathname;
   const [pathname, setPathname] = useState(url);
 
-  const backHome = () => setPathname("/");
+  const backHome = () => setPathname("/evolufit/");
 
   useEffect(() => {
     document.querySelector(".top-bar h1").addEventListener("click", backHome);
@@ -21,7 +21,7 @@ const Tabs = () => {
         onClick={() => setPathname("/profil")}
         className={`tab flex-center ${pathname === "/profil" && "active-tab"}`}
       >
-        <Link className='flex-center' to={"/profil"}>
+        <Link className='flex-center' to={"/evolufit/profil"}>
           <img className='logo-nav' src={profil} alt='account' />
         </Link>
       </li>
@@ -29,7 +29,7 @@ const Tabs = () => {
         onClick={() => setPathname("/cardio")}
         className={`tab flex-center ${pathname === "/cardio" && "active-tab"}`}
       >
-        <Link className='flex-center' to={"/cardio"}>
+        <Link className='flex-center' to={"/evolufit/cardio"}>
           <img className='logo-nav' src={cardio} alt='cardio' />
         </Link>
       </li>
@@ -37,7 +37,7 @@ const Tabs = () => {
         onClick={() => setPathname("/training")}
         className={`tab flex-center ${pathname === "/training" && "active-tab"}`}
       >
-        <Link className='flex-center' to={"/training"}>
+        <Link className='flex-center' to={"/evolufit/training"}>
           <img className='logo-nav' src={muscu} alt='muscu' />
         </Link>
       </li>
@@ -45,7 +45,7 @@ const Tabs = () => {
         onClick={() => setPathname("/planning")}
         className={`tab flex-center ${pathname === "/planning" && "active-tab"}`}
       >
-        <Link className='flex-center' to={"/planning"}>
+        <Link className='flex-center' to={"/evolufit/planning"}>
           <img className='logo-nav' src={planning} alt='planning' />
         </Link>
       </li>

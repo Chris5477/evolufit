@@ -28,17 +28,17 @@ const TopBar = () => {
   const disconnect = () => {
     localStorage.clear();
     toast.success("déconnexion en cours !", { autoClose: 2100, theme: "colored" });
-    setTimeout(() => navigate("/"), 2200);
+    setTimeout(() => navigate("/evolufit"), 2200);
   };
 
   return localStorage.getItem("token") ? (
     <header data-testid='topbar' className='top-bar logged container flex-center white-bg'>
       <div className='container-avatar'>
-        <Link to='/settings'>
+        <Link to='/evolufit/settings'>
           <img src={myPhoto} alt='avatar' width={24} height={24} />
         </Link>
       </div>
-      <Link to='/'>
+      <Link to='/evolufit'>
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
@@ -49,13 +49,13 @@ const TopBar = () => {
     </header>
   ) : (
     <header data-testid='topbar' className='top-bar container white-bg'>
-      <Link to='/'>
+      <Link to='/evolufit/'>
         <h1>Evolu'fit</h1>
       </Link>
-      <Link className='link-button uppercase' to={"/login"}>
+      <Link className='link-button uppercase' to={"/evolufit/login"}>
         Connexion
       </Link>
-      <Link className='link-button uppercase' to={"/signin"}>
+      <Link className='link-button uppercase' to={"/evolufit/signin"}>
         S'inscrire
       </Link>
     </header>

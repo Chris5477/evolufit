@@ -26,21 +26,21 @@ const App = () => {
         <div data-testid='app' className='App container'>
           <Topbar />
           <Routes>
-            <Route path='/' element={<Homepage />} />
-            <Route path='/login' element={<Login setCtx={setCtx} />} />
-            <Route path='/signin' element={<Signin />} />
+            <Route path='/evolufit' element={<Homepage />} />
+            <Route path='/evolufit/login' element={<Login setCtx={setCtx} />} />
+            <Route path='/evolufit/signin' element={<Signin />} />
             <Route
-              path='/profil'
+              path='/evolufit/profil'
               element={
                 <React.Suspense fallback={<Spinner />}>
                   <Profil />
                 </React.Suspense>
               }
             />
-            <Route path='/cardio' element={<Cardio />} />
-            <Route path='/training' element={<Training />} />
-            <Route path='/settings' element={<User />} />
-            <Route path='/planning' element={<Planning />} />
+            <Route path='/evolufit/cardio' element={<Cardio />} />
+            <Route path='/evolufit/training' element={<Training />} />
+            <Route path='/evolufit/settings' element={<User />} />
+            <Route path='/evolufit/planning' element={<Planning />} />
             <Route path='*' element={<Error />} />
           </Routes>
           {localStorage.getItem("token") && <Tabs />}
