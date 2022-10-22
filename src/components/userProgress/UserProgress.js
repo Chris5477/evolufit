@@ -1,4 +1,4 @@
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import calendar from "../../assets/icons/calendar.svg";
 import Button from "../button/Button";
 import Dataline from "../dataline/Dataline";
@@ -28,7 +28,6 @@ const UserProgress = ({ title, isCardio, data }) => {
         <div className='banner-progres'></div>
       </div>
       {graphicExercice}
-      <ToastContainer />
     </section>
   );
 };

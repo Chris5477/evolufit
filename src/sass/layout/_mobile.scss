@@ -40,8 +40,8 @@
   }
 
   aside {
-    @include sizeContainer(60%, 200px);
-    transform: translate(60%, 40%);
+    @include sizeContainer(60%, 230px);
+    transform: translate(60%, 30%);
     position: relative;
     z-index: 100;
     padding: 20px 0;
@@ -59,8 +59,8 @@
   }
 
   img {
-    width: 100%;
-    @include posAbs(25%, -30%);
+    width: 120%;
+    @include posAbs(25%, -50%);
   }
 }
 
@@ -94,16 +94,15 @@
       rgba(255, 218, 193, 1) 59%,
       rgba(255, 111, 15, 0.2147233893557423) 100%
     );
-
   }
-  
+
   p {
     font-size: 6vw;
     padding: 15px 10px;
     color: darken($color: $dark, $amount: 15%);
   }
 }
-q{
+q {
   color: $dark;
   font-size: 26px;
   padding: 0 15px;
@@ -181,7 +180,7 @@ q{
 .progress {
   @include sizeContainer(90%, 150px);
   border-bottom: 1px solid lighten($color: $dark, $amount: 20%);
-  padding: 20px;
+  padding: 10px 15px;
   margin: 20px auto;
 
   h2 {
@@ -300,7 +299,7 @@ q{
 .radar {
   margin-bottom: 10px;
 
-  tspan{
+  tspan {
     font-size: 12px;
   }
 

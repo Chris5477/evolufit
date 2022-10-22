@@ -4,10 +4,32 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "robotoregular", sans-serif;
 }
 
 body {
   background-color: rgb(246, 246, 246);
+}
+
+@font-face {
+  font-family: "russo_oneregular";
+  src: url("../src/assets/fonts/russoone-regular-webfont.woff2") format("woff2"), url("../src/assets/fonts/russoone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("../src/assets/fonts/roboto-regular-webfont.woff2") format("woff2"), url("../src/assets/fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "russo_oneregular", sans-serif;
 }
 
 .recharts-legend-item-text {
@@ -441,8 +463,8 @@ form .error {
 }
 .other-info aside {
   width: 60%;
-  height: 200px;
-  transform: translate(60%, 40%);
+  height: 230px;
+  transform: translate(60%, 30%);
   position: relative;
   z-index: 100;
   padding: 20px 0;
@@ -457,10 +479,10 @@ form .error {
   color: rgb(246, 246, 246);
 }
 .other-info img {
-  width: 100%;
+  width: 120%;
   position: absolute;
   top: 25%;
-  left: -30%;
+  left: -50%;
 }
 
 /* CSS PROFIL PAGE **************************************************************** */
@@ -575,7 +597,7 @@ q {
   width: 90%;
   height: 150px;
   border-bottom: 1px solid #555555;
-  padding: 20px;
+  padding: 10px 15px;
   margin: 20px auto;
 }
 .progress h2 {
