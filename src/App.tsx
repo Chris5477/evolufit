@@ -18,13 +18,13 @@ import "./style.css";
 const Profil = React.lazy(() => import("./pages/profil/Profil"));
 
 const App = () => {
-  const [ctx, setCtx] = useState({});
+  const [ctx, setCtx] = useState(JSON.parse(localStorage.getItem("data")!));
 
   return (
     <BrowserRouter>
       <Context.Provider value={ctx}>
         <div data-testid='app' className='App container'>
-          <Topbar />
+          <Topbar setCtx={setCtx} />
           <Routes>
             <Route path='/evolufit' element={<Homepage />} />
             <Route path='/evolufit/login' element={<Login setCtx={setCtx} />} />
@@ -43,7 +43,7 @@ const App = () => {
             <Route path='/evolufit/planning' element={<Planning />} />
             <Route path='*' element={<Error />} />
           </Routes>
-          {localStorage.getItem("token") && <Tabs />}
+          {localStorage.getItem("data") && <Tabs />}
           <Footer />
           <ToastContainer />
         </div>

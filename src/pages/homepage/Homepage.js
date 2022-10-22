@@ -2,11 +2,17 @@ import athleteOne from "../../assets/athlete/athlete1.png";
 import athleteTwo from "../../assets/athlete/athlete2.png";
 import LoaderHome from "../loader-home/LoaderHome";
 import { Link } from "react-router-dom";
+import Context from "../../components/Context";
+import { useContext } from "react";
 
 const Homepage = () => {
+
+  const loader = useContext(Context) == null ? <LoaderHome/> : ""
+
+
   return (
     <>
-      <LoaderHome />
+     {loader}
       <div data-testid='homepage' className='home-page container'>
         <section className='section-part color-white container'>
           <h2 className='txt-center uppercase color-light'>

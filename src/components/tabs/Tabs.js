@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Tabs = () => {
-  const url = window.location.pathname;
-  const [pathname, setPathname] = useState(url);
+  const [pathname, setPathname] = useState("/profil");
 
   const backHome = () => setPathname("/evolufit/");
 

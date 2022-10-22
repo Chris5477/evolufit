@@ -37,7 +37,7 @@ const Signin = () => {
       toast.error("Veuillez remplir tous les champs!", { autoClose: 2000, theme: "colored" });
     } else {
       toast.success("Compte crée avec succès !", { autoClose: 1400, theme: "colored" });
-      localStorage.setItem("token", "test");
+      localStorage.setItem("data", "test"); // /!\ A MODIFIER PLUS TART
       setTimeout(() => navigate("/profil"), 1500);
     }
   };

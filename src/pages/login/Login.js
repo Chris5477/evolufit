@@ -24,7 +24,7 @@ const Login = ({ setCtx }) => {
     e.preventDefault();
     if (pseudo === "admin" && password === "12345") {
       setCtx(mockBdd);
-      localStorage.setItem("token", JSON.stringify("test"));
+      localStorage.setItem("data", JSON.stringify(mockBdd));
       notify(toast.success, "Connexion en cours...", 2500);
       setTimeout(() => navigate("/evolufit/profil"), 2500);
     } else if (pseudo && password && (pseudo !== "admin" || password !== "12345")) {

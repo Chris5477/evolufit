@@ -31,7 +31,7 @@ const Profil = () => {
   const week = user[2].flatMap((data) => data.week);
 
   useEffect(() => {
-    localStorage.getItem("token") == null && navigate("/");
+    localStorage.getItem("data") == null && navigate("/");
   }, []);
 
   return (

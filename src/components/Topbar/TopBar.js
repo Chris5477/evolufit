@@ -8,13 +8,12 @@ import Context from "../Context";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 
-const TopBar = () => {
+const TopBar = ({ setCtx }) => {
   const user = useContext(Context);
   const navigate = useNavigate();
-
   let myPhoto = avatar;
 
-  if (user[0]?.profilPicture != undefined) {
+  if (user != null) {
     const { profilPicture } = user[0];
     myPhoto = profilPicture;
   }
@@ -28,10 +27,13 @@ const TopBar = () => {
   const disconnect = () => {
     localStorage.clear();
     toast.success("déconnexion en cours !", { autoClose: 2100, theme: "colored" });
-    setTimeout(() => navigate("/evolufit"), 2200);
+    setTimeout(() => {
+      navigate("/evolufit");
+      setCtx(null);
+    }, 2200);
   };
 
-  return localStorage.getItem("token") ? (
+  return localStorage.getItem("data") ? (
     <header data-testid='topbar' className='top-bar logged container flex-center white-bg'>
       <div className='container-avatar'>
         <Link to='/evolufit/settings'>
