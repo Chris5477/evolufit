@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/evolufit/static/css/main.4c963c20.css",
-    "main.js": "/evolufit/static/js/main.c9991079.js",
-    "static/js/215.20f8d368.chunk.js": "/evolufit/static/js/215.20f8d368.chunk.js",
+    "main.js": "/evolufit/static/js/main.49bc1c07.js",
+    "static/js/215.6fe52946.chunk.js": "/evolufit/static/js/215.6fe52946.chunk.js",
     "static/js/258.0823e8a3.chunk.js": "/evolufit/static/js/258.0823e8a3.chunk.js",
     "static/js/787.3beaa5d6.chunk.js": "/evolufit/static/js/787.3beaa5d6.chunk.js",
     "static/media/bannier-muscu.png": "/evolufit/static/media/bannier-muscu.cb6e3a96df77256fd2d7.png",
@@ -37,13 +37,13 @@
     "index.html": "/evolufit/index.html",
     "static/media/avatar.svg": "/evolufit/static/media/avatar.5f0d91a731bd8bd9613919056375c8ef.svg",
     "main.4c963c20.css.map": "/evolufit/static/css/main.4c963c20.css.map",
-    "main.c9991079.js.map": "/evolufit/static/js/main.c9991079.js.map",
-    "215.20f8d368.chunk.js.map": "/evolufit/static/js/215.20f8d368.chunk.js.map",
+    "main.49bc1c07.js.map": "/evolufit/static/js/main.49bc1c07.js.map",
+    "215.6fe52946.chunk.js.map": "/evolufit/static/js/215.6fe52946.chunk.js.map",
     "258.0823e8a3.chunk.js.map": "/evolufit/static/js/258.0823e8a3.chunk.js.map",
     "787.3beaa5d6.chunk.js.map": "/evolufit/static/js/787.3beaa5d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c963c20.css",
-    "static/js/main.c9991079.js"
+    "static/js/main.49bc1c07.js"
   ]
 }
