@@ -1,0 +1,27 @@
+.spinner {
+  @include sizeContainer(100%, 100%);
+  background-color: $primary;
+
+  .dot {
+    font-size: 140px;
+    color: $light;
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  .dot-two {
+    animation-delay: 0.3s;
+  }
+  .dot-three {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.2);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}

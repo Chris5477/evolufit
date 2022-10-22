@@ -1,9 +1,10 @@
 import bannierMuscu from "../../assets/others/bannier-muscu.png";
 import SpiderChart from "../../components/radarchart/Radarchart";
 import Piechart from "../../components/pie/PieGraph";
-import Banner from "../../components/banner/Banner";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import Context from "../../components/Context";
+import Spinner from "../../components/spinner/Spinner";
+const Banner = React.lazy(() => import("../../components/banner/Banner"));
 
 const Training = () => {
   const user = useContext(Context);
@@ -15,7 +16,9 @@ const Training = () => {
 
   return (
     <div className='training-page container flex-center' data-testid='training-page'>
-      <Banner picture={bannierMuscu} />
+      <React.Suspense fallback={<Spinner />}>
+        <Banner picture={bannierMuscu} />
+      </React.Suspense>
       <Piechart title={"Information sur vos masses"} info={addInfo} />
 
       <h2 className='container txt-center'>Vos performanes</h2>

@@ -422,6 +422,31 @@ form .error {
   font-size: 5vw;
 }
 
+.spinner {
+  width: 100%;
+  height: 100%;
+  background-color: #ff7700;
+}
+.spinner .dot {
+  font-size: 140px;
+  color: rgb(246, 246, 246);
+  animation: pulse 1s ease-in-out infinite;
+}
+.spinner .dot-two {
+  animation-delay: 0.3s;
+}
+.spinner .dot-three {
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
 /* CSS HOME PAGE ******************************************************************************/
 .section-part {
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);

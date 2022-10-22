@@ -44,7 +44,7 @@ const Profil = () => {
           Bonjour <span>{firstName}</span>
         </h2>
       </section>
-        <q>Marcher sur la lune est compliqué, mais pas marcher jusqu'à la salle !</q>
+      <q>Marcher sur la lune est compliqué, mais pas marcher jusqu'à la salle !</q>
       <section className='slider container'>
         <h2 className='uppercase subtitle'>Actualités</h2>
         <div ref={slideRef} className='items container uppercase'>
