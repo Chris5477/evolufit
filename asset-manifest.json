@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/evolufit/static/css/main.1046c9af.css",
-    "main.js": "/evolufit/static/js/main.4027eebf.js",
+    "main.css": "/evolufit/static/css/main.4c963c20.css",
+    "main.js": "/evolufit/static/js/main.c9991079.js",
+    "static/js/215.20f8d368.chunk.js": "/evolufit/static/js/215.20f8d368.chunk.js",
+    "static/js/258.0823e8a3.chunk.js": "/evolufit/static/js/258.0823e8a3.chunk.js",
     "static/js/787.3beaa5d6.chunk.js": "/evolufit/static/js/787.3beaa5d6.chunk.js",
     "static/media/bannier-muscu.png": "/evolufit/static/media/bannier-muscu.cb6e3a96df77256fd2d7.png",
     "static/media/profil.jpg": "/evolufit/static/media/profil.ca6588406e4e4b870f35.jpg",
@@ -11,6 +13,10 @@
     "static/media/athlete1.png": "/evolufit/static/media/athlete1.b496a6150a289b0ca711.png",
     "static/media/athlete2.png": "/evolufit/static/media/athlete2.f5e2300ab00ec21edf73.png",
     "static/media/breakfeast.png": "/evolufit/static/media/breakfeast.e9e53231af01ba05b50f.png",
+    "static/media/roboto-regular-webfont.woff": "/evolufit/static/media/roboto-regular-webfont.a27c339b39c0c8a5d91b.woff",
+    "static/media/russoone-regular-webfont.woff": "/evolufit/static/media/russoone-regular-webfont.3de55f17e13170531538.woff",
+    "static/media/roboto-regular-webfont.woff2": "/evolufit/static/media/roboto-regular-webfont.5ba100ed2dedc336d2dc.woff2",
+    "static/media/russoone-regular-webfont.woff2": "/evolufit/static/media/russoone-regular-webfont.35d142e40372b6b2bdcd.woff2",
     "static/media/etude.png": "/evolufit/static/media/etude.c946bb6fd3fd475d13ae.png",
     "static/media/facebook.svg": "/evolufit/static/media/facebook.6a3bc1c919e16f9311cf5c20030f4693.svg",
     "static/media/youtube.svg": "/evolufit/static/media/youtube.2916f75dc22c03a7eb7cc1df8d1af8ac.svg",
@@ -30,12 +36,14 @@
     "static/media/eye.svg": "/evolufit/static/media/eye.5b2e3e1a417834e16813a95ac85f4ebb.svg",
     "index.html": "/evolufit/index.html",
     "static/media/avatar.svg": "/evolufit/static/media/avatar.5f0d91a731bd8bd9613919056375c8ef.svg",
-    "main.1046c9af.css.map": "/evolufit/static/css/main.1046c9af.css.map",
-    "main.4027eebf.js.map": "/evolufit/static/js/main.4027eebf.js.map",
+    "main.4c963c20.css.map": "/evolufit/static/css/main.4c963c20.css.map",
+    "main.c9991079.js.map": "/evolufit/static/js/main.c9991079.js.map",
+    "215.20f8d368.chunk.js.map": "/evolufit/static/js/215.20f8d368.chunk.js.map",
+    "258.0823e8a3.chunk.js.map": "/evolufit/static/js/258.0823e8a3.chunk.js.map",
     "787.3beaa5d6.chunk.js.map": "/evolufit/static/js/787.3beaa5d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1046c9af.css",
-    "static/js/main.4027eebf.js"
+    "static/css/main.4c963c20.css",
+    "static/js/main.c9991079.js"
   ]
 }

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkevolufit=self.webpackChunkevolufit||[]).push([[258],{3258:function(t,e,i){i.r(e);var a=i(184);e.default=function(t){var e=t.picture;return(0,a.jsx)("div",{className:"container bannier","data-testid":"banner",children:(0,a.jsx)("img",{src:e,alt:"activity",width:"100%",height:200})})}}}]);
+//# sourceMappingURL=258.0823e8a3.chunk.js.map
