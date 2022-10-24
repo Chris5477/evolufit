@@ -34,7 +34,7 @@ const Signin = () => {
     e.preventDefault();
     const isValid = Object.values(data).every((value) => value);
     if (!isValid) {
-      toast.error("Veuillez remplir tous les champs!", { autoClose: 2000, theme: "colored" });
+      toast.error("Veuillez remplir tous les champs !", { autoClose: 2000, theme: "colored" });
     } else {
       toast.success("Compte crée avec succès !", { autoClose: 1400, theme: "colored" });
       localStorage.setItem("data", "test"); // /!\ A MODIFIER PLUS TART

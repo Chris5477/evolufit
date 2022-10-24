@@ -17,6 +17,7 @@ const Timer = ({ setModal }) => {
 
   const changeDuration = (operator) => {
     operator === "+" ? setDuration(duration + 15) : setDuration(duration - 15);
+    
   };
 
   const startOrStopTimer = (bool) => {

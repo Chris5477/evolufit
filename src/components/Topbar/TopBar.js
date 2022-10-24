@@ -40,7 +40,7 @@ const TopBar = ({ setCtx }) => {
       </Link>
       <div className='timer'>
         <img onClick={disconnect} src={logout} alt='disconnect' />
-        <img onClick={openModal} src={timer} alt='timer' />
+        <img className="timer-picture" onClick={openModal} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}
     </header>

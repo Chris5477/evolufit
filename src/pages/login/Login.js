@@ -7,7 +7,7 @@ import { planning } from "../../mock/planning.js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const notify = (type, text, duration) => type(text, { autoClose: duration, theme: "colored" });  
+export const notify = (type, text, duration) => type(text, { autoClose: duration, theme: "colored" });
 
 const Login = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
@@ -19,7 +19,6 @@ const Login = ({ setCtx }) => {
     pseudo,
     password,
   };
-
 
   const login = (e) => {
     const { pseudo, password } = userData;
