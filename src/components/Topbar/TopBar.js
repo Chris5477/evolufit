@@ -11,12 +11,7 @@ import { toast } from "react-toastify";
 const TopBar = ({ setCtx }) => {
   const user = useContext(Context);
   const navigate = useNavigate();
-  let myPhoto = avatar;
-
-  if (user != null) {
-    const { profilPicture } = user[0];
-    myPhoto = profilPicture;
-  }
+  let myPhoto = user != undefined ? user[0]?.profilPicture : avatar;
 
   const [modal, setModal] = useState(false);
 
@@ -26,7 +21,7 @@ const TopBar = ({ setCtx }) => {
 
   const disconnect = () => {
     localStorage.clear();
-    toast.success("déconnexion en cours !", { autoClose: 2100, theme: "colored" });
+    toast.success("Déconnexion en cours !", { autoClose: 2000, theme: "colored" });
     setTimeout(() => {
       navigate("/evolufit");
       setCtx(null);

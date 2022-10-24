@@ -7,7 +7,6 @@ const Piechart = ({ title, info }) => {
   const mass = user[1].massRate;
 
   const COLORS = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
-  const RADIAN = Math.PI / 180;
 
   return (
     <section className='pie container flex-center' data-testid='pie'>
@@ -15,12 +14,12 @@ const Piechart = ({ title, info }) => {
       <PieChart width={280} height={280}>
         <Pie
           data={mass}
-          fontSize={30}
+          fontSize={22}
           fontWeight={800}
           cx='50%'
           cy='50%'
           label={"name"}
-          outerRadius={90}
+          outerRadius={70}
           innerRadius={40}
           dataKey='value'
         >

@@ -6,6 +6,9 @@ import { torse, bras, jambes, mass } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+export const notify = (type, text, duration) => type(text, { autoClose: duration, theme: "colored" });  
+
 const Login = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +20,6 @@ const Login = ({ setCtx }) => {
     password,
   };
 
-  const notify = (type, text, duration) => type(text, { autoClose: duration, theme: "colored" });
 
   const login = (e) => {
     const { pseudo, password } = userData;

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Context from "../../components/Context";
 import { mockContext } from "../../mock/mockContext";
@@ -47,27 +47,6 @@ describe("Signin Page", () => {
       expect(man.value).toBe("homme");
       fireEvent.click(woman);
       expect(woman.value).toBe("femme");
-    });
-    test("Should return an error message if any field is empty", async () => {
-      fireEvent.submit(submitBtn);
-
-      const isValid = await screen.findAllByText("Veuillez remplir tous les champs!");
-      expect(isValid).toBeTruthy();
-    });
-    test("Should return a success message if the form is valid", async () => {
-      fireEvent.change(inputFirstname, { target: { value: "firstname" } });
-      fireEvent.change(inputLastName, { target: { value: "lastname" } });
-      fireEvent.change(inputYear, { target: { value: "2022-10-10" } });
-      fireEvent.change(inputEmail, { target: { value: "test@gmail.com" } });
-      fireEvent.change(inputSize, { target: { value: "170" } });
-      fireEvent.change(inputWeight, { target: { value: "49" } });
-      fireEvent.change(inputPseudo, { target: { value: "pseudo" } });
-      fireEvent.change(inputPassword, { target: { value: "password" } });
-
-      fireEvent.submit(submitBtn);
-
-      const isValid = await screen.findByText("Inscription réussie! Redirection en cours...");
-      expect(isValid).toBeTruthy();
     });
   });
 });

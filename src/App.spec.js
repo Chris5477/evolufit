@@ -1,26 +1,35 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
+import Context from "./components/Context";
+import { mockContext } from "./mock/mockContext";
 
 describe("App", () => {
-  beforeAll(() => localStorage.setItem("token", "ok"));
+  beforeAll(() => localStorage.setItem("data", '{"data" : "ok"}'));
   afterAll(() => localStorage.clear());
 
   test("Should render App component", () => {
-    render(<App />);
+    render(
+      <Context.Provider value={mockContext}>
+        <App />
+      </Context.Provider>
+    );
 
     const app = screen.getByTestId("app");
     expect(app).toBeInTheDocument();
-
-    const nav = document.querySelector("nav");
-    expect(nav).toBeInTheDocument();
   });
 });
 
 describe("localStorage", () => {
   test("Should not display the tabs with nodata in localstorage", () => {
-    render(<App />);
+    render(
+      <Context.Provider value={mockContext}>
+        <App />
+      </Context.Provider>
+    );
 
-    const nav = document.querySelector("nav");
-    expect(nav).toBeNull();
+    const data = localStorage.getItem("token");
+
+    expect(data).toBeNull();
+    expect(document.querySelector("nav")).toBeNull();
   });
 });
