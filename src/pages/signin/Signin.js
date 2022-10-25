@@ -2,21 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import FormData from "../../components/formData/FormData";
+import { initialState, signup } from "./utils/variables";
 
 const Signin = () => {
   const navigate = useNavigate();
-
-  const initialState = {
-    firstName: "",
-    lastName: "",
-    yearsOld: "",
-    email: "",
-    size: "",
-    weight: "",
-    gender: "homme",
-    pseudo: "",
-    password: "",
-  };
 
   const [data, setData] = useState(initialState);
   const { firstName, lastName, yearsOld, email, size, weight, gender, pseudo, password } = data;
@@ -30,20 +19,8 @@ const Signin = () => {
     }
   };
 
-  const signup = (e) => {
-    e.preventDefault();
-    const isValid = Object.values(data).every((value) => value);
-    if (!isValid) {
-      toast.error("Veuillez remplir tous les champs !", { autoClose: 2000, theme: "colored" });
-    } else {
-      toast.success("Compte crée avec succès !", { autoClose: 1400, theme: "colored" });
-      localStorage.setItem("data", "test"); // /!\ A MODIFIER PLUS TART
-      setTimeout(() => navigate("/profil"), 1500);
-    }
-  };
-
   return (
-    <form data-testid='signin' className='newAccount container' onSubmit={(e) => signup(e)}>
+    <form data-testid='signin' className='newAccount container' onSubmit={(e) => signup(e, data, navigate)}>
       <h2 className='uppercase txt-center color-light'>
         Créer mon compte <br /> <span className='uppercase'>Evolu'Fit</span>
       </h2>

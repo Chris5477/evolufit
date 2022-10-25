@@ -7,6 +7,7 @@ import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
+import { disconnect } from "./utils/variables";
 
 const TopBar = ({ setCtx }) => {
   const user = useContext(Context);
@@ -14,19 +15,6 @@ const TopBar = ({ setCtx }) => {
   let myPhoto = user != undefined ? user[0]?.profilPicture : avatar;
 
   const [modal, setModal] = useState(false);
-
-  const openModal = () => {
-    setModal(true);
-  };
-
-  const disconnect = () => {
-    localStorage.clear();
-    toast.success("Déconnexion en cours !", { autoClose: 2000, theme: "colored" });
-    setTimeout(() => {
-      navigate("/evolufit");
-      setCtx(null);
-    }, 2200);
-  };
 
   return localStorage.getItem("data") ? (
     <header data-testid='topbar' className='top-bar logged container flex-center white-bg'>
@@ -39,8 +27,8 @@ const TopBar = ({ setCtx }) => {
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
-        <img onClick={disconnect} src={logout} alt='disconnect' />
-        <img className="timer-picture" onClick={openModal} src={timer} alt='timer' />
+        <img onClick={() => disconnect(navigate, setCtx)} src={logout} alt='disconnect' />
+        <img className='timer-picture' onClick={() => setModal(true)} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}
     </header>

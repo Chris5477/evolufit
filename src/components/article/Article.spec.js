@@ -1,7 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import {render, screen } from "@testing-library/react";
 import Article from "./Article";
 import { actualities } from "../../news/actualities.js";
-import { handleClick } from "./Article";
+import { onClick } from "./utils/variables";
+
 describe("Slide Component", () => {
   const { title, article, urlImg } = actualities[0];
   let slide = null;
@@ -15,7 +16,7 @@ describe("Slide Component", () => {
   });
 
   test("Should print something in the console", () => {
-    const resultClick = handleClick();
+    const resultClick = onClick();
     expect(resultClick).toBeNull();
   });
 });

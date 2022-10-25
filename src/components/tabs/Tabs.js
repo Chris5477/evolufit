@@ -1,14 +1,12 @@
-import profil from "../../assets/icons/profil.svg";
-import cardio from "../../assets/icons/cardio.svg";
-import muscu from "../../assets/icons/muscu.svg";
-import planning from "../../assets/icons/planning.svg";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Tab from "../tab/Tab";
+import { tabsLink } from "./utils/variables";
 
 const Tabs = () => {
   const [pathname, setPathname] = useState("/profil");
 
   const backHome = () => setPathname("/evolufit/");
+  const listPaths = tabsLink()
 
   useEffect(() => {
     document.querySelector(".top-bar h1").addEventListener("click", backHome);
@@ -16,40 +14,10 @@ const Tabs = () => {
 
   return (
     <nav data-testid='tabs' className='tabs-navigation posFixed'>
-      <li
-        onClick={() => setPathname("/profil")}
-        className={`tab flex-center ${pathname === "/profil" && "active-tab"}`}
-      >
-        <Link className='flex-center' to={"/evolufit/profil"}>
-          <img className='logo-nav' src={profil} alt='account' />
-        </Link>
-      </li>
-      <li
-        onClick={() => setPathname("/cardio")}
-        className={`tab flex-center ${pathname === "/cardio" && "active-tab"}`}
-      >
-        <Link className='flex-center' to={"/evolufit/cardio"}>
-          <img className='logo-nav' src={cardio} alt='cardio' />
-        </Link>
-      </li>
-      <li
-        onClick={() => setPathname("/training")}
-        className={`tab flex-center ${pathname === "/training" && "active-tab"}`}
-      >
-        <Link className='flex-center' to={"/evolufit/training"}>
-          <img className='logo-nav' src={muscu} alt='muscu' />
-        </Link>
-      </li>
-      <li
-        onClick={() => setPathname("/planning")}
-        className={`tab flex-center ${pathname === "/planning" && "active-tab"}`}
-      >
-        <Link className='flex-center' to={"/evolufit/planning"}>
-          <img className='logo-nav' src={planning} alt='planning' />
-        </Link>
-      </li>
+      {listPaths.map(({ id, txtAlt, url, picture }) => (
+        <Tab key={id} pathname={pathname} setPathname={setPathname} txtAlt={txtAlt} url={url} picture={picture} />
+      ))}
     </nav>
   );
 };
-
 export default Tabs;

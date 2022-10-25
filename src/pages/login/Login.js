@@ -2,41 +2,23 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
-import { torse, bras, jambes, mass } from "../../mock/perf.js";
+import { torse, bras, jambes } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
-import { toast } from "react-toastify";
+import { validationLoginForm } from "./utils/variables";
 import "react-toastify/dist/ReactToastify.css";
-
-export const notify = (type, text, duration) => type(text, { autoClose: duration, theme: "colored" });
 
 const Login = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
   const mockBdd = [...users, ...infoBody, training, torse, bras, jambes, planning];
-  const userData = {
-    pseudo,
-    password,
-  };
-
-  const login = (e) => {
-    const { pseudo, password } = userData;
-    e.preventDefault();
-    if (pseudo === "admin" && password === "12345") {
-      setCtx(mockBdd);
-      localStorage.setItem("data", JSON.stringify(mockBdd));
-      notify(toast.success, "Connexion en cours...", 2500);
-      setTimeout(() => navigate("/evolufit/profil"), 2500);
-    } else if (pseudo && password && (pseudo !== "admin" || password !== "12345")) {
-      notify(toast.error, "Identifiants incorrects", 2500);
-    } else {
-      notify(toast.error, "Veuillez remplir tous les champs !", 2500);
-    }
-  };
 
   return (
-    <form data-testid='loginpage' className='login-form' onSubmit={(e) => login(e)}>
+    <form
+      data-testid='loginpage'
+      className='login-form'
+      onSubmit={(e) => validationLoginForm(e, pseudo, password, setCtx, mockBdd, navigate)}
+    >
       <h2 className='txt-center uppercase color-light'>Connexion</h2>
       <FormData label='pseudo' valueInput={pseudo} handleChange={(e) => setPseudo(e.target.value)} />
       <FormData

@@ -2,46 +2,13 @@ import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
 import { useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
-
-export const getEvolutionWeight = (weight, initialWeight) => {
-  const newWeight = weight - initialWeight;
-  if (weight > initialWeight) {
-    return `+ ${newWeight} kg 🔺`;
-  } else if (weight < initialWeight) {
-    return `${newWeight} kg 🔻`;
-  } else {
-    return weight;
-  }
-};
-
-export const sumData = (arr, key) => {
-  const dataExploit = arr.map((data) => data[key]);
-  let total = dataExploit.reduce((acc, val) => acc + val);
-  total = key === "distance" ? Number(total / 100) : total;
-  return Number.isInteger(total) ? total : total.toFixed(2);
-};
+import { getProgres } from "./utils/variables";
 
 const Progress = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data.at(-1).weight;
-  let getWeightProgression = null;
+  let getWeightProgression = getProgres(label, lastWeight, initialWeight, data, unity);
 
   const [modal, setModal] = useState(false);
-
-  if (label === "poids") {
-    const newWeight = getEvolutionWeight(lastWeight, initialWeight);
-    getWeightProgression = (
-      <>
-        <p>{lastWeight}</p>
-        <p>{initialWeight !== newWeight && newWeight}</p>
-      </>
-    );
-  } else {
-    getWeightProgression = (
-      <p>
-        {sumData(data, label)} <br /> {unity}
-      </p>
-    );
-  }
 
   return (
     <section data-testid='progress' className='progress container'>

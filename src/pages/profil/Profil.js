@@ -7,28 +7,22 @@ import { useNavigate } from "react-router-dom";
 import IMC from "../../components/imc/IMC.js";
 import UserProgress from "../../components/userProgress/UserProgress.js";
 import Context from "../../components/Context.js";
+import { translateItem } from "./utils/variables.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
   const navigate = useNavigate();
   const slideRef = useRef();
-
-  const translateItem = () => {
-    const divElement = slideRef.current;
-    translate < 660 ? setTranslate(translate + 330) : setTranslate(translate - 660);
-    divElement.style.transform = "translateX(" + -translate + "px)";
-    divElement.style.transition = "2s";
-  };
-
-  useEffect(() => {
-    const id = setInterval(translateItem, 4000);
-    return () => clearInterval(id);
-  }, [translate]);
-
   const user = useContext(Context);
   const { firstName, signinDate } = user[0];
   const { weight, initialWeight } = user[1];
   const week = user[2].flatMap((data) => data.week);
+
+  useEffect(() => {
+    const id = setInterval(() => translateItem(slideRef, translate, setTranslate), 4000);
+    return () => clearInterval(id);
+  }, [translate]);
+
 
   useEffect(() => {
     localStorage.getItem("data") == null && navigate("/");

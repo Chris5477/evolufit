@@ -17,14 +17,11 @@ const Timer = ({ setModal }) => {
 
   const changeDuration = (operator) => {
     operator === "+" ? setDuration(duration + 15) : setDuration(duration - 15);
-    
   };
 
   const startOrStopTimer = (bool) => {
     setIsStart(bool);
   };
-
-  const resetTimer = () => setDuration(30);
 
   return createPortal(
     <div className='modal timer container flex-center posFixed' data-testid='timer'>
@@ -37,7 +34,7 @@ const Timer = ({ setModal }) => {
         {isStart ? (
           <Button onClick={() => startOrStopTimer(false)} content={"Stop"} />
         ) : (
-          <Button onClick={resetTimer} content={"Reset"} />
+          <Button onClick={() => setDuration(30)} content={"Reset"} />
         )}
       </div>
     </div>,

@@ -11,7 +11,7 @@ const Error = () => {
   }, []);
 
     useEffect(() => {
-      setTimeout(() => navigate("/"), 4000);
+      setTimeout(() => navigate("/evolufit/"), 4000);
     }, []);
 
   return (
