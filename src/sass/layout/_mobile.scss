@@ -383,3 +383,26 @@ q {
     margin: auto;
   }
 }
+
+/* USER CSS *********************************************************/
+
+.settings-user {
+  padding-left: 25px;
+  margin: 20px 0;
+
+  h2,
+  button {
+    margin: 20px 0;
+  }
+}
+
+.edit-photo {
+  label {
+    visibility: hidden;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import FormData from "../../components/formData/FormData";
 import { initialState, signup } from "./utils/variables";
 
@@ -8,7 +7,7 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const [data, setData] = useState(initialState);
-  const { firstName, lastName, yearsOld, email, size, weight, gender, pseudo, password } = data;
+  const { firstName, lastName, yearsOld, email, size, weight, gender, password } = data;
 
   const changeValue = (e) => {
     const { value, name, id } = e.target;
@@ -45,7 +44,6 @@ const Signin = () => {
       <FormData handleChange={changeValue} label='email' name='email' valueInput={email} typeInput='email' />
       <FormData handleChange={changeValue} label='taille (en cm)' name='size' valueInput={size} />
       <FormData handleChange={changeValue} label='poids (en kg)' name='weight' valueInput={weight} />
-      <FormData handleChange={changeValue} label='pseudo' name='pseudo' valueInput={pseudo} />
       <FormData
         handleChange={changeValue}
         label='password'

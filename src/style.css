@@ -807,4 +807,23 @@ q {
   margin: auto;
 }
 
+/* USER CSS *********************************************************/
+.settings-user {
+  padding-left: 25px;
+  margin: 20px 0;
+}
+.settings-user h2,
+.settings-user button {
+  margin: 20px 0;
+}
+
+.edit-photo label {
+  visibility: hidden;
+}
+.edit-photo img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
