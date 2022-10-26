@@ -4,7 +4,7 @@ import edit from "../../assets/icons/edit.svg";
 import Button from "../../components/button/Button";
 import FormData from "../../components/formData/FormData";
 import { useNavigate } from "react-router-dom";
-import { disconnect } from "../../components/Topbar/utils/variables";
+import { disconnect } from "../../components/Topbar/variables";
 
 const User = ({ setCtx }) => {
   const user = useContext(Context);

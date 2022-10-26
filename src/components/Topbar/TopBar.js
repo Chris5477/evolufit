@@ -7,7 +7,7 @@ import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
-import { disconnect } from "./utils/variables";
+import { disconnect } from "./variables";
 
 const TopBar = ({ setCtx }) => {
   const user = useContext(Context);

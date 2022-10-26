@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Progress from "./Progress";
-import { getEvolutionWeight, sumData } from "./utils/variables.js";
+import { getEvolutionWeight, sumData } from "./variables.js";
 
 describe("Progress Componant", () => {
   test("Should render the componant", () => {

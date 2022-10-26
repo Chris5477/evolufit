@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import eye from "../../assets/icons/eye.svg";
 import Context from "../Context";
 import ModalInfo from "../Modal-info/ModalInfo";
-import { title, content, getVisualIMC } from "./utils/variables";
+import { title, content, getVisualIMC } from "./variables";
 
 const IMC = () => {
   const user = useContext(Context)[1];

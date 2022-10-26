@@ -1,7 +1,7 @@
 import {render, screen } from "@testing-library/react";
 import Article from "./Article";
 import { actualities } from "../../news/actualities.js";
-import { onClick } from "./utils/variables";
+import { onClick } from "./variables";
 
 describe("Slide Component", () => {
   const { title, article, urlImg } = actualities[0];

@@ -1,4 +1,4 @@
-import { onClick } from "./utils/variables";
+import { onClick } from "./variables";
 
 const Article = ({ title, article, urlImg }) => {
   return (

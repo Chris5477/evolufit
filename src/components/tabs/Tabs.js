@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Tab from "../tab/Tab";
-import { tabsLink } from "./utils/variables";
+import { tabsLink } from "./variables";
 
 const Tabs = () => {
   const [pathname, setPathname] = useState("/profil");

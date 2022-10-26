@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import IMC from "../../components/imc/IMC.js";
 import UserProgress from "../../components/userProgress/UserProgress.js";
 import Context from "../../components/Context.js";
-import { translateItem } from "./utils/variables.js";
+import { translateItem } from "./variables.js";
 import NoData from "../../components/nodata/NoData.js";
 
 const Profil = () => {

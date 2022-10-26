@@ -2,7 +2,7 @@ import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
 import { useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
-import { getProgres } from "./utils/variables";
+import { getProgres } from "./variables";
 
 const Progress = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data.at(-1).weight;

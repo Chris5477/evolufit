@@ -4,7 +4,7 @@ import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
 import { torse, bras, jambes } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
-import { validationLoginForm } from "./utils/variables";
+import { validationLoginForm } from "./variables";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ setCtx }) => {

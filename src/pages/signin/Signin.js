@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
-import { initialState, signup } from "./utils/variables";
+import { initialState, signup } from "./variables";
 
 const Signin = () => {
   const navigate = useNavigate();

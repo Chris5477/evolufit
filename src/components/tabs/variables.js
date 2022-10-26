@@ -1,7 +1,7 @@
-import profil from "../../../assets/icons/profil.svg";
-import cardio from "../../../assets/icons/cardio.svg";
-import muscu from "../../../assets/icons/muscu.svg";
-import planning from "../../../assets/icons/planning.svg";
+import profil from "../../assets/icons/profil.svg";
+import cardio from "../../assets/icons/cardio.svg";
+import muscu from "../../assets/icons/muscu.svg";
+import planning from "../../assets/icons/planning.svg";
 
 export const tabsLink = () => [
   {
