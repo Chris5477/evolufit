@@ -27,7 +27,7 @@ const TopBar = ({ setCtx }) => {
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
-        <img onClick={() => disconnect(navigate, setCtx)} src={logout} alt='disconnect' />
+        <img onClick={() => disconnect(navigate, setCtx,"Déconnexion en cours !")} src={logout} alt='disconnect' />
         <img className='timer-picture' onClick={() => setModal(true)} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}

@@ -39,7 +39,7 @@ const App = () => {
             />
             <Route path='/evolufit/cardio' element={<Cardio />} />
             <Route path='/evolufit/training' element={<Training />} />
-            <Route path='/evolufit/settings' element={<User />} />
+            <Route path='/evolufit/settings' element={<User setCtx={setCtx} />} />
             <Route path='/evolufit/planning' element={<Planning />} />
             <Route path='*' element={<Error />} />
           </Routes>

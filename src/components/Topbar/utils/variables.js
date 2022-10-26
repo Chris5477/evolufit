@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
 
-export const disconnect = (navigate, setter) => {
+export const disconnect = (navigate, setter, msg) => {
   localStorage.clear();
-  toast.success("Déconnexion en cours !", { autoClose: 2000, theme: "colored" });
+  toast.success(msg, { autoClose: 2000 });
   setTimeout(() => {
     navigate("/evolufit");
     setter(null);

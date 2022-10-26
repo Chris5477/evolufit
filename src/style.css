@@ -809,21 +809,33 @@ q {
 
 /* USER CSS *********************************************************/
 .settings-user {
-  padding-left: 25px;
   margin: 20px 0;
+  padding-left: 20px;
 }
 .settings-user h2,
 .settings-user button {
   margin: 20px 0;
 }
 
+.edit-photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-photo div.form-data {
+  width: 20%;
+}
 .edit-photo label {
-  visibility: hidden;
+  color: rgb(246, 246, 246);
+}
+.edit-photo input {
+  display: none;
 }
 .edit-photo img {
   object-fit: cover;
   border-radius: 50%;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
