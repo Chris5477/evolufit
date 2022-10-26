@@ -6,7 +6,7 @@ import { title, content, getVisualIMC } from "./utils/variables";
 
 const IMC = () => {
   const user = useContext(Context)[1];
-  const weight = user.weight.at(-1).weight;
+  const weight = user.weight.length > 0 ? user.weight.at(-1).weight : 0;
   const size = user.size / 100;
   const imc = (weight / size ** 2).toFixed(2);
   const rangeImc = (imc * 100) / 40;
@@ -15,15 +15,17 @@ const IMC = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    <section className='info-imc container flex-center' data-testid='info-imc'>
-      <h2>
-        Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
-      </h2>
-      <h3>{imc}</h3>
-      <p>En fonction de votre taille et de poids</p>
-      {actualIMC}
-      {modal && <ModalInfo title={title} content={content} other={actualIMC} setModal={setModal} />}
-    </section>
+    weight != 0 && (
+      <section className='info-imc container flex-center' data-testid='info-imc'>
+        <h2>
+          Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
+        </h2>
+        <h3>{imc}</h3>
+        <p>En fonction de votre taille et de poids</p>
+        {actualIMC}
+        {modal && <ModalInfo title={title} content={content} other={actualIMC} setModal={setModal} />}
+      </section>
+    )
   );
 };
 

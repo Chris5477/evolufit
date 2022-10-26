@@ -8,7 +8,6 @@ export const initialState = {
   size: "",
   weight: "",
   gender: "homme",
-  pseudo: "",
   password: "",
 };
 

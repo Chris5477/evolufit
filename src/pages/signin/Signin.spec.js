@@ -6,15 +6,7 @@ import { mockContext } from "../../mock/mockContext";
 import Signin from "./Signin";
 
 describe("Signin Page", () => {
-  let inputFirstname,
-    inputLastName,
-    inputYear,
-    inputEmail,
-    inputSize,
-    inputWeight,
-    inputPseudo,
-    inputPassword,
-    submitBtn;
+  let inputFirstname, inputLastName, inputYear, inputEmail, inputSize, inputWeight, inputPassword, submitBtn;
   beforeEach(() => {
     render(
       <BrowserRouter>
@@ -31,7 +23,6 @@ describe("Signin Page", () => {
     inputEmail = document.querySelector("input[name='email']");
     inputSize = document.querySelector("input[name='size']");
     inputWeight = document.querySelector("input[name='weight']");
-    inputPseudo = document.querySelector("input[name='pseudo']");
     inputPassword = document.querySelector("input[name='password']");
     submitBtn = document.querySelector("input[type='submit']");
   });
@@ -63,13 +54,15 @@ describe("Signin Page", () => {
       fireEvent.change(inputEmail, { target: { value: "test@gmail.com" } });
       fireEvent.change(inputSize, { target: { value: "170" } });
       fireEvent.change(inputWeight, { target: { value: "49" } });
-      fireEvent.change(inputPseudo, { target: { value: "pseudo" } });
       fireEvent.change(inputPassword, { target: { value: "password" } });
 
       fireEvent.submit(submitBtn);
 
       const toast = await screen.findByText("Compte crée avec succès !");
       expect(toast).toBeInTheDocument();
+
+      expect(localStorage.getItem("data")).not.toBeNull()
     });
+
   });
 });

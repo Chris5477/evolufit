@@ -19,7 +19,7 @@ const User = () => {
   return (
     <div className='settings-user container' data-testid='settings-user'>
       <h2>
-        Votre compte  <br /> 
+        Votre compte <br />
         {fullName}
       </h2>
       <section>

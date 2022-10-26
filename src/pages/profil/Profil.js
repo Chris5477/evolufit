@@ -8,6 +8,7 @@ import IMC from "../../components/imc/IMC.js";
 import UserProgress from "../../components/userProgress/UserProgress.js";
 import Context from "../../components/Context.js";
 import { translateItem } from "./utils/variables.js";
+import NoData from "../../components/nodata/NoData.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -22,7 +23,6 @@ const Profil = () => {
     const id = setInterval(() => translateItem(slideRef, translate, setTranslate), 4000);
     return () => clearInterval(id);
   }, [translate]);
-
 
   useEffect(() => {
     localStorage.getItem("data") == null && navigate("/");
@@ -47,11 +47,15 @@ const Profil = () => {
           ))}
         </div>
       </section>
-      <UserProgress title={"Progrès"} date={signinDate} />
+      <UserProgress title={"Progrès"} />
       <section className='container'>
-        <Progress label='poids' unity='kg' data={weight} initialWeight={initialWeight} />
-        <Progress label='distance' unity='km' data={week} />
-        <Progress label='calories' unity='Kcal' data={week} />
+        {weight.length > 0 ? (
+          <Progress label='poids' unity='kg' data={weight} initialWeight={initialWeight} />
+        ) : (
+          <NoData title='Suivi poids' />
+        )}
+        {week.length > 0 ? <Progress label='distance' unity='km' data={week} /> : <NoData title='Suivi calories' />}
+        {week.length > 0 ? <Progress label='calories' unity='Kcal' data={week} /> : <NoData title='Suivi distance' />}
       </section>
       <IMC />
     </div>

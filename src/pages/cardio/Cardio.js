@@ -5,6 +5,7 @@ import Warning from "../../components/warning/Warning";
 import React, { useContext } from "react";
 import Context from "../../components/Context";
 import Spinner from "../../components/spinner/Spinner";
+import NoData from "../../components/nodata/NoData";
 const Banner = React.lazy(() => import("../../components/banner/Banner"));
 
 const Cardio = () => {
@@ -18,7 +19,7 @@ const Cardio = () => {
       </React.Suspense>
       <section className='container'>
         <h2 className='uppercase txt-center'>Progression corporelle</h2>
-        <Dataline label={"poids"} data={weight} />
+        {weight.length > 0 ? <Dataline label={"poids"} data={weight} /> : <NoData />}
       </section>
       <Exocardio />
       <Warning />
