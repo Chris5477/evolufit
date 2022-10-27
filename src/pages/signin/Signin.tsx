@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
 import { initialState, signup } from "./variables";
@@ -9,7 +9,7 @@ const Signin = () => {
   const [data, setData] = useState(initialState);
   const { firstName, lastName, yearsOld, email, size, weight, gender, password } = data;
 
-  const changeValue = (e) => {
+  const changeValue = (e : ChangeEvent<HTMLInputElement>) => {
     const { value, name, id } = e.target;
     if (name === "gender") {
       setData({ ...data, [name]: id });

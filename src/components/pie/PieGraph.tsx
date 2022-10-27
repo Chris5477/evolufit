@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { FunctionComponent, useContext } from "react";
 import { PieChart, Pie, Cell, Legend } from "recharts";
 import Context from "../Context";
 import NoData from "../nodata/NoData";
+import { PieChartProps } from "./variable";
 
-const Piechart = ({ title, info }) => {
+const Piechart: FunctionComponent<PieChartProps> = ({ title, info }) => {
   const user = useContext(Context);
   const mass = user[1].massRate;
 
-  const COLORS = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
+  const COLORS: [string, string, string] = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
 
   if (mass.length > 0) {
     return (
@@ -20,12 +21,12 @@ const Piechart = ({ title, info }) => {
             fontWeight={800}
             cx='50%'
             cy='50%'
-            label={"name"}
+            label={undefined}
             outerRadius={70}
             innerRadius={40}
             dataKey='value'
           >
-            {mass.map((entry, index) => (
+            {mass.map((_: never, index: number) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
@@ -35,7 +36,7 @@ const Piechart = ({ title, info }) => {
       </section>
     );
   } else {
-    return <NoData title="Suivi des masses"/>;
+    return <NoData title='Suivi des masses' />;
   }
 };
 

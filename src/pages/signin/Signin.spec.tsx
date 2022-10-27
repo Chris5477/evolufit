@@ -6,7 +6,15 @@ import { mockContext } from "../../mock/mockContext";
 import Signin from "./Signin";
 
 describe("Signin Page", () => {
-  let inputFirstname, inputLastName, inputYear, inputEmail, inputSize, inputWeight, inputPassword, submitBtn;
+  let inputFirstname: HTMLInputElement;
+  let inputLastName: HTMLInputElement;
+  let inputYear: HTMLInputElement;
+  let inputEmail: HTMLInputElement;
+  let inputSize: HTMLInputElement;
+  let inputWeight: HTMLInputElement;
+  let inputPassword: HTMLInputElement;
+  let submitBtn: HTMLInputElement;
+
   beforeEach(() => {
     render(
       <BrowserRouter>
@@ -17,14 +25,14 @@ describe("Signin Page", () => {
       </BrowserRouter>
     );
 
-    inputFirstname = document.querySelector("input[name='firstName']");
-    inputLastName = document.querySelector("input[name='lastName']");
-    inputYear = document.querySelector("input[name='yearsOld']");
-    inputEmail = document.querySelector("input[name='email']");
-    inputSize = document.querySelector("input[name='size']");
-    inputWeight = document.querySelector("input[name='weight']");
-    inputPassword = document.querySelector("input[name='password']");
-    submitBtn = document.querySelector("input[type='submit']");
+    inputFirstname = document.querySelector("input[name='firstName']") as HTMLInputElement;
+    inputLastName = document.querySelector("input[name='lastName']") as HTMLInputElement;
+    inputYear = document.querySelector("input[name='yearsOld']") as HTMLInputElement;
+    inputEmail = document.querySelector("input[name='email']") as HTMLInputElement;
+    inputSize = document.querySelector("input[name='size']") as HTMLInputElement;
+    inputWeight = document.querySelector("input[name='weight']") as HTMLInputElement;
+    inputPassword = document.querySelector("input[name='password']") as HTMLInputElement;
+    submitBtn = document.querySelector("input[type='submit']") as HTMLInputElement;
   });
 
   test("Should render the component", () => {
@@ -34,8 +42,8 @@ describe("Signin Page", () => {
 
   describe("Testing validation form", () => {
     test("Should change value of radio input", () => {
-      const man = document.getElementById("homme");
-      const woman = document.getElementById("femme");
+      const man = document.getElementById("homme") as HTMLInputElement;
+      const woman = document.getElementById("femme") as HTMLInputElement;
 
       expect(man.value).toBe("homme");
       fireEvent.click(woman);
@@ -61,8 +69,7 @@ describe("Signin Page", () => {
       const toast = await screen.findByText("Compte crée avec succès !");
       expect(toast).toBeInTheDocument();
 
-      expect(localStorage.getItem("data")).not.toBeNull()
+      expect(localStorage.getItem("data")).not.toBeNull();
     });
-
   });
 });

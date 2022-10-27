@@ -1,6 +1,19 @@
+import { FormEvent } from "react";
+import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export const initialState = {
+interface InisitalStateTypes {
+  firstName: string;
+  lastName: string;
+  yearsOld: string;
+  email: string;
+  size: string;
+  weight: string;
+  gender: string;
+  password: string;
+}
+
+export const initialState: InisitalStateTypes = {
   firstName: "",
   lastName: "",
   yearsOld: "",
@@ -11,7 +24,7 @@ export const initialState = {
   password: "",
 };
 
-export const signup = (e, state, navigate) => {
+export const signup = (e: FormEvent, state: InisitalStateTypes, navigate: NavigateFunction) => {
   e.preventDefault();
   const isValid = Object.values(state).every((value) => value);
   if (!isValid) {
@@ -19,7 +32,7 @@ export const signup = (e, state, navigate) => {
   } else {
     toast.success("Compte crée avec succès !", { autoClose: 1400, theme: "colored" });
     localStorage.setItem("data", "test"); // /!\ A MODIFIER PLUS TART
-    alert("L'inscription n'est pas encore actif ...!")
+    alert("L'inscription n'est pas encore actif ...!");
     // setTimeout(() => navigate("/evolufit/profil"), 1500);
   }
 };

@@ -1,7 +1,9 @@
+import { FunctionComponent } from "react";
 import { createPortal } from "react-dom";
 import close from "../../assets/icons/close.svg";
+import { ModalInfoProps } from "./variables";
 
-const ModalInfo = ({ title, content, setModal, other }) => {
+const ModalInfo: FunctionComponent<ModalInfoProps> = ({ title, content, setModal, other }) => {
   return createPortal(
     <div data-testid='modal' className='modal posFixed flex-center'>
       <img className='close-modal' onClick={() => setModal(false)} src={close} alt='cross' />

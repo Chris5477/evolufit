@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import embarrassed from "../../assets/icons/embarrassed.svg";
 
+
 const Error = () => {
   const [isMessage, setIsMessage] = useState(false);
   const navigate = useNavigate();
