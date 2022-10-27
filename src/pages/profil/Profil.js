@@ -8,7 +8,7 @@ import IMC from "../../components/imc/IMC.js";
 import UserProgress from "../../components/userProgress/UserProgress.js";
 import Context from "../../components/Context.js";
 import { translateItem } from "./variables.js";
-import NoData from "../../components/nodata/NoData.js";
+import NoData from "../../components/nodata/NoData";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
