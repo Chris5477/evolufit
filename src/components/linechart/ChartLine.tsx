@@ -1,6 +1,10 @@
+import { FunctionComponent } from "react";
 import { LineChart, Line } from "recharts";
+import { DatalineProps } from "../dataline/variables";
 
-const ChartLine = ({ label, data }) => {
+
+
+const ChartLine : FunctionComponent<DatalineProps> = ({ label, data }) => {
   const dataKey = label === "poids" ? "weight" : label;
 
   return (

@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import { SpreadElement } from "typescript";
 import { mockContext } from "../../mock/mockContext";
 import Context from "../Context";
 import TopBar from "../Topbar/TopBar";
@@ -10,7 +11,7 @@ describe("Tabs componant", () => {
     render(
       <BrowserRouter>
         <Context.Provider value={mockContext}>
-          <TopBar />
+          <TopBar setCtx={() => {}} />
           <Tabs />
         </Context.Provider>
       </BrowserRouter>
@@ -23,7 +24,7 @@ describe("Tabs componant", () => {
   });
 
   test("Should attribute the active-tab class if user click on a tab", () => {
-    const [tab1, tab2, tab3] = [...document.querySelectorAll("li")];
+    const [tab1, tab2, tab3]  = Array.from(document.querySelectorAll("li")) as HTMLLIElement[]
 
     fireEvent.click(tab1);
     expect(tab1).toHaveClass(" tab flex-center active-tab");

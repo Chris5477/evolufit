@@ -1,15 +1,14 @@
 import avatar from "../../assets/icons/avatar.svg";
 import { Link, useNavigate } from "react-router-dom";
 import timer from "../../assets/icons/timer.svg";
-import { useContext, useState } from "react";
+import { FunctionComponent, useContext, useState } from "react";
 import Timer from "../timer/Timer";
 import logout from "../../assets/icons/logout.svg";
 import Context from "../Context";
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
-import { disconnect } from "./variables";
+import { disconnect, TopBarProps } from "./variables";
 
-const TopBar = ({ setCtx }) => {
+const TopBar: FunctionComponent<TopBarProps> = ({ setCtx }) => {
   const user = useContext(Context);
   const navigate = useNavigate();
   let myPhoto = user != undefined ? user[0]?.profilPicture : avatar;
@@ -27,7 +26,7 @@ const TopBar = ({ setCtx }) => {
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
-        <img onClick={() => disconnect(navigate, setCtx,"Déconnexion en cours !")} src={logout} alt='disconnect' />
+        <img onClick={() => disconnect(navigate, setCtx, "Déconnexion en cours !")} src={logout} alt='disconnect' />
         <img className='timer-picture' onClick={() => setModal(true)} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}

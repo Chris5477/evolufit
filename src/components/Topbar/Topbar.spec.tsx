@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { mockContext } from "../../mock/mockContext";
 import Context from "../Context";
 import Topbar from "./TopBar";
@@ -9,7 +9,7 @@ describe("Topbar", () => {
     render(
       <BrowserRouter>
         <Context.Provider value={mockContext}>
-          <Topbar />
+          <Topbar setCtx={() => null} />
         </Context.Provider>
       </BrowserRouter>
     );
@@ -25,18 +25,18 @@ describe("Topbar", () => {
   });
 
   test("Should open or close modal on the click of button", () => {
-    const openTimer = document.querySelector(".timer-picture");
+    const openTimer = document.querySelector(".timer-picture")!;
 
     fireEvent.click(openTimer);
     const timer = screen.getByTestId("timer");
     expect(timer).toBeInTheDocument();
 
-    const closeModal = document.querySelector(".close-modal");
+    const closeModal = document.querySelector(".close-modal")!;
     fireEvent.click(closeModal);
     expect(timer).not.toBeInTheDocument();
   });
   test("Should remove datas in localStorage", () => {
-    const disconnetBtn = document.querySelector(".timer img");
+    const disconnetBtn = document.querySelector(".timer img")!;
     fireEvent.click(disconnetBtn);
     const data = localStorage.getItem("data");
 

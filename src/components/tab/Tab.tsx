@@ -1,6 +1,8 @@
+import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
+import { TabProps } from "./variables";
 
-const Tab = ({ pathname, setPathname, txtAlt, picture, url }) => {
+const Tab: FunctionComponent<TabProps> = ({ pathname, setPathname, txtAlt, picture, url }) => {
   return (
     <li
       onClick={() => setPathname(`/${txtAlt}`)}

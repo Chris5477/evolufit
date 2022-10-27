@@ -2,10 +2,10 @@ import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from  "../../components/article/Article"
 import { useContext, useEffect, useRef, useState } from "react";
-import Progress from "../../components/progres/Progress.js";
+import Progress from "../../components/progres/Progress";
 import { useNavigate } from "react-router-dom";
-import IMC from "../../components/imc/IMC.js";
-import UserProgress from "../../components/userProgress/UserProgress.js";
+import IMC from "../../components/imc/IMC";
+import UserProgress from "../../components/userProgress/UserProgress";
 import Context from "../../components/Context.js";
 import { translateItem } from "./variables.js";
 import NoData from "../../components/nodata/NoData";

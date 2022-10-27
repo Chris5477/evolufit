@@ -9,7 +9,7 @@ const Tabs = () => {
   const listPaths = tabsLink()
 
   useEffect(() => {
-    document.querySelector(".top-bar h1").addEventListener("click", backHome);
+   ( document.querySelector(".top-bar h1") as HTMLHeadingElement).addEventListener("click", backHome);
   });
 
   return (

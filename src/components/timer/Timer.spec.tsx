@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Timer from "./Timer";
 
 describe("Tabs componant", () => {
-  beforeEach(() => render(<Timer />));
+  beforeEach(() => render(<Timer setModal={() => false} />));
 
   test("Should display a timer", () => {
     const time = screen.getByText(30);
@@ -29,8 +29,8 @@ describe("Tabs componant", () => {
     jest.useFakeTimers();
     jest.spyOn(global, "setTimeout");
     jest.spyOn(global, "clearTimeout");
-    const startBtn = document.querySelector("button:nth-child(3)");
-    const stopBtn = document.querySelector("button:nth-child(4)");
+    const startBtn = document.querySelector("button:nth-child(3)")!;
+    const stopBtn = document.querySelector("button:nth-child(4)")!;
 
     fireEvent.click(startBtn);
 
@@ -43,11 +43,9 @@ describe("Tabs componant", () => {
   test("Should display a reset button", async () => {
     const btnIncremente = screen.getByText("+");
     fireEvent.click(btnIncremente);
-    const resetButton = document.querySelector("button:nth-child(4)");
+    const resetButton = document.querySelector("button:nth-child(4)")!;
     fireEvent.click(resetButton);
     let duration = await screen.findByText("30");
     expect(duration).toBeTruthy();
   });
-
-
 });

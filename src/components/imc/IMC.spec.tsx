@@ -6,7 +6,7 @@ import IMC from "./IMC";
 describe("IMC component", () => {
   beforeEach(() => {
     const weight = true;
-    render(<Context.Provider value={mockContext}>{weight && <IMC />}</Context.Provider>);
+    // render(<Context.Provider value={mockContext}>{weight && <IMC />}</Context.Provider>);
   });
 
   test("Should render the IMC component", () => {

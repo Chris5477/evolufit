@@ -1,3 +1,5 @@
+import { Week } from "../dataline/variables";
+
 export const getEvolutionWeight = (weight, initialWeight) => {
   const newWeight = weight - initialWeight;
   if (weight > initialWeight) {

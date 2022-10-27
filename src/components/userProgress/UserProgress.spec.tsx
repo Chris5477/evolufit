@@ -5,10 +5,13 @@ import Context from "../Context";
 import UserProgress from "./UserProgress";
 
 describe("UserProgress", () => {
+
+  const mockData = [{weight : 50, date :"29 octobre 2020"}]
+
   test("Should render the componant", () => {
     render(
       <Context.Provider value={mockContext}>
-        <UserProgress />
+        <UserProgress title="title" data={mockData}/>
       </Context.Provider>
     );
 
@@ -21,11 +24,11 @@ describe("UserProgress", () => {
       <>
         <ToastContainer />
         <Context.Provider value={mockContext}>
-          <UserProgress isCardio />
+          <UserProgress title="title" data={mockData} isCardio />
         </Context.Provider>
       </>
     );
-    const btn = document.querySelector(".user-progres button");
+    const btn = document.querySelector(".user-progres button")!;
     fireEvent.click(btn);
     const toast = await screen.findByText("Fonctionnalité bientôt disponible");
     expect(toast).toBeInTheDocument();

@@ -4,6 +4,8 @@ import { useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
 import { getProgres } from "./variables";
 
+
+
 const Progress = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data.at(-1).weight;
   let getWeightProgression = getProgres(label, lastWeight, initialWeight, data, unity);

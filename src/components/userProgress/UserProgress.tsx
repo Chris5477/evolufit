@@ -1,10 +1,14 @@
+import { FunctionComponent, ReactElement } from "react";
 import { toast } from "react-toastify";
 import calendar from "../../assets/icons/calendar.svg";
 import Button from "../button/Button";
 import Dataline from "../dataline/Dataline";
+import { UserPrgoresProps } from "./variables";
 
-const UserProgress = ({ title, isCardio, data }) => {
-  let graphicExercice = null;
+
+
+const UserProgress : FunctionComponent<UserPrgoresProps> = ({ title, isCardio, data }) => {
+  let graphicExercice : null | ReactElement = null;
   if (isCardio) {
     graphicExercice = (
       <>

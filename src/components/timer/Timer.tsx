@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import close from "../../assets/icons/close.svg";
 import Button from "../button/Button";
+import { TimerProps } from "./variable";
 
-const Timer = ({ setModal }) => {
+const Timer: FunctionComponent<TimerProps> = ({ setModal }) => {
   const [duration, setDuration] = useState(30);
   const [isStart, setIsStart] = useState(false);
 
@@ -11,15 +12,15 @@ const Timer = ({ setModal }) => {
     if (isStart && duration > 0) {
       setTimeout(() => setDuration(duration - 1), 1000);
     } else {
-      clearTimeout();
+      clearTimeout("");
     }
   }, [isStart, duration]);
 
-  const changeDuration = (operator) => {
+  const changeDuration = (operator: string) => {
     operator === "+" ? setDuration(duration + 15) : setDuration(duration - 15);
   };
 
-  const startOrStopTimer = (bool) => {
+  const startOrStopTimer = (bool: boolean) => {
     setIsStart(bool);
   };
 

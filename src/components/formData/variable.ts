@@ -5,5 +5,5 @@ export interface FormDataProps {
   valueInput: string;
   typeInput?: string;
   handleChange: (e: ChangeEvent) => void;
-  name: string;
+  name?: string;
 }

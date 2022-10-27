@@ -1,8 +1,10 @@
+import { FunctionComponent } from "react";
 import { toast } from "react-toastify";
 import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, RadarChart, Radar } from "recharts";
 import Button from "../button/Button";
+import { SpiderChartProps } from "./variable";
 
-const SpiderChart = ({ title, data }) => {
+const SpiderChart: FunctionComponent<SpiderChartProps> = ({ title, data }) => {
   return (
     <section className='radar container flex-center' data-testid='radarchart'>
       <h3 className='container txt-center color-light'>{title}</h3>
