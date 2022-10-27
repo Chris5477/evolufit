@@ -5,7 +5,7 @@ import { onClick } from "./variables";
 
 describe("Slide Component", () => {
   const { title, article, urlImg } = actualities[0];
-  let slide = null;
+  let slide : HTMLDivElement;
   beforeEach(() => {
     render(<Article title={title} article={article} urlImg={urlImg} />);
     slide = screen.getByTestId("slide");

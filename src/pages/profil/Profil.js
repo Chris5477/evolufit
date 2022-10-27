@@ -1,6 +1,6 @@
 import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
-import Article from "../../components/article/Article.js";
+import Article from  "../../components/article/Article"
 import { useContext, useEffect, useRef, useState } from "react";
 import Progress from "../../components/progres/Progress.js";
 import { useNavigate } from "react-router-dom";

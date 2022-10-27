@@ -1,6 +1,9 @@
-import { onClick } from "./variables";
+import { FunctionComponent } from "react";
+import { ArticleProps, onClick } from "./variables";
 
-const Article = ({ title, article, urlImg }) => {
+
+
+const Article: FunctionComponent<ArticleProps> = ({ title, article, urlImg }) => {
   return (
     <article onClick={onClick} data-testid='slide' className='item'>
       <img src={urlImg} alt='illustration' />
