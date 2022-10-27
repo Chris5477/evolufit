@@ -1,6 +1,8 @@
+import { FunctionComponent } from "react";
 import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
+import { DatalineProps } from "./variables";
 
-const Dataline = ({ label, data, isCardio }) => {
+const Dataline: FunctionComponent<DatalineProps> = ({ label, data, isCardio }) => {
   const dataKey = label === "poids" ? "weight" : label;
   const width = window.innerWidth - 40;
 
