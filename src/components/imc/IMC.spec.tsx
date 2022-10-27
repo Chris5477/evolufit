@@ -5,11 +5,8 @@ import IMC from "./IMC";
 
 describe("IMC component", () => {
   beforeEach(() => {
-    render(
-      <Context.Provider value={mockContext}>
-        <IMC />
-      </Context.Provider>
-    );
+    const weight = true;
+    render(<Context.Provider value={mockContext}>{weight && <IMC />}</Context.Provider>);
   });
 
   test("Should render the IMC component", () => {
@@ -18,13 +15,13 @@ describe("IMC component", () => {
   });
 
   test("Should dialog with a modal if user clicks on the icons", () => {
-    const openerModal = document.querySelector(".info-imc h2 img");
+    const openerModal = document.querySelector(".info-imc h2 img") as HTMLDivElement;
     fireEvent.click(openerModal);
 
     const modal = screen.getByTestId("modal");
     expect(modal).toBeInTheDocument();
 
-    const closerModal = document.querySelector(".close-modal");
+    const closerModal = document.querySelector(".close-modal") as HTMLImageElement;
     fireEvent.click(closerModal);
     expect(modal).not.toBeInTheDocument();
   });

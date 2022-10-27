@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
+import {useContext, useState } from "react";
 import eye from "../../assets/icons/eye.svg";
 import Context from "../Context";
 import ModalInfo from "../Modal-info/ModalInfo";
 import { title, content, getVisualIMC } from "./variables";
 
 const IMC = () => {
-  const user = useContext(Context)[1];
-  const weight = user.weight.length > 0 ? user.weight.at(-1).weight : 0;
-  const size = user.size / 100;
-  const imc = (weight / size ** 2).toFixed(2);
+  const user = useContext(Context)[1]; // TYPER CETTE VARIABLE
+  const weight: number = user.weight.length > 0 ? user.weight.at(-1).weight : 0;
+  const size: number = user.size / 100;
+  const imc: number = Number((weight / size ** 2).toFixed(2));
   const rangeImc = (imc * 100) / 40;
   const actualIMC = getVisualIMC(rangeImc);
 

@@ -5,7 +5,7 @@ describe("FormData", () => {
   const props = {
     label: "test",
     valueInput: "",
-    handleChange: () => "test",
+    handleChange: () => null,
     name: "test",
   };
 
@@ -19,8 +19,8 @@ describe("FormData", () => {
   });
 
   test("Should add type text to input if the type isn't specified", () => {
-    const typeInput = document.querySelector("input").type;
-    if (props.type === undefined) {
+    const typeInput = (document.querySelector("input") as HTMLInputElement).type;
+    if (typeInput === undefined) {
       expect(typeInput).toBe("text");
     }
   });
