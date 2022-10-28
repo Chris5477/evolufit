@@ -3,7 +3,14 @@ import cardio from "../../assets/icons/cardio.svg";
 import muscu from "../../assets/icons/muscu.svg";
 import planning from "../../assets/icons/planning.svg";
 
-export const tabsLink = () => [
+interface TabsLinkType {
+  id: number;
+  txtAlt: string;
+  url: string;
+  picture: string;
+}
+
+export const tabsLink = (): TabsLinkType[] => [
   {
     id: 0,
     txtAlt: "profil",

@@ -1,8 +1,6 @@
 import { FunctionComponent } from "react";
 import { ArticleProps, onClick } from "./variables";
 
-
-
 const Article: FunctionComponent<ArticleProps> = ({ title, article, urlImg }) => {
   return (
     <article onClick={onClick} data-testid='slide' className='item'>

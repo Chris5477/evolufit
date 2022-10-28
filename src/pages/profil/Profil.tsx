@@ -1,23 +1,23 @@
+import { useContext, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
-import Article from  "../../components/article/Article"
-import { useContext, useEffect, useRef, useState } from "react";
+import Article from "../../components/article/Article";
 import Progress from "../../components/progres/Progress";
-import { useNavigate } from "react-router-dom";
 import IMC from "../../components/imc/IMC";
 import UserProgress from "../../components/userProgress/UserProgress";
 import Context from "../../components/Context.js";
-import { translateItem } from "./variables.js";
+import { FlatMapTypes, translateItem } from "./variables";
 import NoData from "../../components/nodata/NoData";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
   const navigate = useNavigate();
-  const slideRef = useRef();
+  const slideRef = useRef(null);
   const user = useContext(Context);
-  const { firstName, signinDate } = user[0];
+  const { firstName } = user[0];
   const { weight, initialWeight } = user[1];
-  const week = user[2].flatMap((data) => data.week);
+  const week = user[2].flatMap((data: FlatMapTypes) => data.week);
 
   useEffect(() => {
     const id = setInterval(() => translateItem(slideRef, translate, setTranslate), 4000);
@@ -57,7 +57,7 @@ const Profil = () => {
         {week.length > 0 ? <Progress label='distance' unity='km' data={week} /> : <NoData title='Suivi calories' />}
         {week.length > 0 ? <Progress label='calories' unity='Kcal' data={week} /> : <NoData title='Suivi distance' />}
       </section>
-      <IMC />
+      {weight && <IMC />}
     </div>
   );
 };

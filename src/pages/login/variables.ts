@@ -28,3 +28,7 @@ export const validationLoginForm = (
     notify(toast.error, "Veuillez remplir tous les champs !", 2500);
   }
 };
+
+export interface LoginProps {
+  setCtx: Dispatch<SetStateAction<Object>>;
+}

@@ -23,7 +23,7 @@ describe("Profil Page", () => {
 
   test("Should display the name of user", () => {
     const { firstName } = users[0];
-    const titleh2 = document.querySelector(".greet-user").textContent;
+    const titleh2 = (document.querySelector(".greet-user") as HTMLHeadingElement).textContent;
 
     expect(titleh2).toBe(`Bonjour ${firstName}`);
   });

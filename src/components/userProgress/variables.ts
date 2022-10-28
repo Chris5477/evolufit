@@ -6,6 +6,6 @@ type DataInDataline = Weight | Week;
 
 export interface UserPrgoresProps {
   title: string;
-  data: DataInDataline;
+  data?: any;
   isCardio?: boolean;
 }

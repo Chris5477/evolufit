@@ -1,13 +1,19 @@
 import ChartLine from "../linechart/ChartLine";
 import eye from "../../assets/icons/eye.svg";
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
-import { getProgres } from "./variables";
+import { getProgres } from "./variables.js";
 
+interface ProgressProps {
+  label: string;
+  unity: string;
+  initialWeight?: number;
+  data: any; //  A MODIFIER
+}
 
+const Progress: FunctionComponent<ProgressProps> = ({ label, unity, initialWeight, data }) => {
+  const lastWeight = data[0].weight;
 
-const Progress = ({ label, unity, initialWeight, data }) => {
-  const lastWeight = data.at(-1).weight;
   let getWeightProgression = getProgres(label, lastWeight, initialWeight, data, unity);
 
   const [modal, setModal] = useState(false);

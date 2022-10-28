@@ -51,13 +51,13 @@ describe("sumData", () => {
     test("Should open and close the modal on the click of user", () => {
       render(<Progress label='poids' unity='kg' data={[{ weight: 59 }, { weight: 77 }]} initialWeight={98} />);
 
-      const BtnOpenModal = document.querySelector(".open-btn");
+      const BtnOpenModal = document.querySelector(".open-btn")!;
       fireEvent.click(BtnOpenModal);
 
       const modal = screen.getByTestId("modal");
       expect(modal).toBeInTheDocument();
 
-      const closeBtn = document.querySelector(".close-modal");
+      const closeBtn = document.querySelector(".close-modal")!;
       fireEvent.click(closeBtn);
       expect(modal).not.toBeInTheDocument();
     });

@@ -23,7 +23,7 @@ describe("Planning Page", () => {
   });
 
   test("Should return a feedback", async () => {
-    const btn = document.querySelector(".planning button");
+    const btn = document.querySelector(".planning button")!;
     fireEvent.click(btn);
     const toast = await screen.findByText("Fonctionnalité bientôt disponible");
     expect(toast).toBeInTheDocument();

@@ -1,24 +1,11 @@
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  Dispatch,
-  FormEvent,
-  FormEventHandler,
-  FunctionComponent,
-  SetStateAction,
-  useState,
-} from "react";
+import { ChangeEvent, Dispatch, FormEvent, FunctionComponent, SetStateAction, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
 import { torse, bras, jambes } from "../../mock/perf.js";
 import { planning } from "../../mock/planning.js";
-import { validationLoginForm } from "./variables";
+import { LoginProps, validationLoginForm } from "./variables";
 import "react-toastify/dist/ReactToastify.css";
-
-interface LoginProps {
-  setCtx: Dispatch<SetStateAction<Object>>;
-}
 
 const Login: FunctionComponent<LoginProps> = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");

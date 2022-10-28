@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { toast } from "react-toastify";
 import Button from "../../components/button/Button";
 import Context from "../../components/Context";
+import { PlanningType } from "./variables";
 
 const Planning = () => {
   const user = useContext(Context);
@@ -13,7 +14,7 @@ const Planning = () => {
 
       <div className='day-week container uppercase'>
         <ul className='container txt-center'>
-          {planning.map(({ week }, index) => (
+          {planning.map(({ week }: PlanningType, index: number) => (
             <div key={index}>
               {week.map(({ day, objectif, program }, index) => (
                 <div className='day' key={`index ${index}`}>

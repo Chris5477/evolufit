@@ -9,7 +9,7 @@ describe("User page", () => {
     render(
       <BrowserRouter>
         <Context.Provider value={mockContext}>
-          <User />
+          <User setCtx={() => null}/>
         </Context.Provider>
       </BrowserRouter>
     );

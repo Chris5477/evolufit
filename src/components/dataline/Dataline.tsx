@@ -3,7 +3,7 @@ import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "r
 import { DatalineProps } from "./variables";
 
 const Dataline: FunctionComponent<DatalineProps> = ({ label, data, isCardio }) => {
-  const dataKey = label === "poids" ? "weight" : label;
+  let dataKey = label === "poids" ? "weight" : label;
   const width = window.innerWidth - 40;
 
   return (

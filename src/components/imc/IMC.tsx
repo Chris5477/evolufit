@@ -1,4 +1,4 @@
-import {useContext, useState } from "react";
+import { useContext, useState } from "react";
 import eye from "../../assets/icons/eye.svg";
 import Context from "../Context";
 import ModalInfo from "../Modal-info/ModalInfo";
@@ -15,17 +15,15 @@ const IMC = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    weight != 0 && (
-      <section className='info-imc container flex-center' data-testid='info-imc'>
-        <h2>
-          Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
-        </h2>
-        <h3>{imc}</h3>
-        <p>En fonction de votre taille et de poids</p>
-        {actualIMC}
-        {modal && <ModalInfo title={title} content={content} other={actualIMC} setModal={setModal} />}
-      </section>
-    )
+    <section className='info-imc container flex-center' data-testid='info-imc'>
+      <h2>
+        Mon IMC <img onClick={() => setModal(true)} src={eye} alt='more' />
+      </h2>
+      <h3>{imc}</h3>
+      <p>En fonction de votre taille et de poids</p>
+      {actualIMC}
+      {modal && <ModalInfo title={title} content={content} other={actualIMC} setModal={setModal} />}
+    </section>
   );
 };
 
