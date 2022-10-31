@@ -7,12 +7,12 @@ import { disconnect } from "../../components/Topbar/variables";
 import { LoginProps } from "../login/variables";
 
 const User: FunctionComponent<LoginProps> = ({ setCtx }) => {
-  const user = useContext(Context);
+  const {firstName, lastName, profilPicture, signinDate} = useContext(Context);
   const navigate = useNavigate();
 
-  const fullName = user[0].firstName + " " + user[0].lastName;
+  const fullName = firstName + " " + lastName;
 
-  const myPhoto = user[0]?.profilPicture && user[0]?.profilPicture;
+  const myPhoto = profilPicture! && profilPicture;
 
   const changeValue = (e: any) => {
     // A MODIFIER
@@ -53,7 +53,7 @@ const User: FunctionComponent<LoginProps> = ({ setCtx }) => {
           </div>
         </div>
         <h2>Inscript depuis :</h2>
-        <p>{user[0].signinDate}</p>
+        <p>{signinDate}</p>
         <Button onClick={deleteAccount} content='Supprimer mon compte' />
       </section>
     </div>

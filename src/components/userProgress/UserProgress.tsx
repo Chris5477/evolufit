@@ -2,7 +2,7 @@ import { FunctionComponent, ReactElement } from "react";
 import { toast } from "react-toastify";
 import calendar from "../../assets/icons/calendar.svg";
 import Button from "../button/Button";
-import Dataline from "../dataline/Dataline";
+import BigLineChart from "../biglinechart/BigLineChart";
 import { UserPrgoresProps } from "./variables";
 
 
@@ -12,7 +12,7 @@ const UserProgress : FunctionComponent<UserPrgoresProps> = ({ title, isCardio, d
   if (isCardio) {
     graphicExercice = (
       <>
-        <Dataline isCardio data={data} />
+        <BigLineChart isCardio data={data} />
         <Button
           onClick={() => toast.warn("Fonctionnalité bientôt disponible", { autoClose: 2000, theme: "colored" })}
           content='Visualiser'

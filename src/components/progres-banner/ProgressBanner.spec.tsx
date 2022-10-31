@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Progress from "./Progress";
+import ProgressBanner from "./ProgressBanner";
 import { getEvolutionWeight, sumData } from "./variables.js";
 
 describe("Progress Componant", () => {
   test("Should render the componant", () => {
-    render(<Progress label='poids' unity='kg' data={[{ weight: 59 }, { weight: 77 }]} initialWeight={98} />);
+    render(<ProgressBanner label='poids' unity='kg' data={[{ weight: 59 }, { weight: 77 }]} initialWeight={98} />);
 
     const componant = screen.getByTestId("progress");
     expect(componant).toBeInTheDocument();
@@ -49,7 +49,7 @@ describe("sumData", () => {
 
   describe("Modal componant", () => {
     test("Should open and close the modal on the click of user", () => {
-      render(<Progress label='poids' unity='kg' data={[{ weight: 59 }, { weight: 77 }]} initialWeight={98} />);
+      render(<ProgressBanner label='poids' unity='kg' data={[{ weight: 59 }, { weight: 77 }]} initialWeight={98} />);
 
       const BtnOpenModal = document.querySelector(".open-btn")!;
       fireEvent.click(BtnOpenModal);

@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import Dataline from "../dataline/Dataline";
+import BigLineChart from "../biglinechart/BigLineChart";
 import close from "../../assets/icons/close.svg";
 import Warning from "../warning/Warning";
 import { FunctionComponent } from "react";
@@ -12,7 +12,7 @@ const ModalGraphic: FunctionComponent<ModalGraphicProps> = ({ setModal, data, la
       <h2 className='uppercase'>
         {label} <br /> 7 derniers jours
       </h2>
-      <Dataline data={data} label={label} />
+      <BigLineChart data={data} label={label} />
       {label === "distance" && <Warning />}
     </div>,
     document.body

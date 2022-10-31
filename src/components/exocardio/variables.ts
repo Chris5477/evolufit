@@ -1,4 +1,4 @@
-import { Week } from "../dataline/variables";
+import { Week } from "../biglinechart/variables";
 
 export type TrainingProps = {
   id: string;

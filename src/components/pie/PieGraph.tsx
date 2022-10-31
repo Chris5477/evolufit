@@ -5,8 +5,8 @@ import NoData from "../nodata/NoData";
 import { PieChartProps } from "./variable";
 
 const Piechart: FunctionComponent<PieChartProps> = ({ title, info }) => {
-  const user = useContext(Context);
-  const mass = user[1].massRate;
+  const {body} = useContext(Context);
+  const mass = body.massRate;
 
   const COLORS: [string, string, string] = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
 

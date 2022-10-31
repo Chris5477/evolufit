@@ -1,4 +1,4 @@
-import Dataline from "../../components/dataline/Dataline";
+import BigLineChart from "../../components/biglinechart/BigLineChart";
 import bannerCardio from "../../assets/others/banner-cardio.png";
 import Exocardio from "../../components/exocardio/Exocardio";
 import Warning from "../../components/warning/Warning";
@@ -9,9 +9,8 @@ import NoData from "../../components/nodata/NoData";
 const Banner = React.lazy(() => import("../../components/banner/Banner"));
 
 const Cardio = () => {
-  const user = useContext(Context);
-  const { weight } = user[1];
-
+  const {weight} = useContext(Context).body;
+  
   return (
     <section className='cardio-page container' data-testid='cardio-page'>
       <React.Suspense fallback={<Spinner />}>
@@ -19,7 +18,7 @@ const Cardio = () => {
       </React.Suspense>
       <section className='container'>
         <h2 className='uppercase txt-center'>Progression corporelle</h2>
-        {weight.length > 0 ? <Dataline label={"poids"} data={weight} /> : <NoData />}
+        {weight.length > 0 ? <BigLineChart label={"poids"} data={weight} /> : <NoData />}
       </section>
       <Exocardio />
       <Warning />

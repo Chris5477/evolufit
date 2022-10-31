@@ -3,8 +3,3 @@ export type Program = {
   objectif: string;
   program: string[];
 };
-
-export interface PlanningType {
-  id: string;
-  week: Program[];
-}

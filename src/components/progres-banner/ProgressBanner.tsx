@@ -1,4 +1,4 @@
-import ChartLine from "../linechart/ChartLine";
+import SmallLineChart from "../smallLineChart/SmallLineChart";
 import eye from "../../assets/icons/eye.svg";
 import { FunctionComponent, useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
@@ -28,7 +28,7 @@ const Progress: FunctionComponent<ProgressProps> = ({ label, unity, initialWeigh
       </div>
       <div className='space-flex'>
         <div className='indication'>{getWeightProgression}</div>
-        <ChartLine label={label} data={data} />
+        <SmallLineChart label={label} data={data} />
       </div>
       {modal && <ModalGraphic setModal={setModal} data={data} label={label} />}
     </section>

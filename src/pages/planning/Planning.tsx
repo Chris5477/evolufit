@@ -2,11 +2,10 @@ import { useContext } from "react";
 import { toast } from "react-toastify";
 import Button from "../../components/button/Button";
 import Context from "../../components/Context";
-import { PlanningType } from "./variables";
+import {Program } from "./variables";
 
 const Planning = () => {
-  const user = useContext(Context);
-  const planning = user[6];
+  const { week } = useContext(Context).planning;
 
   return (
     <section className='planning container' data-testid='planning'>
@@ -14,21 +13,19 @@ const Planning = () => {
 
       <div className='day-week container uppercase'>
         <ul className='container txt-center'>
-          {planning.map(({ week }: PlanningType, index: number) => (
-            <div key={index}>
-              {week.map(({ day, objectif, program }, index) => (
-                <div className='day' key={`index ${index}`}>
-                  <h3 className='txt-center color-light'>
-                    {day} -- {objectif}
-                  </h3>
+          <div>
+            {week.map(({ day, objectif, program } :Program , index : number) => (
+              <div className='day' key={`index ${index}`}>
+                <h3 className='txt-center color-light'>
+                  {day} -- {objectif}
+                </h3>
 
-                  {program.map((exo, index) => (
-                    <li key={`index ${index}`}>{exo}</li>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ))}
+                {program.map((exo, index) => (
+                  <li key={`index ${index}`}>{exo}</li>
+                ))}
+              </div>
+            ))}
+          </div>
         </ul>
         <Button
           content={"Modifier"}

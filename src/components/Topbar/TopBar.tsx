@@ -9,9 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { disconnect, TopBarProps } from "./variables";
 
 const TopBar: FunctionComponent<TopBarProps> = ({ setCtx }) => {
-  const user = useContext(Context);
+  const user = useContext(Context)?.user;
   const navigate = useNavigate();
-  let myPhoto = user != undefined ? user[0]?.profilPicture : avatar;
+  let myPhoto = user != undefined ? user?.profilPicture : avatar;
 
   const [modal, setModal] = useState(false);
 

@@ -9,7 +9,7 @@ const Banner = React.lazy(() => import("../../components/banner/Banner"));
 
 const Training = () => {
   const user = useContext(Context);
-  const [torso, arms, legs] = user.filter((_: never, index: number) => index >= 3 && index <= 5);
+  const {torse, bras, jambes} = user
 
   const addInfo = `La masse musculaire joue un rôle non négligeable sur la dépense énergétique quotidienne et engendre un coût
   métabolique plus important que la masse grasse. Pour simplifier, cela signifie que vos muscles demandent et
@@ -22,9 +22,9 @@ const Training = () => {
       </React.Suspense>
       <Piechart title={"Information sur vos masses"} info={addInfo} />
       <h2 className='container txt-center'>Vos performanes</h2>
-      {torso.length > 0 ? <SpiderChart title='Muscle du torse' data={torso} /> : <NoData title='Muscle du torse' />}
-      {arms.length > 0 ? <SpiderChart title='Muscle des bras' data={arms} /> : <NoData title='Muscle des bras' />}
-      {legs.length > 0 ? <SpiderChart title='Muscle des jambes' data={legs} /> : <NoData title='Muscle des jambes' />}
+      {torse.length > 0 ? <SpiderChart title='Muscle du torse' data={torse} /> : <NoData title='Muscle du torse' />}
+      {bras.length > 0 ? <SpiderChart title='Muscle des bras' data={bras} /> : <NoData title='Muscle des bras' />}
+      {jambes.length > 0 ? <SpiderChart title='Muscle des jambes' data={jambes} /> : <NoData title='Muscle des jambes' />}
     </div>
   );
 };

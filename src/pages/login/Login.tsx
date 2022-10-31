@@ -11,7 +11,16 @@ const Login: FunctionComponent<LoginProps> = ({ setCtx }) => {
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const mockBdd = [...users, ...infoBody, training, torse, bras, jambes, planning];
+  const mockBdd = {
+    user : users,
+    body : infoBody,
+    torse,
+    bras, 
+    jambes,
+    training,
+    planning
+  }
+  //  [...users, ...infoBody, training, torse, bras, jambes, planning];
 
   return (
     <form

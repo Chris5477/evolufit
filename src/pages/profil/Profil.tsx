@@ -3,21 +3,24 @@ import { useNavigate } from "react-router-dom";
 import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from "../../components/article/Article";
-import Progress from "../../components/progres/Progress";
+import Progress from "../../components/progres-banner/ProgressBanner";
 import IMC from "../../components/imc/IMC";
 import UserProgress from "../../components/userProgress/UserProgress";
 import Context from "../../components/Context.js";
 import { FlatMapTypes, translateItem } from "./variables";
 import NoData from "../../components/nodata/NoData";
+import { training } from "../../mock/users.js";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
   const navigate = useNavigate();
   const slideRef = useRef(null);
-  const user = useContext(Context);
-  const { firstName } = user[0];
-  const { weight, initialWeight } = user[1];
-  const week = user[2].flatMap((data: FlatMapTypes) => data.week);
+
+  const userData = useContext(Context);
+  const firstName = userData?.user.firstName;
+  const weight = userData?.body.weight;
+  const initialWeight = userData?.body.initialWeight;
+  const cardio = training.flatMap(({ week }): any => week);
 
   useEffect(() => {
     const id = setInterval(() => translateItem(slideRef, translate, setTranslate), 4000);
@@ -54,8 +57,12 @@ const Profil = () => {
         ) : (
           <NoData title='Suivi poids' />
         )}
-        {week.length > 0 ? <Progress label='distance' unity='km' data={week} /> : <NoData title='Suivi calories' />}
-        {week.length > 0 ? <Progress label='calories' unity='Kcal' data={week} /> : <NoData title='Suivi distance' />}
+        {cardio.length > 0 ? <Progress label='distance' unity='km' data={cardio} /> : <NoData title='Suivi calories' />}
+        {cardio.length > 0 ? (
+          <Progress label='calories' unity='Kcal' data={cardio} />
+        ) : (
+          <NoData title='Suivi distance' />
+        )}
       </section>
       {weight && <IMC />}
     </div>

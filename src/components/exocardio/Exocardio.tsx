@@ -5,10 +5,9 @@ import NoData from "../nodata/NoData";
 import { TrainingProps } from "./variables";
 
 const Exocardio = () => {
-  const user = useContext(Context);
-  const training = user[2];
+  const training = useContext(Context).training;
 
-  if (user[2].length > 0) {
+  if (training.length > 0) {
     return (
       <section className='exocardio container' data-testid='exocardio'>
         {training.map((data: TrainingProps, index: number) => (

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { DataInDataline } from "../dataline/variables";
+import { DataInDataline } from "../biglinechart/variables";
 
 export interface ModalGraphicProps {
     setModal : Dispatch<SetStateAction<boolean>>,
