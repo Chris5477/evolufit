@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext } from "react";
+import { ChangeEvent, FunctionComponent, useContext } from "react";
 import Context from "../../components/Context";
 import edit from "../../assets/icons/edit.svg";
 import Button from "../../components/button/Button";
@@ -7,22 +7,26 @@ import { disconnect } from "../../components/Topbar/variables";
 import { LoginProps } from "../login/variables";
 
 const User: FunctionComponent<LoginProps> = ({ setCtx }) => {
-  const {firstName, lastName, profilPicture, signinDate} = useContext(Context);
+  const { firstName, lastName, profilPicture, signinDate } = useContext(Context).user;
   const navigate = useNavigate();
 
   const fullName = firstName + " " + lastName;
 
   const myPhoto = profilPicture! && profilPicture;
 
-  const changeValue = (e: any) => {
+  const changeValue = (e: ChangeEvent) => {
     // A MODIFIER
-    const newPicture = e.target.files[0];
-    const reader: any = new FileReader();
-    reader.addEventListener("load", () => {
-      const img = document.querySelector(".edit-profil") as HTMLImageElement;
-      img.setAttribute("src", reader.result);
-    });
-    reader.readAsDataURL(newPicture);
+    const target = e.target as HTMLInputElement;
+
+    if (target.files) {
+      const newPicture = target.files[0];
+      const reader: any = new FileReader();
+      reader.addEventListener("load", () => {
+        const img = document.querySelector(".edit-profil") as HTMLImageElement;
+        img.setAttribute("src", reader.result);
+      });
+      reader.readAsDataURL(newPicture);
+    }
   };
 
   const confirmation = () => window.confirm("Êtes-vous sur de vouloir supprimer votre compte ?");

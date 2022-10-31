@@ -2,19 +2,12 @@ import SmallLineChart from "../smallLineChart/SmallLineChart";
 import eye from "../../assets/icons/eye.svg";
 import { FunctionComponent, useState } from "react";
 import ModalGraphic from "../modal-graphic/ModalGraphic";
-import { getProgres } from "./variables.js";
+import { getProgres, ProgressProps } from "./variables";
 
-interface ProgressProps {
-  label: string;
-  unity: string;
-  initialWeight?: number;
-  data: any; //  A MODIFIER
-}
-
-const Progress: FunctionComponent<ProgressProps> = ({ label, unity, initialWeight, data }) => {
+const ProgressBanner: FunctionComponent<ProgressProps> = ({ label, unity, initialWeight, data }) => {
   const lastWeight = data[0].weight;
 
-  let getWeightProgression = getProgres(label, lastWeight, initialWeight, data, unity);
+  let getWeightProgression = getProgres(label, lastWeight, initialWeight!, data, unity);
 
   const [modal, setModal] = useState(false);
 
@@ -35,4 +28,4 @@ const Progress: FunctionComponent<ProgressProps> = ({ label, unity, initialWeigh
   );
 };
 
-export default Progress;
+export default ProgressBanner;

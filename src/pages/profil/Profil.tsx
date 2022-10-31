@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { actualities } from "../../news/actualities.js";
 import athlete3 from "../../assets/athlete/athlete3.png";
 import Article from "../../components/article/Article";
-import Progress from "../../components/progres-banner/ProgressBanner";
 import IMC from "../../components/imc/IMC";
 import UserProgress from "../../components/userProgress/UserProgress";
 import Context from "../../components/Context.js";
-import { FlatMapTypes, translateItem } from "./variables";
+import { translateItem } from "./variables";
 import NoData from "../../components/nodata/NoData";
 import { training } from "../../mock/users.js";
+import ProgressBanner from "../../components/progres-banner/ProgressBanner";
 
 const Profil = () => {
   const [translate, setTranslate] = useState(330);
@@ -53,13 +53,17 @@ const Profil = () => {
       <UserProgress title={"Progrès"} />
       <section className='container'>
         {weight.length > 0 ? (
-          <Progress label='poids' unity='kg' data={weight} initialWeight={initialWeight} />
+          <ProgressBanner label='poids' unity='kg' data={weight} initialWeight={initialWeight} />
         ) : (
           <NoData title='Suivi poids' />
         )}
-        {cardio.length > 0 ? <Progress label='distance' unity='km' data={cardio} /> : <NoData title='Suivi calories' />}
         {cardio.length > 0 ? (
-          <Progress label='calories' unity='Kcal' data={cardio} />
+          <ProgressBanner label='distance' unity='km' data={cardio} />
+        ) : (
+          <NoData title='Suivi calories' />
+        )}
+        {cardio.length > 0 ? (
+          <ProgressBanner label='calories' unity='Kcal' data={cardio} />
         ) : (
           <NoData title='Suivi distance' />
         )}

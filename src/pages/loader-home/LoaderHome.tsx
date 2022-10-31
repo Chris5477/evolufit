@@ -6,7 +6,7 @@ const LoaderHome = () => {
   const arr = [heart, body];
 
   const [index, setIndex] = useState(0);
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null!);
   const upIndex = index < 1;
 
   useEffect(() => {
@@ -14,7 +14,8 @@ const LoaderHome = () => {
   }, [upIndex]);
 
   useEffect(() => {
-    setTimeout(() => ref.current.style.display="none", 6000);
+
+    setTimeout(() => (ref.current.style.display = "none"), 6000);
   }, []);
 
   return (
@@ -24,7 +25,7 @@ const LoaderHome = () => {
           <img className='scalup' src={arr[index]} alt='logo' />
         </div>
       )}
-      <h1 className="color-light">EVOLU'FIT</h1>
+      <h1 className='color-light'>EVOLU'FIT</h1>
     </div>
   );
 };

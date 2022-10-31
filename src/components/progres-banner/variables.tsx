@@ -1,4 +1,4 @@
-export const getEvolutionWeight = (weight, initialWeight) => {
+export const getEvolutionWeight = (weight: number, initialWeight: number) => {
   const newWeight = weight - initialWeight;
   if (weight > initialWeight) {
     return `+ ${newWeight} kg 🔺`;
@@ -9,14 +9,14 @@ export const getEvolutionWeight = (weight, initialWeight) => {
   }
 };
 
-export const sumData = (arr, key) => {
-  const dataExploit = arr.map((data) => data[key]);
-  let total = dataExploit.reduce((acc, val) => acc + val);
+export const sumData = (arr: any, key: string) => {
+  const dataExploit = arr.map((data: any) => data[key]);
+  let total = dataExploit.reduce((acc: number, val: number) => acc + val);
   total = key === "distance" ? Number(total / 100) : total;
   return Number.isInteger(total) ? total : total.toFixed(2);
 };
 
-export const getProgres = (label, lastWeight, initialWeight, data, unity) => {
+export const getProgres = (label: string, lastWeight: number, initialWeight: number, data: any, unity: string) => {
   if (label === "poids") {
     const newWeight = getEvolutionWeight(lastWeight, initialWeight);
     return (
@@ -33,3 +33,10 @@ export const getProgres = (label, lastWeight, initialWeight, data, unity) => {
     );
   }
 };
+
+export interface ProgressProps {
+  label: string;
+  unity: string;
+  initialWeight?: number;
+  data: any; //  A MODIFIER
+}

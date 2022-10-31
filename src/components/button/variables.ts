@@ -1,5 +1,5 @@
 export interface ButtonProps {
-    onClick: () => any; // A VERIFIER PLUS TARD
+    onClick: () => unknown; 
     content: string;
   }
   
