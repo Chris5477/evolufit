@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { ChangeEvent } from "react";
 
 export interface FormDataProps {

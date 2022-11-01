@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { mockContext } from "../../mock/mockContext";
 import Context from "../Context";
@@ -35,11 +36,11 @@ describe("Topbar", () => {
     fireEvent.click(closeModal);
     expect(timer).not.toBeInTheDocument();
   });
+
   test("Should remove datas in localStorage", () => {
-    const disconnetBtn = document.querySelector(".timer img")!;
+    const disconnetBtn = document.querySelector(".logout")!;
     fireEvent.click(disconnetBtn);
     const data = localStorage.getItem("data");
-
     expect(data).toBeNull();
   });
 });

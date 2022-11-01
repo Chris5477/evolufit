@@ -1,6 +1,7 @@
+/* istanbul ignore file */
+
 import { Dispatch, SetStateAction } from "react";
 
 export interface TimerProps {
-    setModal : Dispatch<SetStateAction<boolean>>
-  }
-  
+  setModal: Dispatch<SetStateAction<boolean>>;
+}

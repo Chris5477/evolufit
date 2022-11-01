@@ -7,7 +7,9 @@ import { TrainingProps } from "./variables";
 const Exocardio = () => {
   const training = useContext(Context).training;
 
-  if (training.length > 0) {
+  const isTraining = training == undefined ? false : true
+  
+  if (isTraining) {
     return (
       <section className='exocardio container' data-testid='exocardio'>
         {training.map((data: TrainingProps, index: number) => (

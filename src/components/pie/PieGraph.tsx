@@ -6,11 +6,12 @@ import { PieChartProps } from "./variable";
 
 const Piechart: FunctionComponent<PieChartProps> = ({ title, info }) => {
   const {body} = useContext(Context);
-  const mass = body.massRate;
+  const isBody = body == undefined ? false : true;
+  const mass = body?.massRate;
 
   const COLORS: [string, string, string] = ["#ff7700", "rgb(119, 203, 113)", "rgb(134, 146, 217)"];
 
-  if (mass.length > 0) {
+  if (isBody) {
     return (
       <section className='pie container flex-center' data-testid='pie'>
         <h2 className='container txt-center color-light'>{title}</h2>

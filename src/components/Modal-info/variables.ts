@@ -1,3 +1,4 @@
+/*istanbul ignore file*/
 import { Dispatch, ReactElement, SetStateAction } from "react";
 
 export interface ModalInfoProps {

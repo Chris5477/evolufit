@@ -53,7 +53,7 @@ const User: FunctionComponent<LoginProps> = ({ setCtx }) => {
             <label htmlFor='picture'>
               <img src={edit} alt='edit' /> :
             </label>
-            <input onChange={(e) => changeValue(e)} name='picture' id={"picture"} type='file' />
+            <input onChange={(e) => changeValue(e)} name='picture' id="picture" type='file' />
           </div>
         </div>
         <h2>Inscript depuis :</h2>

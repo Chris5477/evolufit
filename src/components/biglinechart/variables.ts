@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export type Weight = { weight: number; date: string }[];
 
 export type Week = { calories: number; distance: number; date: string }[];

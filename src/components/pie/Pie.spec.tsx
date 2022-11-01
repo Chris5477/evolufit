@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { mockContext } from "../../mock/mockContext";
 import Context from "../Context";
+import NoData from "../nodata/NoData";
 import Piechart from "./PieGraph";
 
 describe("PieChart component", () => {
@@ -19,4 +20,15 @@ describe("PieChart component", () => {
     expect(text).toBeTruthy();
     expect(info).toBeTruthy();
   });
+
+  test("Should render NoData component", () => {
+    render(
+      <Context.Provider value={[]}>
+        <Piechart title='Hello world' info='Des informations' />
+      </Context.Provider>
+    );
+
+    const noDataComponent = screen.getByTestId("no-data")
+    expect(noDataComponent).toBeInTheDocument()
+  })
 });

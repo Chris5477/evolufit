@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 type spiderData = {
   subject: string;
   performance: number;

@@ -6,7 +6,7 @@ import IMC from "./IMC";
 describe("IMC component", () => {
   beforeEach(() => {
     const weight = true;
-    // render(<Context.Provider value={mockContext}>{weight && <IMC />}</Context.Provider>);
+    render(<Context.Provider value={mockContext}>{weight && <IMC />}</Context.Provider>);
   });
 
   test("Should render the IMC component", () => {
@@ -24,5 +24,14 @@ describe("IMC component", () => {
     const closerModal = document.querySelector(".close-modal") as HTMLImageElement;
     fireEvent.click(closerModal);
     expect(modal).not.toBeInTheDocument();
+  });
+
+  test("Should not change the input value", () => {
+    const rangeInput = document.querySelector("input") as HTMLInputElement;
+    const currentValue = rangeInput.value;
+    fireEvent.change(rangeInput, { target: { value: 25 } });
+    const valueAfterEvent = rangeInput.value;
+
+    expect(currentValue).toEqual(valueAfterEvent);
   });
 });

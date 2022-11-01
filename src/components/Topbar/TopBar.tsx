@@ -12,7 +12,6 @@ const TopBar: FunctionComponent<TopBarProps> = ({ setCtx }) => {
   const user = useContext(Context)?.user;
   const navigate = useNavigate();
   let myPhoto = user != undefined ? user?.profilPicture : avatar;
-
   const [modal, setModal] = useState(false);
 
   return localStorage.getItem("data") ? (
@@ -26,7 +25,7 @@ const TopBar: FunctionComponent<TopBarProps> = ({ setCtx }) => {
         <h1>Evolu'fit</h1>
       </Link>
       <div className='timer'>
-        <img onClick={() => disconnect(navigate, setCtx, "Déconnexion en cours !")} src={logout} alt='disconnect' />
+        <img className="logout" onClick={() => disconnect(navigate, setCtx, "Déconnexion en cours !")} src={logout} alt='disconnect' />
         <img className='timer-picture' onClick={() => setModal(true)} src={timer} alt='timer' />
       </div>
       {modal && <Timer setModal={setModal} />}

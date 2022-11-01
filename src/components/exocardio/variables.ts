@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { Week } from "../biglinechart/variables";
 
 export type TrainingProps = {
@@ -8,4 +10,3 @@ export type TrainingProps = {
   month: number[];
   year: number[];
 };
-
