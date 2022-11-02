@@ -19,7 +19,7 @@ const Piechart: FunctionComponent<PieChartProps> = ({ title, info }) => {
           fontWeight={800}
           cx='50%'
           cy='50%'
-          label={undefined}
+          label={true}
           outerRadius={70}
           innerRadius={40}
           dataKey='value'

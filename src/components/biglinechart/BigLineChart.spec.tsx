@@ -3,7 +3,7 @@ import BigLineChart from "./BigLineChart";
 
 const mockData = [{ weight: 50, date: "27 octobre 2020" }];
 
-describe("Dataline Component", () => {
+describe("Component", () => {
   test("Should render the componant", () => {
     render(<BigLineChart label='label' data={mockData} />);
 

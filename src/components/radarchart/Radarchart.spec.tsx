@@ -22,18 +22,4 @@ describe("Radarchart Component", () => {
     const radar = screen.getByTestId("radarchart");
     expect(radar).toBeInTheDocument();
   });
-
-  test("Should return a feedback", async () => {
-    render(
-      <>
-        <ToastContainer />
-        <SpiderChart title='title' data={mockData} />
-      </>
-    );
-
-    const radar = document.querySelector(".radar button")!;
-    fireEvent.click(radar);
-    const toast = await screen.findByText("Fonctionnalité bientôt disponible");
-    expect(toast).toBeInTheDocument();
-  });
 });

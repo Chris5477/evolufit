@@ -1,22 +1,20 @@
-import { FunctionComponent, ReactElement } from "react";
-import { toast } from "react-toastify";
+import { FunctionComponent, ReactElement, useState } from "react";
 import calendar from "../../assets/icons/calendar.svg";
 import Button from "../button/Button";
 import BigLineChart from "../biglinechart/BigLineChart";
 import { UserPrgoresProps } from "./variables";
+import FormExo from "../form-exo/FormExo";
 
+const UserProgress: FunctionComponent<UserPrgoresProps> = ({ title, isCardio, data }) => {
+  const [modalExo, setModalExo] = useState(false);
+  let graphicExercice: null | ReactElement = null;
 
-
-const UserProgress : FunctionComponent<UserPrgoresProps> = ({ title, isCardio, data }) => {
-  let graphicExercice : null | ReactElement = null;
   if (isCardio) {
     graphicExercice = (
       <>
         <BigLineChart isCardio data={data} />
-        <Button
-          onClick={() => toast.warn("Fonctionnalité bientôt disponible", { autoClose: 2000, theme: "colored" })}
-          content='Visualiser'
-        />
+        <Button onClick={() => setModalExo(true)} content='Ajouter une donnée' />
+        {modalExo && <FormExo />}
       </>
     );
   }

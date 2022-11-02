@@ -14,7 +14,7 @@ body {
 @font-face {
   font-family: "russo_oneregular";
   src: url("../src/assets/fonts/russoone-regular-webfont.woff2") format("woff2"),
-  url("../src/assets/fonts/russoone-regular-webfont.woff") format("woff");
+    url("../src/assets/fonts/russoone-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +22,7 @@ body {
 @font-face {
   font-family: "robotoregular";
   src: url("../src/assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
-  url("../src/assets/fonts/roboto-regular-webfont.woff") format("woff");
+    url("../src/assets/fonts/roboto-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -90,5 +90,4 @@ li {
 .color-light {
   color: $light;
 }
-
 

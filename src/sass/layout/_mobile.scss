@@ -336,6 +336,10 @@ q {
 .cardio-page h2 {
   padding: 15px 0;
 }
+button {
+  display: block;
+  margin: auto;
+}
 
 .exocardio,
 .dataline {
@@ -349,6 +353,13 @@ q {
 
 .exocardio h2:first-child {
   padding-left: 25px;
+}
+
+.add-data {
+  width: 100%;
+  min-height: 50vh;
+  flex-direction: column;
+  margin-bottom: 10px
 }
 
 /* PLANNING PAGE CSS ************************************************/
@@ -398,7 +409,7 @@ q {
 .edit-photo {
   @include flex(space-between, center);
 
-  div.form-data{
+  div.form-data {
     width: 20%;
   }
   label {
