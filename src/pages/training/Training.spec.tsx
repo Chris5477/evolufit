@@ -5,7 +5,7 @@ import { mockContext } from "../../mock/mockContext";
 import Training from "./Training";
 
 describe("Training page", () => {
-  beforeEach(() => {
+  test("Should render the training page", () => {
     render(
       <BrowserRouter>
         <Context.Provider value={mockContext}>
@@ -13,10 +13,21 @@ describe("Training page", () => {
         </Context.Provider>
       </BrowserRouter>
     );
-  });
-
-  test("Should render the training page", () => {
     const training = screen.getByTestId("training-page");
     expect(training).toBeInTheDocument();
+  });
+
+  test("Should render the NoData component if there is no data", () => {
+    render(
+      <BrowserRouter>
+        <Context.Provider value={null}>
+          <Training />
+        </Context.Provider>
+      </BrowserRouter>
+    );
+    
+    const noData = screen.getAllByTestId("no-data").length
+
+    expect(noData).toEqual(4)
   });
 });
