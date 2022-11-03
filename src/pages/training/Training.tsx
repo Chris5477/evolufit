@@ -22,18 +22,10 @@ const Training = () => {
       {user?.body ? <Piechart title={"Information sur vos masses"} info={addInfo} /> : <NoData title='Vos masses' />}
 
       <h2 className='container txt-center'>Vos performanes</h2>
-      {user?.torse.length > 0 ? (
-        <SpiderChart title='Muscle du torse' data={user?.torse} />
-      ) : (
-        <NoData title='Muscle du torse' />
-      )}
-      {user?.bras.length > 0 ? (
-        <SpiderChart title='Muscle des bras' data={user?.bras} />
-      ) : (
-        <NoData title='Muscle des bras' />
-      )}
+      {user?.torse.length > 0 ? <SpiderChart title='torse' data={user?.torse} /> : <NoData title='Muscle du torse' />}
+      {user?.bras.length > 0 ? <SpiderChart title='bras' data={user?.bras} /> : <NoData title='Muscle des bras' />}
       {user?.jambes.length > 0 ? (
-        <SpiderChart title='Muscle des jambes' data={user?.jambes} />
+        <SpiderChart title='jambes' data={user?.jambes} />
       ) : (
         <NoData title='Muscle des jambes' />
       )}

@@ -3,7 +3,7 @@ import FormExo from "./FormExo";
 
 
 describe("FormExo", () => {
-  beforeEach(() => render(<FormExo />));
+  beforeEach(() => render(<FormExo setModal={() => false}/>));
 
   test("Should render FormExo component", () => {
     const form = screen.getByTestId("form-exo");

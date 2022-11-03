@@ -182,7 +182,6 @@ footer .main-title {
 }
 
 form {
-  min-height: 65vh;
   background: linear-gradient(16deg, rgb(237, 114, 20) 0%, rgb(255, 102, 0) 100%);
   color: rgb(246, 246, 246);
   padding-bottom: 5px;
@@ -848,6 +847,39 @@ button {
   border-radius: 50%;
   margin-right: 20px;
   cursor: pointer;
+}
+
+/* FORM MUSCULATION ***************************************************/
+.exo-form {
+  overflow-y: scroll;
+  padding-bottom: 25px;
+}
+.exo-form h2 {
+  background-color: #ff7700;
+  color: rgb(246, 246, 246);
+  padding: 25px;
+}
+.exo-form h3 {
+  margin: 15px 0;
+  padding: 10px 25px;
+}
+.exo-form h3,
+.exo-form .exo {
+  background: #dddddd;
+}
+.exo-form .exo {
+  border-bottom: 2px solid #ff7700;
+}
+.exo-form .exo label {
+  color: rgb(34, 34, 34);
+}
+.exo-form .exo p {
+  padding-top: 0;
+  text-align: left;
+}
+.exo-form .exo span {
+  color: #ff7700;
+  font-size: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

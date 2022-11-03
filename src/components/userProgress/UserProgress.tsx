@@ -6,15 +6,16 @@ import { UserPrgoresProps } from "./variables";
 import FormExo from "../form-exo/FormExo";
 
 const UserProgress: FunctionComponent<UserPrgoresProps> = ({ title, isCardio, data }) => {
-  const [modalExo, setModalExo] = useState(false);
+  const [modal, setModal] = useState(false);
+
   let graphicExercice: null | ReactElement = null;
 
   if (isCardio) {
     graphicExercice = (
       <>
         <BigLineChart isCardio data={data} />
-        <Button onClick={() => setModalExo(true)} content='Ajouter une donnée' />
-        {modalExo && <FormExo />}
+        <Button onClick={() => setModal(true)} content='Ajouter une donnée' />
+        {modal && <FormExo setModal={setModal} />}
       </>
     );
   }

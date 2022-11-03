@@ -11,7 +11,7 @@ const Piechart: FunctionComponent<PieChartProps> = ({ title, info }) => {
 
   return (
     <section className='pie container flex-center' data-testid='pie'>
-      <h2 className='container txt-center color-light'>{title}</h2>
+      <h2 className='container bg-primary txt-center color-light'>{title}</h2>
       <PieChart width={280} height={280}>
         <Pie
           data={mass}

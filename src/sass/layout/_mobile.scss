@@ -359,7 +359,7 @@ button {
   width: 100%;
   min-height: 50vh;
   flex-direction: column;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 /* PLANNING PAGE CSS ************************************************/
@@ -425,5 +425,44 @@ button {
     border-radius: 50%;
     margin-right: 20px;
     cursor: pointer;
+  }
+}
+
+/* FORM MUSCULATION ***************************************************/
+
+.exo-form {
+  overflow-y: scroll;
+  padding-bottom: 25px;
+
+  h2{
+    background-color: $primary;
+    color: $light;
+    padding:25px;
+  }
+  
+  h3{
+    margin: 15px 0;
+    padding: 10px 25px;
+  }
+
+  h3,
+  .exo {
+    background: darken($color: $light, $amount: 10);
+  }
+  .exo {
+    label {
+      color: $dark;
+    }
+    
+    p {
+      padding-top: 0;
+      text-align: left;
+    }
+
+    span {
+      color: $primary;
+      font-size: 60px;
+    }
+    border-bottom: 2px solid $primary;
   }
 }
