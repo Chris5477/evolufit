@@ -806,6 +806,9 @@ button {
 }
 .planning li {
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .planning li:nth-child(odd) {
   background-color: #c3c3c3;
@@ -813,9 +816,16 @@ button {
 .planning li:nth-child(even) {
   background-color: #dddddd;
 }
+.planning li button:last-child {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 50%;
+}
 .planning button {
   display: block;
-  margin: auto;
+  margin: 15px auto;
 }
 
 /* USER CSS *********************************************************/
@@ -849,7 +859,7 @@ button {
   cursor: pointer;
 }
 
-/* FORM MUSCULATION ***************************************************/
+/* FORM ADD DATA ***************************************************/
 .exo-form {
   overflow-y: scroll;
   padding-bottom: 25px;
