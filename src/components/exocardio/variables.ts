@@ -1,12 +1,12 @@
 /* istanbul ignore file */
 
-import { Week } from "../biglinechart/variables";
+import { Week } from "../../utils/interface";
 
 export type TrainingProps = {
   id: string;
   type: string;
   name: string;
-  week: Week;
+  week: Week  ;
   month: number[];
   year: number[];
 };

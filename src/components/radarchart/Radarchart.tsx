@@ -1,7 +1,7 @@
 import { FunctionComponent, useState } from "react";
 import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, RadarChart, Radar } from "recharts";
 import Button from "../button/Button";
-import ExosMuscu from "../ExosMuscu/ExoMuscu";
+import ExosMuscu from "../form-muscu/FormMuscu";
 import { SpiderChartProps } from "./variable";
 
 const SpiderChart: FunctionComponent<SpiderChartProps> = ({ title, data }) => {

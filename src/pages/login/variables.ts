@@ -1,14 +1,9 @@
-import { ChangeEvent, Dispatch, FormEvent, SetStateAction } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
+import { login } from "../../utils/functions";
 
 const notify = (type: any, text: string, duration: number) => type(text, { autoClose: duration, theme: "colored" });
-
-const login = (setter: Dispatch<SetStateAction<string>>, mock: any, navigate: NavigateFunction) => {
-  setter(mock);
-  localStorage.setItem("data", JSON.stringify(mock));
-  setTimeout(() => navigate("/evolufit/profil"), 2500);
-};
 
 export const validationLoginForm = (
   e: FormEvent<HTMLFormElement>,

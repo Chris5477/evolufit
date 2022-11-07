@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, FormEvent, FunctionComponent, SetStateAction, useState } from "react";
+import { ChangeEvent, FormEvent, FunctionComponent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
 import { infoBody, training, users } from "../../mock/users.js";
@@ -20,7 +20,6 @@ const Login: FunctionComponent<LoginProps> = ({ setCtx }) => {
     training,
     planning
   }
-  //  [...users, ...infoBody, training, torse, bras, jambes, planning];
 
   return (
     <form

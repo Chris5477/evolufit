@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormData from "../../components/formData/FormData";
+import { changeValue } from "../../utils/functions";
 import { initialState, signup } from "./variables";
 
 const Signin = () => {
@@ -8,15 +9,6 @@ const Signin = () => {
 
   const [data, setData] = useState(initialState);
   const { firstName, lastName, yearsOld, email, size, weight, gender, password } = data;
-
-  const changeValue = (e : ChangeEvent<HTMLInputElement>) => {
-    const { value, name, id } = e.target;
-    if (name === "gender") {
-      setData({ ...data, [name]: id });
-    } else {
-      setData({ ...data, [name]: value });
-    }
-  };
 
   return (
     <form data-testid='signin' className='newAccount container' onSubmit={(e) => signup(e, data, navigate)}>
@@ -33,19 +25,57 @@ const Signin = () => {
           checked
           type='radio'
           value={gender}
-          onChange={changeValue}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
         />
         <label htmlFor='femme'>Femme</label>
-        <input className='uppercase' name='gender' id='femme' type='radio' value={gender} onChange={changeValue} />
+        <input
+          className='uppercase'
+          name='gender'
+          id='femme'
+          type='radio'
+          value={gender}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        />
       </div>
-      <FormData handleChange={changeValue} label='prenom' name='firstName' valueInput={firstName} />
-      <FormData handleChange={changeValue} label='nom' name='lastName' valueInput={lastName} />
-      <FormData handleChange={changeValue} label='age' name='yearsOld' valueInput={yearsOld} />
-      <FormData handleChange={changeValue} label='email' name='email' valueInput={email} typeInput='email' />
-      <FormData handleChange={changeValue} label='taille (en cm)' name='size' valueInput={size} />
-      <FormData handleChange={changeValue} label='poids (en kg)' name='weight' valueInput={weight} />
       <FormData
-        handleChange={changeValue}
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='prenom'
+        name='firstName'
+        valueInput={firstName}
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='nom'
+        name='lastName'
+        valueInput={lastName}
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='age'
+        name='yearsOld'
+        valueInput={yearsOld}
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='email'
+        name='email'
+        valueInput={email}
+        typeInput='email'
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='taille (en cm)'
+        name='size'
+        valueInput={size}
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
+        label='poids (en kg)'
+        name='weight'
+        valueInput={weight}
+      />
+      <FormData
+        handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setData, data)}
         label='password'
         name='password'
         typeInput='password'

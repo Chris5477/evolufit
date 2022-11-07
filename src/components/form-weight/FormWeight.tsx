@@ -1,34 +1,15 @@
-import { ChangeEvent, Dispatch, FormEvent, FunctionComponent, SetStateAction, useState } from "react";
+import { ChangeEvent, FormEvent, FunctionComponent, useState } from "react";
 import { createPortal } from "react-dom";
-import { toast } from "react-toastify";
 import FormData from "../formData/FormData";
 import { initialMass, initialWeight, TypeFormWeightProps } from "./variable";
 import close from "../../assets/icons/close.svg";
+import { changeValue, createData } from "../../utils/functions";
 
 const FormWeight: FunctionComponent<TypeFormWeightProps> = ({ setModal }) => {
   const [weight, setWeight] = useState(initialWeight);
   const [form, setForm] = useState(initialMass);
-
-  const changeValue = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value, valueAsNumber } = e.target;
-    if (name === "weight") {
-      setWeight({ ...weight, [name]: valueAsNumber });
-    } else {
-      setForm({ ...form, [name]: value });
-    }
-  };
-
   const { fatMass, muscularMass, bonesMass } = form;
 
-  const createData = (e: FormEvent, state: any) => {
-    e.preventDefault();
-    const isValid = Object.values(state).every((value) => value);
-    if (!isValid) {
-      toast.error("Veuillez remplir tous les champs", { autoClose: 2000, theme: "colored" });
-    } else {
-      alert("Aucune base de donnée est disponible pour le moment");
-    }
-  };
 
   return createPortal(
     <div className='modal container exo-form posFixed' data-testid='form-weight'>
@@ -41,7 +22,7 @@ const FormWeight: FunctionComponent<TypeFormWeightProps> = ({ setModal }) => {
             label='nouveau poids'
             typeInput='number'
             valueInput={weight.weight}
-            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e)}
+            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setWeight, weight)}
             name='weight'
           />
           <input className='btn btn-color' type='submit' value='Valider' />
@@ -52,21 +33,21 @@ const FormWeight: FunctionComponent<TypeFormWeightProps> = ({ setModal }) => {
             label='Masse Grasse'
             typeInput='number'
             valueInput={fatMass}
-            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e)}
+            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setForm, form)}
             name='fatMass'
           />
           <FormData
             label='Masse Musculaire'
             typeInput='number'
             valueInput={muscularMass}
-            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e)}
+            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setForm, form)}
             name='muscularMass'
           />
           <FormData
             label='Masse osseuse'
             typeInput='number'
             valueInput={bonesMass}
-            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e)}
+            handleChange={(e: ChangeEvent<HTMLInputElement>) => changeValue(e, setForm, form)}
             name='bonesMass'
           />
           <input className='btn btn-color' type='submit' value='Valider' />
