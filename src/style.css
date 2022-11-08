@@ -865,9 +865,12 @@ button {
   padding-bottom: 25px;
 }
 .exo-form h2 {
-  background-color: #ff7700;
-  color: rgb(246, 246, 246);
+  color: rgb(34, 34, 34);
   padding: 25px;
+}
+.exo-form h2:first-child {
+  background-color: transparent;
+  color: rgb(34, 34, 34);
 }
 .exo-form h3 {
   margin: 15px 0;

@@ -443,9 +443,12 @@ button {
   padding-bottom: 25px;
 
   h2 {
-    background-color: $primary;
-    color: $light;
+    color: $dark;
     padding: 25px;
+    &:first-child{
+      background-color: transparent;
+      color: $dark;
+    }
   }
 
   h3 {
