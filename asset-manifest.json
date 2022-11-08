@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evolufit/static/css/main.8f12d163.css",
-    "main.js": "/evolufit/static/js/main.651bdbdb.js",
+    "main.css": "/evolufit/static/css/main.5b6e2985.css",
+    "main.js": "/evolufit/static/js/main.fa468052.js",
     "static/js/90.29d236b7.chunk.js": "/evolufit/static/js/90.29d236b7.chunk.js",
     "static/js/729.be1b5552.chunk.js": "/evolufit/static/js/729.be1b5552.chunk.js",
     "static/js/787.3beaa5d6.chunk.js": "/evolufit/static/js/787.3beaa5d6.chunk.js",
@@ -37,14 +37,14 @@
     "index.html": "/evolufit/index.html",
     "static/media/eye.svg": "/evolufit/static/media/eye.5b2e3e1a417834e16813a95ac85f4ebb.svg",
     "static/media/avatar.svg": "/evolufit/static/media/avatar.5f0d91a731bd8bd9613919056375c8ef.svg",
-    "main.8f12d163.css.map": "/evolufit/static/css/main.8f12d163.css.map",
-    "main.651bdbdb.js.map": "/evolufit/static/js/main.651bdbdb.js.map",
+    "main.5b6e2985.css.map": "/evolufit/static/css/main.5b6e2985.css.map",
+    "main.fa468052.js.map": "/evolufit/static/js/main.fa468052.js.map",
     "90.29d236b7.chunk.js.map": "/evolufit/static/js/90.29d236b7.chunk.js.map",
     "729.be1b5552.chunk.js.map": "/evolufit/static/js/729.be1b5552.chunk.js.map",
     "787.3beaa5d6.chunk.js.map": "/evolufit/static/js/787.3beaa5d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f12d163.css",
-    "static/js/main.651bdbdb.js"
+    "static/css/main.5b6e2985.css",
+    "static/js/main.fa468052.js"
   ]
 }
