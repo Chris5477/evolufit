@@ -21,11 +21,4 @@ describe("Planning Page", () => {
     const planning = screen.getByTestId("planning");
     expect(planning).toBeInTheDocument();
   });
-
-  test("Should return a feedback", async () => {
-    const btn = document.querySelector(".planning button")!;
-    fireEvent.click(btn);
-    const toast = await screen.findByText("Fonctionnalité bientôt disponible");
-    expect(toast).toBeInTheDocument();
-  });
 });

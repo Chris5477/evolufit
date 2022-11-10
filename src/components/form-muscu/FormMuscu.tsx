@@ -9,13 +9,12 @@ import { changeValue, createData } from "../../utils/functions";
 const FormsMuscu: FunctionComponent<TypeExosMuscuProps> = ({ groupMuscular, setModal }) => {
   const training = useContext(Context);
   const [form, setForm] = useState(initialWeight);
-  console.log(form)
-  
+
   return (
     <div className='modal exo-form posFixed container' data-testid='exo-muscu'>
       <img className='close-modal' onClick={() => setModal(false)} src={close} alt='cross' />
 
-      <h2 className="txt-center color-light">Muscles {groupMuscular}</h2>
+      <h2 className='txt-center color-light'>Muscles {groupMuscular}</h2>
       {training[groupMuscular].map(({ subject, performance }: TypeMapFormMuscu, index: number) => (
         <form className='exo' key={`index ${index}`} onSubmit={(e) => createData(e, form)}>
           <h2>{subject}</h2>
@@ -30,7 +29,7 @@ const FormsMuscu: FunctionComponent<TypeExosMuscuProps> = ({ groupMuscular, setM
             name={"weight"}
           />
 
-          <input className="btn btn-color" type='submit' value='Valider' />
+          <input className='btn btn-color' type='submit' value='Valider' />
         </form>
       ))}
     </div>
